@@ -1,6 +1,6 @@
 # Final Project - Segment 1
 ## Overview (Presentation)
-- Selected topic
+- Selected topic: Ukraine Sentiment Analysis
 - Reason why they selected their topic
 - Description of their source of data
 - Questions they hope to answer with the data
