@@ -18,3 +18,5 @@ The provisional machine learning model must accomplish:
 Provisional database must:
 - Sample data that mimics the expected final database structure or schema
 - Draft machine learning module is connected to the provisional database
+
+#### Testing github branches --- changes made by Flora
