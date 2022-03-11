@@ -10,26 +10,54 @@ On February 24, 2022, Russia invaded Ukraine demanding an assurance that Ukraine
 
 Since then, there have been tensions between countries, in particular with the United States and European Union supporting Ukraine, and Russia counting with Venezuela and Syria as allies (include NYTimes source). These tensions, according to media channels and specialists, can potentially escalate the Ukrainian war to a third world war.
 
-World impacts of the Russian invasion on Ukraine has already been observed. The most prominent impact is Ukrainians’ migration to neighboring countries, such as Poland, Hungary and Slovakia. Specialists have been calling it a major refugee crisis, as of March 11 over two and a half million Ukrainians have fled their home. (Source: https://data2.unhcr.org/en/situations/ukraine#_ga=2.200929772.353981607.1646674903-2007428328.1646674903 --- Maybe include a line graph of the increasing number of migrants)
+Besides the threat of worldwide conflict, other impacts of the Russian invasion on Ukraine has already been observed. The most prominent impact is Ukrainians’ migration to neighboring countries, such as Poland, Hungary and Slovakia. Specialists have been calling it a major refugee crisis, as of March 11 over two and a half million Ukrainians have fled their homes. (Source: https://data2.unhcr.org/en/situations/ukraine#_ga=2.200929772.353981607.1646674903-2007428328.1646674903 --- Maybe include a line graph of the increasing number of migrants)
 
-Given that the current war in Ukraine is having a worldwide impact, it is worthwhile to assess people’s sentiment about this  event. People’s sentiment were identified through text data, consisting of over one million tweets downloaded from February 26 to March 10, 2022.
-Data source: https://www.kaggle.com/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows/discussion/310030
+Given the direct or indirect impact of the war in Ukraine to people’s lives, it is worthwhile to assess the sentiments people have about this event. Sentiments were identified through text data, consisting of over one million tweets downloaded from February 26 to March 10, 2022. Data was sourced from Kaggle.
+(Data source: https://www.kaggle.com/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows/discussion/310030)
 
 Through the examination of tweet data, the following questions will be answered:
-	- 
+1. **What are the most common words mentioned on twitter about the Ukrainian war**?
+(in results, show ordered list or tag clouds with most frequent words for the whole dataset and/or can split by sentiment polarity)
+2. **What is the sentiment breakdown for Ukraine war tweets**?
+(in results, show pie chart with negative, positive and neutral percentages)
+3. **How sentiment polarity changes over time**?
+(in results, show line graph with sentiments change over time)
 
-## Overview (Presentation)
-- Selected topic
-- Reason why they selected their topic
-- Description of their source of data
-- Questions they hope to answer with the data
+Further questions can be answered if time allows:
+4. Do sentiment distributions change according to country (location of the twitter account)?
+5. How accurate is the model created in predicting polarity (new sentiment output) based on tweet text?
 
-    1. Would it be possible to know if the sentiments of the people of different countries change as per the political relations of Ukraine and Russia with those countries?
-    2. Can the sentiment analysis support or explain the current migration trends from Ukraine to the neighbouring countries?
+### Description of the communication protocols
+The group has created a GitHub repository with 4 different branches for each member to work on their own branch.
 
-## Description of the communication protocols (github)
+Specific roles have not yet been assigned to members as the group is deciding together the main project components. To do this, group members have been communicating through slack and meeting daily via zoom.
 
-(create 4 branches in github, with at least 4 commits per person)
+## Results
+
+### Preprocessing Data
+(explain how raw data was cleaned using pandas and re, filtered by language and location, and a new data file was created for NLP)
+
+### Database Structure
+(Add sketch of the ER Diagram here)
+
+### Natural Language Processing (Exploratory Data Analysis)
+- Tokenization
+- Lemmatization and Stemming?
+- Removing stop words
+- Can use bag-of-words or tf-idf to get word frequency [*still left to decide best approach*]
+
+### Sentiment Analysis
+- Extract polarity score (positive, negative or neutral) from text  [*still left to decide best approach*]
+
+### Polarity Prediction [*a maybe*]
+
+## Summary
+
+
+
+
+
+
 
 ## Provisional Machine Learning Model (MLM)
 The provisional machine learning model must accomplish:
@@ -41,4 +69,3 @@ Provisional database must:
 - Sample data that mimics the expected final database structure or schema
 - Draft machine learning module is connected to the provisional database
 
-#### Testing github branches --- changes made by Flora
