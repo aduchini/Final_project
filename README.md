@@ -8,6 +8,11 @@
 
     1. Would it be possible to know if the sentiments of the people of different countries change as per the political relations of Ukraine and Russia with those countries?
     2. Can the sentiment analysis support or explain the current migration trends from Ukraine to the neighbouring countries?
+    3. What are the most common words used on social media (twitter) about the Ukraine-Russia conflict?
+    4. What is the polarity distribution of the tweet sentiments?
+    5. What are the most commmon reasons for negative or positive sentiments?
+    6. People from which country have more neutral stand?
+    7. How effective is the model in predicting sentiments for new tweets?
 
 ## Description of the communication protocols (github)
 
