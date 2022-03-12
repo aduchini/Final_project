@@ -24,7 +24,7 @@ Through the examination of tweet data, the following questions will be answered:
 (in results, show line graph with sentiments change over time)
 
 Further questions can be answered if time allows:
-4. Do sentiment distributions change according to country (location of the twitter account)?
+4. Do sentiment distributions change according to country (i.e., location of the twitter account)?
 5. How accurate is the model created in predicting polarity (new sentiment output) based on tweet text?
 
 ### Description of the communication protocols
@@ -35,19 +35,24 @@ Specific roles have not yet been assigned to members as the group is deciding to
 ## Results
 
 ### Preprocessing Data
-(explain how raw data was cleaned using pandas and re, filtered by language and location, and a new data file was created for NLP)
+(Explain how raw data was cleaned using pandas and re, filtered by language and location, and a new data file was created for NLP)
 
 ### Database Structure
+- Load raw dataset and preprocessed dataset to SQLite or PostgreSQL
 (Add sketch of the ER Diagram here)
 
 ### Natural Language Processing (Exploratory Data Analysis)
-- Tokenization
-- Lemmatization and Stemming?
-- Removing stop words
-- Can use bag-of-words or tf-idf to get word frequency [*still left to decide best approach*]
+- Extract preprocessed data from database
+- Use NLP to turn unstructured text into machine-usable code by:
+	- Tokenization
+	- Lemmatization and Stemming?
+	- Removing stop words
+	- Can use bag-of-words or tf-idf to get word frequency [*still left to decide best approach*]
 
 ### Sentiment Analysis
 - Extract polarity score (positive, negative or neutral) from text  [*still left to decide best approach*]
+- use Library TextBlob or Vader to get polarity and subjectivity scores. Seems Vader is a better option as it’s optimized for social media data.
+- to visualize words as word clouds use wordcloud library with matplotlib 
 
 ### Polarity Prediction [*a maybe*]
 
