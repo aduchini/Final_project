@@ -13,7 +13,11 @@ Since then, there have been tensions between countries, in particular with the U
 Besides the threat of worldwide conflict, other impacts of the Russian invasion on Ukraine has already been observed. The most prominent impact is Ukrainians’ migration to neighboring countries, such as Poland, Hungary and Slovakia. Specialists have been calling it a major refugee crisis, as of March 11 over two and a half million Ukrainians have fled their homes. (Source: https://data2.unhcr.org/en/situations/ukraine#_ga=2.200929772.353981607.1646674903-2007428328.1646674903 --- Maybe include a line graph of the increasing number of migrants)
 
 Given the direct or indirect impact of the war in Ukraine to people’s lives, it is worthwhile to assess the sentiments people have about this event. Sentiments were identified through text data, consisting of over one million tweets downloaded from February 26 to March 10, 2022. Data was sourced from Kaggle.
-(Data source: https://www.kaggle.com/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows/discussion/310030)
+(Data source: https://www.kaggle.com/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows/discussion/310030). The dataset administrator used three processes to collect data:
+
+- Process 1 hashtags: "#SlavaUkraini OR #Russia OR #RussiaUkraineWar OR #Putin OR #RussiaUkraine OR #RussianWar OR #ww3 OR #moscow OR #RussianConflict"
+- Process 2 hashtags: "#ukraineunderattack OR #Ukriane OR #Ukraine OR #RussianUkrainianWar OR #UkraineRussia OR #UkraineConflict OR #UkraineWar OR #Kharkiv OR #StopPutinNow"
+- Process 3: Geolocation UKRAINE country.
 
 Through the examination of tweet data, the following questions will be answered:
 1. **What are the most common words mentioned on twitter about the Ukrainian war**?
@@ -48,6 +52,9 @@ Specific roles have not yet been assigned to members as the group is deciding to
 	- Lemmatization and Stemming?
 	- Removing stop words
 	- Can use bag-of-words or tf-idf to get word frequency [*still left to decide best approach*]
+
+*** NLP packages: NLTK, SpaCy, Gensim, Scikit-Learn
+*** Key areas of NLP: LDA, TF-IDF, embedding techniques (i.e. word2vec, doc2vec), neural architectures (i.e. CNN, RNN, attention, Seq2Seq)
 
 ### Sentiment Analysis
 - Extract polarity score (positive, negative or neutral) from text  [*still left to decide best approach*]
