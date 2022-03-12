@@ -22,6 +22,7 @@ CREATE TABLE CleanedTweets (
   tweetid BIGINT PRIMARY KEY NOT NULL UNIQUE,
   acctdesc TEXT,
   country TEXT,
+  tweetcreatedts DATE,
   retweetcount INT,
   text TEXT,
   hashtags TEXT,

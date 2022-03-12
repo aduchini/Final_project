@@ -28,6 +28,7 @@ hashtags nvarchar
 language nvarchar
 latitude float
 longitude float
+tweetcreatedts datetime
 
 VisualizationsData
 -

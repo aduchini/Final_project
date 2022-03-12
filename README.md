@@ -12,6 +12,12 @@
 ## Provisional Machine Learning Model (MLM)
 The provisional machine learning model must accomplish:
 - Outputs label(s) for input data
+Pipeline steps to follow (could use separate notebooks for each step):
+1. Raw Text: Start with the raw data, then clean it up.
+2. Tokenization: Separate the words from paragraphs or sentences, into individual words.
+3. Stop Words Filtering: Remove common words like "a" and "the" that add no real value to what we are looking to analyze.
+4. Term Frequency-Inverse Document Frequency (TF-IDF): Statistically rank the words by importance compared to the rest of the words in the text. This is also when the words are converted from text to numbers.
+5. Machine Learning: Put everything together and run through the machine learning model to produce an output.
 
 ## Database
 Provisional database must:
