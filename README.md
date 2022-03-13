@@ -1,4 +1,4 @@
-Final Project - Segment 1
+
 # Analyzing the Sentiment Distribution of Tweets about the War in Ukraine
 Using Natural Language Processing and Sentiment Analysis, tweet data on the War in Ukraine was analyzed.
 
@@ -65,19 +65,4 @@ Specific roles have not yet been assigned to members as the group is deciding to
 
 ## Summary
 
-
-
-
-
-
-
-## Provisional Machine Learning Model (MLM)
-The provisional machine learning model must accomplish:
-- Takes in data in from the provisional database
-- Outputs label(s) for input data
-
-## Database
-Provisional database must:
-- Sample data that mimics the expected final database structure or schema
-- Draft machine learning module is connected to the provisional database
 
