@@ -41,6 +41,7 @@ Provisional database must:
 - Draft machine learning module is connected to the provisional database
 
 ## Project Pipeline :
+![project pipeline](https://user-images.githubusercontent.com/23488019/158079683-59057a33-11ee-42c4-bcac-af917b35b83d.PNG)
 
 
 # Technologies Used
