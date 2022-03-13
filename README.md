@@ -9,7 +9,7 @@ On February 24, 2022, Russia invaded Ukraine demanding an assurance that Ukraine
 
 Since then, there have been tensions between countries, in particular with the United States and European Union supporting Ukraine, and Russia counting with Venezuela and Syria as allies (Source: [NYTimes](https://www.nytimes.com/2022/03/05/world/americas/venezuela-russia-usa.html?searchResultPosition=1)). These tensions, according to media channels and specialists, can potentially escalate the Ukrainian war to a third world war.
 
-Besides the threat of worldwide conflict, other impacts of the Russian invasion on Ukraine has already been observed. The most prominent impact is Ukrainians’ migration to neighboring countries, such as Poland, Hungary and Slovakia. Specialists have been calling it a major refugee crisis, as of March 11 over two and a half million Ukrainians have fled their homes. (Source: [The UN Refugee Agency](https://data2.unhcr.org/en/situations/ukraine#_ga=2.200929772.353981607.1646674903-2007428328.1646674903))
+Besides the threat of worldwide conflict, other impacts of the Russian invasion on Ukraine has already been observed. The most prominent impact is Ukrainians’ migration to neighboring countries, such as Poland, Hungary and Slovakia. Specialists have been calling it a major refugee crisis, as of March 11 over two and a half million Ukrainians have fled their homes (Source: [The UN Refugee Agency](https://data2.unhcr.org/en/situations/ukraine#_ga=2.200929772.353981607.1646674903-2007428328.1646674903)).
 
 Given the direct or indirect impact of the war in Ukraine to people’s lives, it is worthwhile to assess the sentiments people have about this event. Sentiments were identified through text data, consisting of over one million tweets downloaded from February 26 to March 10, 2022. Data was sourced from [Kaggle](https://www.kaggle.com/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows/discussion/310030). The dataset administrator used three processes to collect data:
 
@@ -18,6 +18,7 @@ Given the direct or indirect impact of the war in Ukraine to people’s lives, i
 - Process 3: Geolocation UKRAINE country.
 
 Through the examination of tweet data, the following questions will be answered:
+
 1. **What are the most common words mentioned on twitter about the Ukrainian war**?
 (in results, show ordered list or tag clouds with most frequent words for the whole dataset and/or can split by sentiment polarity)
 2. **What is the sentiment breakdown for Ukraine war tweets**?
@@ -26,6 +27,7 @@ Through the examination of tweet data, the following questions will be answered:
 (in results, show line graph with sentiments change over time)
 
 Further questions can be answered if time allows:
+
 4. Do sentiment distributions change according to country (i.e., location of the twitter account)?
 5. How accurate is the model created in predicting polarity (new sentiment output) based on tweet text?
 
