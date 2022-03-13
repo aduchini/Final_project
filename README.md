@@ -1,3 +1,4 @@
+
 # Analyzing the Sentiment Distribution of Tweets about the War in Ukraine
 Using Natural Language Processing and Sentiment Analysis, tweet data on the War in Ukraine was analyzed.
 
@@ -56,7 +57,10 @@ Specific roles have not yet been assigned to members as the group is deciding to
 ## Results
 
 ### Preprocessing Data
+
 (Explain how raw data was cleaned using pandas and re, filtered by language and location, and a new data file was created for NLP)
+
+
 
 ### Database Structure
 - Load raw dataset and preprocessed dataset to SQLite or PostgreSQL
@@ -69,7 +73,12 @@ Specific roles have not yet been assigned to members as the group is deciding to
 	- Lemmatization and Stemming?
 	- Removing stop words
 	- Can use bag-of-words or tf-idf to get word frequency [*still left to decide best approach*]
-
+Pipeline steps to follow (could use separate notebooks for each step):
+1. Raw Text: Start with the raw data, then clean it up.
+2. Tokenization: Separate the words from paragraphs or sentences, into individual words.
+3. Stop Words Filtering: Remove common words like "a" and "the" that add no real value to what we are looking to analyze.
+4. Term Frequency-Inverse Document Frequency (TF-IDF): Statistically rank the words by importance compared to the rest of the words in the text. This is also when the words are converted from text to numbers.
+5. Machine Learning: Put everything together and run through the machine learning model to produce an output.
 *** NLP packages: NLTK, SpaCy, Gensim, Scikit-Learn
 *** Key areas of NLP: LDA, TF-IDF, embedding techniques (i.e. word2vec, doc2vec), neural architectures (i.e. CNN, RNN, attention, Seq2Seq)
 
