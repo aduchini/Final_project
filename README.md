@@ -66,6 +66,7 @@ In addition to using a Flask template, we will also integrate D3.js for a fully 
 ## Project Pipeline :
 
 ![project pipeline](https://user-images.githubusercontent.com/23488019/158079683-59057a33-11ee-42c4-bcac-af917b35b83d.PNG)
+ 
  The steps to be completed for Twitter Sentiment Analysis are shown below:
  1. Collecting Data
  2. Preprocessing Data
