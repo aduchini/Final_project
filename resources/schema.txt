@@ -1,0 +1,42 @@
+UkraineCombinedTweetsDeduped
+-
+username nvarchar PK
+acctdesc nvarchar
+location nvarchar
+following int
+followers int
+totaltweets int
+usercreatedts datetime
+tweetid bigint
+tweetcreatedts datetime
+retweetcount int	
+text string
+hashtags nvarchar 
+language nvarchar
+coordinates nvarchar
+favorite_count int
+extractedts datetime
+
+CleanedTweets
+-
+tweetid bigint PK
+acctdesc nvarchar
+country nvarchar FK
+retweetcount int
+text nvarchar
+hashtags nvarchar
+language nvarchar
+latitude float
+longitude float
+tweetcreatedts datetime
+
+VisualizationsData
+-
+tweetid bigint PK
+country nvarchar FK
+language nvarchar
+text nvarchar
+emoticons nvarchar
+hashtags nvarchar
+retweet_count int
+sentiment_result int
