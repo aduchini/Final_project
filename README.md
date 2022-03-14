@@ -1,3 +1,4 @@
+
 # Analyzing the Sentiment Distribution of Tweets about the War in Ukraine
 Using Natural Language Processing and Sentiment Analysis, tweet data on the War in Ukraine was analyzed.
 
@@ -58,9 +59,33 @@ In addition to using a Flask template, we will also integrate D3.js for a fully 
 
 
 
+### Preprocessing Data
+
+The raw data file contains more than 1.2 million rows and 18 columns of twitter data from all over the world, in 64 different languages. For the purpose of this project, only English tweets were extracted from the data set for the analysis. The number of English tweets are further divided into smaller data sets on the basis of the location of the tweets i.e. data sets from different countries.
+
+The first step in cleaning the data, is to identify the most relevant data, extract it and clean it. As far as sentiment analysis is concerned, the most relevant data in the entire data set is the tweeted text in the 'text' column. For cleaning, the tweets were extracted into a dataframe. To evaluate sentiments, tweets need to contain pure text in lower case. The numbers, hashtags, emojis, hyperlinks are removed with the help of regex (regular expressions) and pandas functions. Once free of all the noise, the data are stored in the form of a csv file for further analysis. The details of cleaning operations can be viewed in the Sentiment_Analysis_Data_Cleaning.ipynb
+
+
+
 ## Results :
 
 
+
+### Natural Language Processing (Exploratory Data Analysis)
+- Extract preprocessed data from database
+- Use NLP to turn unstructured text into machine-usable code by:
+	- Tokenization
+	- Lemmatization and Stemming?
+	- Removing stop words
+	- Can use bag-of-words or tf-idf to get word frequency [*still left to decide best approach*]
+Pipeline steps to follow (could use separate notebooks for each step):
+1. Raw Text: Start with the raw data, then clean it up.
+2. Tokenization: Separate the words from paragraphs or sentences, into individual words.
+3. Stop Words Filtering: Remove common words like "a" and "the" that add no real value to what we are looking to analyze.
+4. Term Frequency-Inverse Document Frequency (TF-IDF): Statistically rank the words by importance compared to the rest of the words in the text. This is also when the words are converted from text to numbers.
+5. Machine Learning: Put everything together and run through the machine learning model to produce an output.
+*** NLP packages: NLTK, SpaCy, Gensim, Scikit-Learn
+*** Key areas of NLP: LDA, TF-IDF, embedding techniques (i.e. word2vec, doc2vec), neural architectures (i.e. CNN, RNN, attention, Seq2Seq)
 
 
 ## Project Pipeline :
