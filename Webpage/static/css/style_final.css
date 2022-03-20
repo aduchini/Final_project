@@ -1,0 +1,20 @@
+body {
+
+    color: #f7f7f7;
+  }
+ 
+ .tag {
+     font-family: inherit; 
+     font-size: 1rem;
+     
+    }  
+
+.jumbotron {
+    background-image: url("../images/RUK_flag.jpg");
+    
+    
+    background-size: 100%;
+    
+    text-align: center;
+  }
+
