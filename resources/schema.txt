@@ -17,26 +17,28 @@ coordinates nvarchar
 favorite_count int
 extractedts datetime
 
-CleanedTweets
+tweets_data
 -
 tweetid bigint PK
-acctdesc nvarchar
-country nvarchar FK
+username nvarchar
 retweetcount int
+favorite_count int
+tweetcreatedts datetime FK
 text nvarchar
-hashtags nvarchar
-language nvarchar
+country nvarchar 
+neg float
+neu float
+pos float
+compound float
+cleaned_text nvarchar
+sentiment nvarchar
 latitude float
 longitude float
-tweetcreatedts datetime
 
-VisualizationsData
+RussianPersonnelLosses
 -
-tweetid bigint PK
-country nvarchar FK
-language nvarchar
-text nvarchar
-emoticons nvarchar
-hashtags nvarchar
-retweet_count int
-sentiment_result int
+date datetime PK
+day int
+personnel int
+personnel* nvarchar
+POW int
