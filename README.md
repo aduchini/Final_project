@@ -125,8 +125,8 @@ Pipeline steps to follow (could use separate notebooks for each step):
 ## Summary
  The steps for the analysis are as follows:
  1. **Collecting Data**: From [Kaggle dataset](https://www.kaggle.com/datasets/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows)
- 2. **Preprocessing Data**: (data cleaning, filter by English language, and selected countries) (Twitter_Vader_Sentiment_Analysis_Data_Cleaning.ipynb)[Twitter_Vader_Sentiment_Analysis_Data_Cleaning.ipynb]. Due to the size of each dataset collected by ranges of dates, each file was processes separately, and later consolidated for analysis.
- 3. **Sentiment Analysis**: Using (VADER)[Twitter_Vader_Sentiment_Analysis_Data_Cleaning.ipynb]. A compound score is calculated. This is converted into overall 'positive','negative' or 'neutral' values, and aggregated to each tweet data.
+ 2. **Preprocessing Data**: (data cleaning, filter by English language, and selected countries) [Twitter_Vader_Sentiment_Analysis_Data_Cleaning.ipynb](Twitter_Vader_Sentiment_Analysis_Data_Cleaning.ipynb). Due to the size of each dataset collected by ranges of dates, each file was processes separately, and later consolidated for analysis.
+ 3. **Sentiment Analysis**: Using [VADER](Twitter_Vader_Sentiment_Analysis_Data_Cleaning.ipynb). A compound score is calculated. This is converted into overall 'positive','negative' or 'neutral' values, and aggregated to each tweet data.
  4. **Machine Learning Model**:
   Evaluated various models in [Machine_Learning](Machine_Learning.ipynb), where a function was created to compare the accuracy of 3 models: Naive Bayes, Logistic Regression, and Linear SVC.
  7. **Data Visualizations**: A working presentation has been added to [Google docs](https://docs.google.com/presentation/d/1uzYRtAgBxeyVoteSkImERVQHtRtEBiBFCAVat05HdC0/edit?usp=sharing)
