@@ -17,7 +17,7 @@ Sentiment Analysis is an important way to understand the audience and hence make
 
 ### Setbacks of Sentiment Analysis
 Sentiment Analysis is a popular way, companies can get information regarding public opinion and their inclination towards or against issues. However, it is not perfect, since there can be discrepancies in the data accumulated and this can lead to minor to major changes in the final result analysis. Few of the major hurdles in performing sentiment anlaysis are discusse below:
-1. Tone of people's voice - Th etone of people's voice can sadly not be identified 100% of the times. Sarcasm and irony can b emisinterpreted and misevaluated an dend up getting categorized incorrectly. This problem can be difficult for humans to decipher in day-to-day lives, let alone any algorithm. 
+1. Tone of people's voice - The tone of people's voice can sadly not be identified 100% of the times. Sarcasm and irony can b emisinterpreted and misevaluated an dend up getting categorized incorrectly. This problem can be difficult for humans to decipher in day-to-day lives, let alone any algorithm. 
 2. Emojis - Wrong use of emojis for sentiment expression can end up in getting skewed results. Sometimes, people can get confused with what emotion an emoji actually represents and hence alter the sentiment altogether. 
 
 
@@ -63,21 +63,24 @@ Specific roles have not yet been assigned to members as the group is deciding to
 
 ## Technologies Used
 ### A.  Data Cleaning and Analysis
-Pandas in Python will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using Python. A number of different libraries that can be used for our project are described below:
+Pandas in Python will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using Python. A number of different libraries that were used for our project are described below:
 
-#### 1. Tweepy - 
-It allows Python to access the Twitter platform/database using its API. A twiiter developer account will be required to get access to the API. We are still working on this aspect of the project. 
+#### 1. Sentiment Analysis using Vader
+The VADER (Valence Aware Dictionary for sEntiment Reasoning) sentiment analysis model, relies on a dictionary that maps words and other lexical features common to microblogs. F1 scores have been calculated to approach 0.95 ([see research paper](https://www.researchgate.net/publication/275828927_VADER_A_Parsimonious_Rule-based_Model_for_Sentiment_Analysis_of_Social_Media_Text)). It provides pos, neu, and neg scores, which are ratios for proportions of text that fall in each category (so they add up to 1), as well as a compound score normalized between -1 and 1. 
+The Heuristics of VADER are:
+1. Punctuation
+2. Capitalization
+3. Degree modifiers (also called booster words) 
+4. Polarity shift due to Conjunctions
+5. Catching Polarity Negation
 
-#### 2. WordCloud - 
-A wordCloud is referred to as a cluster of words that are shown in different sizes depending on their usage. The frequently used words are displayed in bigger bolder font and the lesser used words are shown in smaller font sizes. They are also known as text clouds or tag clouds. 
-
-#### 3. TextBlob - 
-It si a Python library for text processing. It is used in performing Natural Language Processing tasks such as sentiment analysis, classification, translation, parts of speech tagging and phrase extraction. 
+#### 2. Sentiment Analysis using TextBlob
+It is a Python library for text processing. It is used in performing Natural Language Processing tasks such as sentiment analysis, classification, translation, parts of speech tagging and phrase extraction. 
 
 Anaconda prompt will be used to install all the Python libraries. 
 
 ### B.  Database Storage
-PostgreSQL is the database we intend to use, and we will integrate Flask to display the data.
+The final data is exported to SQLite for later access. [Current zipped version can be found here](resources/data set/tweets_data.sqlite.zip). The [schema used can be found here](resources/schema.sql)
 
 ### C.  Machine Learning
 SciKitLearn is the Machine Learning library we'll be using to create a classifier. Our training and testing setup is 
@@ -118,16 +121,20 @@ Pipeline steps to follow (could use separate notebooks for each step):
 
 ![project pipeline](https://user-images.githubusercontent.com/23488019/158079683-59057a33-11ee-42c4-bcac-af917b35b83d.PNG)
  
- The steps to be completed for Twitter Sentiment Analysis are shown below:
- 1. Collecting Data
- 2. Preprocessing Data
- 3. Exploratory Data processing 
- 4. Splitting data into Training and Test sebsets
- 5. Applying Machine model and transformations. sentiment Analysis with Logistic Regression and other models.
- 6. Evaluating the Model
- 7. Data Visualizations
- 8.  Deploying the model and visualizations at the web app. 
-
-
+ 
 ## Summary
+ The steps for the analysis are as follows:
+ 1. **Collecting Data**: From [Kaggle dataset](https://www.kaggle.com/datasets/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows)
+ 2. **Preprocessing Data**: (data cleaning, filter by English language, and selected countries) (Twitter_Vader_Sentiment_Analysis_Data_Cleaning.ipynb)[Twitter_Vader_Sentiment_Analysis_Data_Cleaning.ipynb]. Due to the size of each dataset collected by ranges of dates, each file was processes separately, and later consolidated for analysis.
+ 3. **Sentiment Analysis**: Using (VADER)[Twitter_Vader_Sentiment_Analysis_Data_Cleaning.ipynb]. A compound score is calculated. This is converted into overall 'positive','negative' or 'neutral' values, and aggregated to each tweet data.
+ 4. **Machine Learning Model**:
+  Evaluated various models in [Machine_Learning](Machine_Learning.ipynb), where a function was created to compare the accuracy of 3 models: Naive Bayes, Logistic Regression, and Linear SVC.
+ 7. **Data Visualizations**: A working presentation has been added to [Google docs](https://docs.google.com/presentation/d/1uzYRtAgBxeyVoteSkImERVQHtRtEBiBFCAVat05HdC0/edit?usp=sharing)
+ 8. **Database**: A copy of the datasets can be found in [the resources data sets folder](resources/data%20set/tweets_data.sqlite.zip) using the following [schema](resources/schema.sql), as laid out below:
+ ![screenshot of schema](resources/images/schema.png)
+ 9. **Deploying the model and visualizations at the web app** (in progress). 
+
+![Diagram of the process steps](resources/images/flowchart.png)
+*Diagram of the steps followed and the files involved*
+
 
