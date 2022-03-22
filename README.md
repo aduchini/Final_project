@@ -21,13 +21,45 @@ Sentiment Analysis is a popular way, companies can get information regarding pub
 2. Emojis - Wrong use of emojis for sentiment expression can end up in getting skewed results. Sometimes, people can get confused with what emotion an emoji actually represents and hence alter the sentiment altogether. 
 
 
-### Description of the communication protocols
+## Overview
+The main goal of the present project was to identify the sentiments Twitter users have about the war in Ukraine.
 
+On February 24, 2022, Russia invaded Ukraine demanding an assurance that Ukraine will never join NATO. Over a dozen cities and towns were attacked, including the capital city, Kyiv (Source: [NYTimes](https://www.nytimes.com/interactive/2022/world/europe/ukraine-maps.html?searchResultPosition=3))
+
+Since then, there have been tensions between countries, in particular with the United States and European Union supporting Ukraine, and Russia counting with Venezuela and Syria as allies (Source: [NYTimes](https://www.nytimes.com/2022/03/05/world/americas/venezuela-russia-usa.html?searchResultPosition=1)). These tensions, according to media channels and specialists, can potentially escalate the Ukrainian war to a third world war.
+
+Besides the threat of worldwide conflict, other impacts of the Russian invasion on Ukraine has already been observed. The most prominent impact is Ukrainians’ migration to neighboring countries, such as Poland, Hungary and Slovakia. Specialists have been calling it a major refugee crisis, as of March 11 over two and a half million Ukrainians have fled their homes (Source: [The UN Refugee Agency](https://data2.unhcr.org/en/situations/ukraine#_ga=2.200929772.353981607.1646674903-2007428328.1646674903)).
+
+Given the direct or indirect impact of the war in Ukraine to people’s lives, it is worthwhile to assess the sentiments people have about this event. Sentiments were identified through text data, consisting of over one million tweets downloaded from February 26 to March 10, 2022. Data was sourced from [Kaggle](https://www.kaggle.com/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows/discussion/310030). The dataset administrator used three processes to collect data:
+
+- Process 1 hashtags: "#SlavaUkraini OR #Russia OR #RussiaUkraineWar OR #Putin OR #RussiaUkraine OR #RussianWar OR #ww3 OR #moscow OR #RussianConflict"
+- Process 2 hashtags: "#ukraineunderattack OR #Ukriane OR #Ukraine OR #RussianUkrainianWar OR #UkraineRussia OR #UkraineConflict OR #UkraineWar OR #Kharkiv OR #StopPutinNow"
+- Process 3: Geolocation UKRAINE country.
+
+Through the examination of tweet data, the following questions will be answered:
+
+1. **What are the most common words mentioned on twitter about the Ukrainian war**?
+(in results, show ordered list or tag clouds with most frequent words for the whole dataset and/or can split by sentiment polarity)
+2. **What is the sentiment breakdown for Ukraine war tweets**?
+(in results, show pie chart with negative, positive and neutral percentages)
+3. **How sentiment polarity changes over time**?
+(in results, show line graph with sentiments change over time)
+
+Further questions can be answered if time allows:
+
+4. Do sentiment distributions change according to country (i.e., location of the twitter account)?
+5. How accurate is the model created in predicting polarity (new sentiment output) based on tweet text?
+
+### Description of the communication protocols
 The group has created a GitHub repository with 4 different branches for each member to work on their own branch. The 4 branches that have been created are as follows:
+
 1. AD_segment-1 : Branch for Ana Duchini
 2. AS_segment-1 : Branch for Aakriti Sharma
 3. FM_segment-1 : Branch for Flora Matos
 4. RK_segment-1 : Branch for Ruchika Kulkarni
+
+Specific roles have not yet been assigned to members as the group is deciding together the main project components. To do this, group members have been communicating through slack and meeting daily via zoom.
+
 
 ## Technologies Used
 ### A.  Data Cleaning and Analysis
@@ -44,7 +76,6 @@ It si a Python library for text processing. It is used in performing Natural Lan
 
 Anaconda prompt will be used to install all the Python libraries. 
 
-
 ### B.  Database Storage
 PostgreSQL is the database we intend to use, and we will integrate Flask to display the data.
 
@@ -57,8 +88,6 @@ Tableau will be used to graphically depict our results and chart the visualizati
 ### E.  Dashboard
 In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard. HTML, Bootstrap CSS will be used to create a webpage where we will have the dashboard for all our findings and sentiment analysis. 
 
-
-
 ### Preprocessing Data
 
 The raw data file contains more than 1.2 million rows and 18 columns of twitter data from all over the world, in 64 different languages. For the purpose of this project, only English tweets were extracted from the data set for the analysis. The number of English tweets are further divided into smaller data sets on the basis of the location of the tweets i.e. data sets from different countries.
@@ -66,10 +95,7 @@ The raw data file contains more than 1.2 million rows and 18 columns of twitter 
 The first step in cleaning the data, is to identify the most relevant data, extract it and clean it. As far as sentiment analysis is concerned, the most relevant data in the entire data set is the tweeted text in the 'text' column. For cleaning, the tweets were extracted into a dataframe. To evaluate sentiments, tweets need to contain pure text in lower case. The numbers, hashtags, emojis, hyperlinks are removed with the help of regex (regular expressions) and pandas functions. Once free of all the noise, the data are stored in the form of a csv file for further analysis. The details of cleaning operations can be viewed in the Sentiment_Analysis_Data_Cleaning.ipynb
 
 
-
-## Results :
-
-
+## Results
 
 ### Natural Language Processing (Exploratory Data Analysis)
 - Extract preprocessed data from database
