@@ -76,6 +76,15 @@ The group has created a GitHub repository with 4 different branches for each mem
 
 Each group member has worked in a specific project task and the whole group has been communicating through slack and meeting every two days via zoom.
 
+## Data Preprocessing
+
+Typically data pre-processing for sentiment analysis requires removal of everything other than pure text data. After this initial cleaning process, pure text, goes through a NLP pipeline consisting of tokenization, stemming, lemmatization, POS tagging and stop words removal etc.
+
+However, due to VADER's capability of analyzing data as complete sentence the need for pre-processing the tweets is considerably minimized. The process followed for cleaning the tweets is described below.
+
+### Cleaning Tweets:
+The tweets contain a wide variety of emoticons, hashtags, mentions, special characters and hyperlinks. For the subject analysis simple textual sentences are needed to be passed to VADER. This is achieved by writing one function in python, that performs all of the aforementioned cleaning actions using regex. This function is then called on the entire dataset to render a cleaned tweets dataframe. 
+
 ## Sentiment Analysis
 
 ### About Sentiment Analysis:
@@ -86,13 +95,7 @@ For the purpose of this analysis we are using VADER (Valence Aware Dictionary sE
 
  > Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text. Eighth International Conference   on Weblogs and Social Media (ICWSM-14). Ann Arbor, MI, June 2014.
  
-## Data Preprocessing
-Typically data pre-processing for sentiment analysis requires removal of everything other than pure text data. After this initial cleaning process, pure text, goes through a NLP pipeline consisting of tokenization, stemming, lemmatization, POS tagging and stop words removal etc.
-
-However, due to VADER's capability of analyzing data as complete sentence the need for pre-processing the tweets is considerably minimized. The process followed for cleaning the tweets is described below.
-
-### Cleaning Tweets:
-The tweets contain a wide variety of emoticons, hashtags, mentions, special characters and hyperlinks. For the subject analysis simple textual sentences are needed to be passed to VADER. This is achieved by writing one function in python, that performs all of the aforementioned cleaning actions using regex. This function is then called on the entire dataset to render a cleaned tweets dataframe. 
+Once the data is cleaned and ready for VADER, the data is analyzed by importing and using SentimentIntensityAnalyzer module from vaderSentiment package. The tweets are then passes throught the analyzer and assigned polarity scores, using which we can further divide the tweets as positive, neutral and negative. Detailed demo of VADER sentiment analysis can be found [here](https://github.com/aduchini/Final_project/blob/main/Twitter_Vader_Sentiment_Analysis.ipynb).
 
 ## Database Storage
 The data (tweets data, casualty data, and migration data) has been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in [Google Drive](https://drive.google.com/file/d/152mxp0DtOWYw0seek4LncegdKDTBk65C/view?usp=sharing). It uses the following [schema](resources/schema.sql), as laid out below:
