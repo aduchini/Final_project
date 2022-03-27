@@ -17,28 +17,30 @@ CREATE TABLE UkraineCombinedTweetsDeduped (
     favorite_count INT,
     extractedts DATE
 );
--- THIS IS THE CLEANED DATA
-CREATE TABLE CleanedTweets (
+-- THIS IS ALL THE CLEANED DATA INCLUDING VADER SENTIMENTS
+CREATE TABLE tweets_data (
   tweetid BIGINT PRIMARY KEY NOT NULL UNIQUE,
-  acctdesc TEXT,
-  country TEXT,
-  tweetcreatedts DATE,
+  username TEXT,
   retweetcount INT,
+  favorite_count INT,
+  tweetcreatedts DATE,
   text TEXT,
-  hashtags TEXT,
-  language TEXT,
-  latitude FLOAT,
-  longitude FLOAT
+  country TEXT,
+  neg FLOAT,
+  neu FLOAT,
+  pos FLOAT,
+  compound FLOAT,
+  cleaned_text TEXT,
+  sentiment TEXT
+ -- latitude FLOAT,
+ -- longitude FLOAT
 );
 
 -- This table will contain the results of the analysis
-CREATE TABLE VisualizationsData (
-    tweetid BIGINT PRIMARY KEY NOT NULL UNIQUE,
-    country TEXT,
-    language TEXT,
-    text TEXT,
-    emoticons TEXT,
-    hashtags TEXT,
-    retweet_count INT,
-    sentiment_result INT
+CREATE TABLE RussianPersonnelLosses (
+    date DATE PRIMARY KEY NOT NULL UNIQUE,
+    day INT,
+    personnel INT,
+    personnel* TEXT,
+    POW INT
 );
