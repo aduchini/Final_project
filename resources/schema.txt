@@ -1,44 +1,28 @@
-UkraineCombinedTweetsDeduped
+tweets
 -
-username nvarchar PK
-acctdesc nvarchar
+tweetcreatedts datetime PK
 location nvarchar
-following int
-followers int
-totaltweets int
-usercreatedts datetime
-tweetid bigint
-tweetcreatedts datetime
-retweetcount int	
-text string
-hashtags nvarchar 
-language nvarchar
-coordinates nvarchar
-favorite_count int
-extractedts datetime
-
-tweets_data
--
-tweetid bigint PK
-username nvarchar
-retweetcount int
-favorite_count int
-tweetcreatedts datetime FK
 text nvarchar
-country nvarchar 
+country nvarchar
 neg float
 neu float
 pos float
 compound float
-cleaned_text nvarchar
 sentiment nvarchar
-latitude float
-longitude float
 
-RussianPersonnelLosses
+migration
 -
-date datetime PK
-day int
-personnel int
-personnel* nvarchar
-POW int
+data_date datetime FK
+people int
+
+casualties
+-
+Date datetime FK
+casualties int
+
+migration_sentiments
+-
+data_date datetime FK
+people int
+casualties int
+compound_sentiment float

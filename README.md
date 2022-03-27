@@ -124,9 +124,9 @@ Pipeline steps to follow (could use separate notebooks for each step):
  4. **Machine Learning Model**:
   Evaluated various models in [Machine_Learning](Machine_Learning.ipynb), where a function was created to compare the accuracy of 4 models: Random Forest, Naive Bayes, Logistic Regression, and Linear SVC.
  7. **Data Visualizations**: A working presentation has been added to [Google docs](https://docs.google.com/presentation/d/1uzYRtAgBxeyVoteSkImERVQHtRtEBiBFCAVat05HdC0/edit?usp=sharing)
- 8. **Database**: A copy of the datasets can be found in [the resources data sets folder](resources/data%20set/tweets_data.sqlite.zip) using the following [schema](resources/schema.sql), as laid out below:
+ 8. **Database**: The data has been loaded to a SQLite database using [this notebook](SQL_database.ipynb). A copy of the output can be found in [Google Drive](https://drive.google.com/file/d/152mxp0DtOWYw0seek4LncegdKDTBk65C/view?usp=sharing) using the following [schema](resources/schema.sql), as laid out below:
  ![screenshot of schema](resources/images/schema.png)
- 9. **Deploying the model and visualizations at the web app** (in progress). 
+ 9. **Deploying the model and visualizations at the web app** (in progress). Working [Tableau file can be found here](Ukraine_analysis.twb). It uses the SQLite data referenced above. 
 
 ![Diagram of the process steps](resources/images/flowchart.png)
 *Diagram of the steps followed and the files involved*
