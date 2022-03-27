@@ -11,12 +11,12 @@ The main focus of this project is Sentiment Analysis of twitter data related to 
 - Communication Protocol
 
 2. [Data Preprocessing](#Data-Preprocessing)
-- Ruchita add subsections here
-- Ruchita add subsections here
+- Text Pre-processing
+- Data Cleaning
 
 3. [Sentiment Analysis](#Sentiment-Analysis)
-- Ruchita add subsections here
-- Ruchita add subsections here
+- About Sentiment Analysis
+- Sentiment Analysis Using VADER
 
 4. [Database Storage](#Database-Storage)
 - Flowchart of Data Processes and Inputs/Outputs
@@ -95,7 +95,7 @@ For the purpose of this analysis we are using VADER (Valence Aware Dictionary sE
 
  > Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text. Eighth International Conference   on Weblogs and Social Media (ICWSM-14). Ann Arbor, MI, June 2014.
  
-Once the data is cleaned and ready for VADER, the data is analyzed by importing and using SentimentIntensityAnalyzer module from vaderSentiment package. The tweets are then passes throught the analyzer and assigned polarity scores, using which we can further divide the tweets as positive, neutral and negative. Detailed demo of VADER sentiment analysis can be found [here](https://github.com/aduchini/Final_project/blob/main/Twitter_Vader_Sentiment_Analysis.ipynb).
+Once the data is cleaned and ready for VADER, the data is analyzed by importing and using SentimentIntensityAnalyzer module from vaderSentiment package. The tweets are then passes throught the analyzer and assigned polarity scores, using which we can further divide the tweets as positive, neutral and negative. Detailed demo of cleaning process and VADER sentiment analysis can be found [here](https://github.com/aduchini/Final_project/blob/main/Twitter_Vader_Sentiment_Analysis.ipynb).
 
 ## Database Storage
 The data (tweets data, casualty data, and migration data) has been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in [Google Drive](https://drive.google.com/file/d/152mxp0DtOWYw0seek4LncegdKDTBk65C/view?usp=sharing). It uses the following [schema](resources/schema.sql), as laid out below:
