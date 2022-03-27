@@ -109,6 +109,8 @@ We have used Tableau for all our data visualizations and analysis. Tableau will 
 #### Interactive elements - 
 Our Dashboard in Tableau Public will have a number of interactive elements. Drop down boxes will be used to give the user flexibility to choose a country of choice and perfrm visualizations. Another drop down box for data can be used to select date of choice and see the visualizations accordingly. 
 
+## Model Deployment 
+Finally the data visualizations will be deployed on Tableau Public and shared publicly.  
 
 ## Summary
 
