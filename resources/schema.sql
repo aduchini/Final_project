@@ -1,6 +1,6 @@
 -- THIS IS THE SOURCE DATA
 CREATE TABLE tweets (
-    usercreatedts DATE NOT NULL,
+    tweetcreatedts DATE NOT NULL,
     location TEXT,
     text TEXT,
     country TEXT,
@@ -24,7 +24,7 @@ CREATE TABLE casualties (
 
 CREATE TABLE migration_sentiments (
   data_date DATE NOT NULL, 
-  people FLOAT, 
+  people INT, 
   casualties INT, 
   compound_sentiment FLOAT
   );
