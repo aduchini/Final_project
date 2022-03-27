@@ -82,13 +82,17 @@ Each group member has worked in a specific project task and the whole group has 
 Sentiment Analysis, also known as Opinion Mining, is a popular data mining approach used to study the inclination of people's sentiments, opinions and emotions towards any product, global issue, event, service and organization. The sentiments are typically extracted from the text reviews, comments and surveys using tools in Natural Language Processing(NLP), Machine learning and other computational linguistics.
 
 ### Sentiment Analysis Using VADER:
-For the purpose of this analysis we are using VADER (Valence Aware Dictionary sEntiment Reasoner) sentiment analysis relies on a dictionary that maps words and other lexical features common to microblogs. F1 scores have been calculated to approach 
+For the purpose of this analysis we are using VADER (Valence Aware Dictionary sEntiment Reasoner) sentiment analysis. It is a trained NLTK lexicon that relies on a dictionary that maps words and other lexical features common to microblogs. It is a powerful tool specifically attuned to sentiments expressed in social media.
 
+ > Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text. Eighth International Conference   on Weblogs and Social Media (ICWSM-14). Ann Arbor, MI, June 2014.
+ 
 ## Data Preprocessing
+Typically data pre-processing for sentiment analysis requires removal of everything other than pure text data. After this initial cleaning process, pure text, goes through a NLP pipeline consisting of tokenization, stemming, lemmatization, POS tagging and stop words removal etc.
 
-### 
+However, due to VADER's capability of analyzing data as complete sentence the need for pre-processing the tweets is considerably minimized. The process followed for cleaning the tweets is described below.
 
 ### Cleaning Tweets:
+The tweets contain a wide variety of emoticons, hashtags, mentions, special characters and hyperlinks. For the subject analysis simple textual sentences are needed to be passed to VADER. This is achieved by writing one function in python, that performs all of the aforementioned cleaning actions using regex. This function is then called on the entire dataset to render a cleaned tweets dataframe. 
 
 ## Database Storage
 The data (tweets data, casualty data, and migration data) has been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in [Google Drive](https://drive.google.com/file/d/152mxp0DtOWYw0seek4LncegdKDTBk65C/view?usp=sharing). It uses the following [schema](resources/schema.sql), as laid out below:
