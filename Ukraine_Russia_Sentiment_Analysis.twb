@@ -1,0 +1,1947 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.22.0213.1102                               -->
+<workbook original-version='18.1' source-build='2021.4.4 (20214.22.0213.1102)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='Ukraine_Casualties_daily' inline='true' name='federated.0hapys50hjvjj813svtjj0rxh3n0' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Ukraine_Casualties_daily' name='textscan.0vfh5k30ahsdqp17otu610fuiu1i'>
+            <connection class='textscan' directory='C:/Users/14197/OneDrive/Desktop/Segment 2/Final_project/resources/data set' filename='Ukraine_Casualties_daily.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Ukraine_Casualties_cumulative' name='textscan.0he77vv03e974f185dqfq1g8mjdb'>
+            <connection class='textscan' directory='C:/Users/14197/OneDrive/Desktop/Segment 2/Final_project/resources/data set' filename='Ukraine_Casualties_cumulative.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Ukraine_Key_Figures' name='textscan.1c4cgyz0qnpgqr148xem31a3xos9'>
+            <connection class='textscan' directory='C:/Users/14197/OneDrive/Desktop/New folder/Final_project/Datasets' filename='Ukraine_Key_Figures.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='cleaned_data' name='textscan.0yvhqzj0yn1ho81bihy4q0jeie0u'>
+            <connection class='textscan' directory='C:/Users/14197/OneDrive/Desktop/Segment 2/Final_project/resources/data set/cleaned_data.csv' filename='cleaned_data.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='russia_losses_equipment' name='textscan.0fzd3p803j66is1cedemt03vcsu5'>
+            <connection class='textscan' directory='C:/Users/14197/OneDrive/Desktop/New folder/Final_project' filename='russia_losses_equipment.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='russia_losses_equipment_total' name='textscan.0bf934f1qia5ay127jyfv0tglzwr'>
+            <connection class='textscan' directory='C:/Users/14197/OneDrive/Desktop/New folder/Final_project/Datasets' filename='russia_losses_equipment_total.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0he77vv03e974f185dqfq1g8mjdb' name='Ukraine_Casualties_cumulative.csv' table='[Ukraine_Casualties_cumulative#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='Date' ordinal='0' />
+            <column datatype='integer' name='total civilian casualties' ordinal='1' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0vfh5k30ahsdqp17otu610fuiu1i' name='Ukraine_Casualties_daily.csv' table='[Ukraine_Casualties_daily#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='Date' ordinal='0' />
+              <column datatype='integer' name='total civilian casualties' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0he77vv03e974f185dqfq1g8mjdb' name='Ukraine_Casualties_cumulative.csv' table='[Ukraine_Casualties_cumulative#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='Date' ordinal='0' />
+              <column datatype='integer' name='total civilian casualties' ordinal='1' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0bf934f1qia5ay127jyfv0tglzwr' name='heatmap.csv' table='[heatmap#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='tweetcreatedts' ordinal='0' />
+              <column datatype='real' name='australia' ordinal='1' />
+              <column datatype='real' name='canada' ordinal='2' />
+              <column datatype='real' name='china' ordinal='3' />
+              <column datatype='real' name='india' ordinal='4' />
+              <column datatype='real' name='nigeria' ordinal='5' />
+              <column datatype='real' name='pakistan' ordinal='6' />
+              <column datatype='real' name='poland' ordinal='7' />
+              <column datatype='real' name='russia' ordinal='8' />
+              <column datatype='real' name='uk' ordinal='9' />
+              <column datatype='real' name='ukraine' ordinal='10' />
+              <column datatype='real' name='usa' ordinal='11' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0bf934f1qia5ay127jyfv0tglzwr' name='russia_losses_equipment.csv' table='[russia_losses_equipment#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='date' ordinal='0' />
+              <column datatype='integer' name='day' ordinal='1' />
+              <column datatype='integer' name='aircraft' ordinal='2' />
+              <column datatype='integer' name='helicopter' ordinal='3' />
+              <column datatype='integer' name='tank' ordinal='4' />
+              <column datatype='integer' name='APC' ordinal='5' />
+              <column datatype='integer' name='field artillery' ordinal='6' />
+              <column datatype='integer' name='BUK' ordinal='7' />
+              <column datatype='integer' name='MRL' ordinal='8' />
+              <column datatype='integer' name='military auto' ordinal='9' />
+              <column datatype='integer' name='fuel tank' ordinal='10' />
+              <column datatype='integer' name='drone' ordinal='11' />
+              <column datatype='integer' name='naval ship' ordinal='12' />
+              <column datatype='integer' name='anti-aircraft warfare' ordinal='13' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0bf934f1qia5ay127jyfv0tglzwr' name='russia_losses_equipment_total.csv' table='[russia_losses_equipment_total#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='date' ordinal='0' />
+              <column datatype='integer' name='day' ordinal='1' />
+              <column datatype='integer' name='aircraft' ordinal='2' />
+              <column datatype='integer' name='helicopter' ordinal='3' />
+              <column datatype='integer' name='tank' ordinal='4' />
+              <column datatype='integer' name='APC' ordinal='5' />
+              <column datatype='integer' name='field artillery' ordinal='6' />
+              <column datatype='integer' name='BUK' ordinal='7' />
+              <column datatype='integer' name='MRL' ordinal='8' />
+              <column datatype='integer' name='military auto' ordinal='9' />
+              <column datatype='integer' name='fuel tank' ordinal='10' />
+              <column datatype='integer' name='drone' ordinal='11' />
+              <column datatype='integer' name='naval ship' ordinal='12' />
+              <column datatype='integer' name='anti-aircraft warfare' ordinal='13' />
+              <column datatype='integer' name='Total' ordinal='14' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0bf934f1qia5ay127jyfv0tglzwr' name='russia_losses_personnel.csv' table='[russia_losses_personnel#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+              <column datatype='date' name='date' ordinal='0' />
+              <column datatype='integer' name='day' ordinal='1' />
+              <column datatype='integer' name='personnel' ordinal='2' />
+              <column datatype='integer' name='POW' ordinal='3' />
+              <column datatype='string' name='personnel*' ordinal='4' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[APC (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[APC]' />
+          <map key='[APC]' value='[russia_losses_equipment.csv].[APC]' />
+          <map key='[BUK (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[BUK]' />
+          <map key='[BUK]' value='[russia_losses_equipment.csv].[BUK]' />
+          <map key='[Date (Ukraine_Casualties_cumulative.csv)]' value='[Ukraine_Casualties_cumulative.csv].[Date]' />
+          <map key='[Date]' value='[Ukraine_Casualties_daily.csv].[Date]' />
+          <map key='[MRL (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[MRL]' />
+          <map key='[MRL]' value='[russia_losses_equipment.csv].[MRL]' />
+          <map key='[POW]' value='[russia_losses_personnel.csv].[POW]' />
+          <map key='[Total]' value='[russia_losses_equipment_total.csv].[Total]' />
+          <map key='[aircraft (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[aircraft]' />
+          <map key='[aircraft]' value='[russia_losses_equipment.csv].[aircraft]' />
+          <map key='[anti-aircraft warfare (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[anti-aircraft warfare]' />
+          <map key='[anti-aircraft warfare]' value='[russia_losses_equipment.csv].[anti-aircraft warfare]' />
+          <map key='[australia]' value='[heatmap.csv].[australia]' />
+          <map key='[canada]' value='[heatmap.csv].[canada]' />
+          <map key='[china]' value='[heatmap.csv].[china]' />
+          <map key='[date (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[date]' />
+          <map key='[date (russia_losses_personnel.csv)]' value='[russia_losses_personnel.csv].[date]' />
+          <map key='[date]' value='[russia_losses_equipment.csv].[date]' />
+          <map key='[day (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[day]' />
+          <map key='[day (russia_losses_personnel.csv)]' value='[russia_losses_personnel.csv].[day]' />
+          <map key='[day]' value='[russia_losses_equipment.csv].[day]' />
+          <map key='[drone (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[drone]' />
+          <map key='[drone]' value='[russia_losses_equipment.csv].[drone]' />
+          <map key='[field artillery (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[field artillery]' />
+          <map key='[field artillery]' value='[russia_losses_equipment.csv].[field artillery]' />
+          <map key='[fuel tank (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[fuel tank]' />
+          <map key='[fuel tank]' value='[russia_losses_equipment.csv].[fuel tank]' />
+          <map key='[helicopter (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[helicopter]' />
+          <map key='[helicopter]' value='[russia_losses_equipment.csv].[helicopter]' />
+          <map key='[india]' value='[heatmap.csv].[india]' />
+          <map key='[military auto (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[military auto]' />
+          <map key='[military auto]' value='[russia_losses_equipment.csv].[military auto]' />
+          <map key='[naval ship (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[naval ship]' />
+          <map key='[naval ship]' value='[russia_losses_equipment.csv].[naval ship]' />
+          <map key='[nigeria]' value='[heatmap.csv].[nigeria]' />
+          <map key='[pakistan]' value='[heatmap.csv].[pakistan]' />
+          <map key='[personnel*]' value='[russia_losses_personnel.csv].[personnel*]' />
+          <map key='[personnel]' value='[russia_losses_personnel.csv].[personnel]' />
+          <map key='[poland]' value='[heatmap.csv].[poland]' />
+          <map key='[russia]' value='[heatmap.csv].[russia]' />
+          <map key='[tank (russia_losses_equipment_total.csv)]' value='[russia_losses_equipment_total.csv].[tank]' />
+          <map key='[tank]' value='[russia_losses_equipment.csv].[tank]' />
+          <map key='[total civilian casualties (Ukraine_Casualties_cumulative.csv)]' value='[Ukraine_Casualties_cumulative.csv].[total civilian casualties]' />
+          <map key='[total civilian casualties]' value='[Ukraine_Casualties_daily.csv].[total civilian casualties]' />
+          <map key='[tweetcreatedts]' value='[heatmap.csv].[tweetcreatedts]' />
+          <map key='[uk]' value='[heatmap.csv].[uk]' />
+          <map key='[ukraine]' value='[heatmap.csv].[ukraine]' />
+          <map key='[usa]' value='[heatmap.csv].[usa]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Ukraine_Casualties_daily.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Ukraine_Casualties_cumulative.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[russia_losses_personnel.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[Ukraine_Casualties_daily.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Ukraine_Casualties_daily.csv_08C3E8A65DFF4FDCB9BFD7383421C6A6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total civilian casualties</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total civilian casualties]</local-name>
+            <parent-name>[Ukraine_Casualties_daily.csv]</parent-name>
+            <remote-alias>total civilian casualties</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Ukraine_Casualties_daily.csv_08C3E8A65DFF4FDCB9BFD7383421C6A6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[Date (Ukraine_Casualties_cumulative.csv)]</local-name>
+            <parent-name>[Ukraine_Casualties_cumulative.csv]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Ukraine_Casualties_cumulative.csv_907BD4ABC10A456AB2690AC80E79D930]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total civilian casualties</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total civilian casualties (Ukraine_Casualties_cumulative.csv)]</local-name>
+            <parent-name>[Ukraine_Casualties_cumulative.csv]</parent-name>
+            <remote-alias>total civilian casualties</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[Ukraine_Casualties_cumulative.csv_907BD4ABC10A456AB2690AC80E79D930]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tweetcreatedts</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[tweetcreatedts]</local-name>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias>tweetcreatedts</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>australia</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[australia]</local-name>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias>australia</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>canada</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[canada]</local-name>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias>canada</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>china</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[china]</local-name>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias>china</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>india</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[india]</local-name>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias>india</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nigeria</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[nigeria]</local-name>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias>nigeria</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pakistan</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pakistan]</local-name>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias>pakistan</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>poland</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[poland]</local-name>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias>poland</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>russia</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[russia]</local-name>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias>russia</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>uk</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[uk]</local-name>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias>uk</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ukraine</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ukraine]</local-name>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias>ukraine</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usa</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[usa]</local-name>
+            <parent-name>[heatmap.csv]</parent-name>
+            <remote-alias>usa</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>day</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>aircraft</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[aircraft]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>aircraft</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>helicopter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[helicopter]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>helicopter</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tank]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>tank</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>APC</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[APC]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>APC</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>field artillery</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[field artillery]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>field artillery</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BUK</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BUK]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>BUK</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MRL</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MRL]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>MRL</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>military auto</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[military auto]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>military auto</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fuel tank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fuel tank]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>fuel tank</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drone</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[drone]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>drone</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>naval ship</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[naval ship]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>naval ship</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>anti-aircraft warfare</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[anti-aircraft warfare]</local-name>
+            <parent-name>[russia_losses_equipment.csv]</parent-name>
+            <remote-alias>anti-aircraft warfare</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>day</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>aircraft</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[aircraft (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>aircraft</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>helicopter</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[helicopter (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>helicopter</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[tank (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>tank</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>APC</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[APC (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>APC</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>field artillery</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[field artillery (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>field artillery</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>BUK</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[BUK (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>BUK</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>MRL</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[MRL (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>MRL</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>military auto</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[military auto (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>military auto</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fuel tank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[fuel tank (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>fuel tank</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drone</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[drone (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>drone</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>naval ship</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[naval ship (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>naval ship</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>anti-aircraft warfare</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[anti-aircraft warfare (russia_losses_equipment_total.csv)]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>anti-aircraft warfare</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Total]</local-name>
+            <parent-name>[russia_losses_equipment_total.csv]</parent-name>
+            <remote-alias>Total</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[date (russia_losses_personnel.csv)]</local-name>
+            <parent-name>[russia_losses_personnel.csv]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_personnel.csv_F83C06BC9AFB47CB844F1CB0D492BA7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day (russia_losses_personnel.csv)]</local-name>
+            <parent-name>[russia_losses_personnel.csv]</parent-name>
+            <remote-alias>day</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_personnel.csv_F83C06BC9AFB47CB844F1CB0D492BA7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>personnel</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[personnel]</local-name>
+            <parent-name>[russia_losses_personnel.csv]</parent-name>
+            <remote-alias>personnel</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_personnel.csv_F83C06BC9AFB47CB844F1CB0D492BA7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>POW</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[POW]</local-name>
+            <parent-name>[russia_losses_personnel.csv]</parent-name>
+            <remote-alias>POW</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_personnel.csv_F83C06BC9AFB47CB844F1CB0D492BA7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>personnel*</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[personnel*]</local-name>
+            <parent-name>[russia_losses_personnel.csv]</parent-name>
+            <remote-alias>personnel*</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[russia_losses_personnel.csv_F83C06BC9AFB47CB844F1CB0D492BA7E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='APC (russia losses equipment total.csv)' datatype='integer' name='[APC (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+      <column caption='BUK (russia losses equipment total.csv)' datatype='integer' name='[BUK (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+      <column caption='Date (Ukraine Casualties cumulative.csv)' datatype='date' name='[Date (Ukraine_Casualties_cumulative.csv)]' role='dimension' type='ordinal' />
+      <column caption='MRL (russia losses equipment total.csv)' datatype='integer' name='[MRL (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Ukraine_Casualties_cumulative.csv' datatype='table' name='[__tableau_internal_object_id__].[Ukraine_Casualties_cumulative.csv_907BD4ABC10A456AB2690AC80E79D930]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='Ukraine_Casualties_daily.csv' datatype='table' name='[__tableau_internal_object_id__].[Ukraine_Casualties_daily.csv_08C3E8A65DFF4FDCB9BFD7383421C6A6]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='heatmap.csv' datatype='table' name='[__tableau_internal_object_id__].[heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='russia_losses_equipment.csv' datatype='table' name='[__tableau_internal_object_id__].[russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='russia_losses_equipment_total.csv' datatype='table' name='[__tableau_internal_object_id__].[russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='russia_losses_personnel.csv' datatype='table' name='[__tableau_internal_object_id__].[russia_losses_personnel.csv_F83C06BC9AFB47CB844F1CB0D492BA7E]' role='measure' type='quantitative' />
+      <column caption='Aircraft (Russia Losses Equipment Total.Csv)' datatype='integer' name='[aircraft (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+      <column caption='Aircraft' datatype='integer' name='[aircraft]' role='measure' type='quantitative' />
+      <column caption='Anti-Aircraft Warfare (Russia Losses Equipment Total.Csv)' datatype='integer' name='[anti-aircraft warfare (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+      <column caption='Anti-Aircraft Warfare' datatype='integer' name='[anti-aircraft warfare]' role='measure' type='quantitative' />
+      <column caption='Australia' datatype='real' name='[australia]' role='measure' type='quantitative' />
+      <column caption='Canada' datatype='real' name='[canada]' role='measure' type='quantitative' />
+      <column caption='China' datatype='real' name='[china]' role='measure' type='quantitative' />
+      <column caption='Date (Russia Losses Equipment Total.Csv)' datatype='date' name='[date (russia_losses_equipment_total.csv)]' role='dimension' type='ordinal' />
+      <column caption='Date (Russia Losses Personnel.Csv)' datatype='date' name='[date (russia_losses_personnel.csv)]' role='dimension' type='ordinal' />
+      <column caption='Date1' datatype='date' name='[date]' role='dimension' type='ordinal' />
+      <column caption='Day (Russia Losses Equipment Total.Csv)' datatype='integer' name='[day (russia_losses_equipment_total.csv)]' role='dimension' type='quantitative' />
+      <column caption='Day (Russia Losses Personnel.Csv)' datatype='integer' name='[day (russia_losses_personnel.csv)]' role='dimension' type='quantitative' />
+      <column caption='Day' datatype='integer' name='[day]' role='dimension' type='quantitative' />
+      <column caption='Drone (Russia Losses Equipment Total.Csv)' datatype='integer' name='[drone (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+      <column caption='Drone' datatype='integer' name='[drone]' role='measure' type='quantitative' />
+      <column caption='Field Artillery (Russia Losses Equipment Total.Csv)' datatype='integer' name='[field artillery (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+      <column caption='Field Artillery' datatype='integer' name='[field artillery]' role='measure' type='quantitative' />
+      <column caption='Fuel Tank (Russia Losses Equipment Total.Csv)' datatype='integer' name='[fuel tank (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+      <column caption='Fuel Tank' datatype='integer' name='[fuel tank]' role='measure' type='quantitative' />
+      <column caption='Helicopter (Russia Losses Equipment Total.Csv)' datatype='integer' name='[helicopter (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+      <column caption='Helicopter' datatype='integer' name='[helicopter]' role='measure' type='quantitative' />
+      <column caption='India' datatype='real' name='[india]' role='measure' type='quantitative' />
+      <column caption='Military Auto (Russia Losses Equipment Total.Csv)' datatype='integer' name='[military auto (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+      <column caption='Military Auto' datatype='integer' name='[military auto]' role='measure' type='quantitative' />
+      <column caption='Naval Ship (Russia Losses Equipment Total.Csv)' datatype='integer' name='[naval ship (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+      <column caption='Naval Ship' datatype='integer' name='[naval ship]' role='measure' type='quantitative' />
+      <column caption='Nigeria' datatype='real' name='[nigeria]' role='measure' type='quantitative' />
+      <column caption='Pakistan' datatype='real' name='[pakistan]' role='measure' type='quantitative' />
+      <column caption='Personnel*' datatype='string' name='[personnel*]' role='dimension' type='nominal' />
+      <column caption='Personnel' datatype='integer' name='[personnel]' role='measure' type='quantitative' />
+      <column caption='Poland' datatype='real' name='[poland]' role='measure' type='quantitative' />
+      <column caption='Russia' datatype='real' name='[russia]' role='measure' type='quantitative' />
+      <column caption='Tank (Russia Losses Equipment Total.Csv)' datatype='integer' name='[tank (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+      <column caption='Tank' datatype='integer' name='[tank]' role='measure' type='quantitative' />
+      <column caption='total civilian casualties (Ukraine Casualties cumulative.csv)' datatype='integer' name='[total civilian casualties (Ukraine_Casualties_cumulative.csv)]' role='measure' type='quantitative' />
+      <column caption='Total Civilian Casualties' datatype='integer' name='[total civilian casualties]' role='measure' type='quantitative' />
+      <column caption='Tweetcreatedts' datatype='date' name='[tweetcreatedts]' role='dimension' type='ordinal' />
+      <column caption='Uk' datatype='real' name='[uk]' role='measure' type='quantitative' />
+      <column caption='Ukraine' datatype='real' name='[ukraine]' role='measure' type='quantitative' />
+      <column caption='Usa' datatype='real' name='[usa]' role='measure' type='quantitative' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='Ukraine_Casualties_cumulative.csv' id='Ukraine_Casualties_cumulative.csv_907BD4ABC10A456AB2690AC80E79D930'>
+            <properties context=''>
+              <relation connection='textscan.0he77vv03e974f185dqfq1g8mjdb' name='Ukraine_Casualties_cumulative.csv' table='[Ukraine_Casualties_cumulative#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='Date' ordinal='0' />
+                  <column datatype='integer' name='total civilian casualties' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='Ukraine_Casualties_daily.csv' id='Ukraine_Casualties_daily.csv_08C3E8A65DFF4FDCB9BFD7383421C6A6'>
+            <properties context=''>
+              <relation connection='textscan.0vfh5k30ahsdqp17otu610fuiu1i' name='Ukraine_Casualties_daily.csv' table='[Ukraine_Casualties_daily#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='Date' ordinal='0' />
+                  <column datatype='integer' name='total civilian casualties' ordinal='1' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='heatmap.csv' id='heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B'>
+            <properties context=''>
+              <relation connection='textscan.0bf934f1qia5ay127jyfv0tglzwr' name='heatmap.csv' table='[heatmap#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='tweetcreatedts' ordinal='0' />
+                  <column datatype='real' name='australia' ordinal='1' />
+                  <column datatype='real' name='canada' ordinal='2' />
+                  <column datatype='real' name='china' ordinal='3' />
+                  <column datatype='real' name='india' ordinal='4' />
+                  <column datatype='real' name='nigeria' ordinal='5' />
+                  <column datatype='real' name='pakistan' ordinal='6' />
+                  <column datatype='real' name='poland' ordinal='7' />
+                  <column datatype='real' name='russia' ordinal='8' />
+                  <column datatype='real' name='uk' ordinal='9' />
+                  <column datatype='real' name='ukraine' ordinal='10' />
+                  <column datatype='real' name='usa' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='russia_losses_equipment.csv' id='russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871'>
+            <properties context=''>
+              <relation connection='textscan.0bf934f1qia5ay127jyfv0tglzwr' name='russia_losses_equipment.csv' table='[russia_losses_equipment#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='integer' name='day' ordinal='1' />
+                  <column datatype='integer' name='aircraft' ordinal='2' />
+                  <column datatype='integer' name='helicopter' ordinal='3' />
+                  <column datatype='integer' name='tank' ordinal='4' />
+                  <column datatype='integer' name='APC' ordinal='5' />
+                  <column datatype='integer' name='field artillery' ordinal='6' />
+                  <column datatype='integer' name='BUK' ordinal='7' />
+                  <column datatype='integer' name='MRL' ordinal='8' />
+                  <column datatype='integer' name='military auto' ordinal='9' />
+                  <column datatype='integer' name='fuel tank' ordinal='10' />
+                  <column datatype='integer' name='drone' ordinal='11' />
+                  <column datatype='integer' name='naval ship' ordinal='12' />
+                  <column datatype='integer' name='anti-aircraft warfare' ordinal='13' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='russia_losses_equipment_total.csv' id='russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9'>
+            <properties context=''>
+              <relation connection='textscan.0bf934f1qia5ay127jyfv0tglzwr' name='russia_losses_equipment_total.csv' table='[russia_losses_equipment_total#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='integer' name='day' ordinal='1' />
+                  <column datatype='integer' name='aircraft' ordinal='2' />
+                  <column datatype='integer' name='helicopter' ordinal='3' />
+                  <column datatype='integer' name='tank' ordinal='4' />
+                  <column datatype='integer' name='APC' ordinal='5' />
+                  <column datatype='integer' name='field artillery' ordinal='6' />
+                  <column datatype='integer' name='BUK' ordinal='7' />
+                  <column datatype='integer' name='MRL' ordinal='8' />
+                  <column datatype='integer' name='military auto' ordinal='9' />
+                  <column datatype='integer' name='fuel tank' ordinal='10' />
+                  <column datatype='integer' name='drone' ordinal='11' />
+                  <column datatype='integer' name='naval ship' ordinal='12' />
+                  <column datatype='integer' name='anti-aircraft warfare' ordinal='13' />
+                  <column datatype='integer' name='Total' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+          <object caption='russia_losses_personnel.csv' id='russia_losses_personnel.csv_F83C06BC9AFB47CB844F1CB0D492BA7E'>
+            <properties context=''>
+              <relation connection='textscan.0bf934f1qia5ay127jyfv0tglzwr' name='russia_losses_personnel.csv' table='[russia_losses_personnel#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='date' ordinal='0' />
+                  <column datatype='integer' name='day' ordinal='1' />
+                  <column datatype='integer' name='personnel' ordinal='2' />
+                  <column datatype='integer' name='POW' ordinal='3' />
+                  <column datatype='string' name='personnel*' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[Date]' />
+              <expression op='[Date (Ukraine_Casualties_cumulative.csv)]' />
+            </expression>
+            <first-end-point object-id='Ukraine_Casualties_daily.csv_08C3E8A65DFF4FDCB9BFD7383421C6A6' />
+            <second-end-point object-id='Ukraine_Casualties_cumulative.csv_907BD4ABC10A456AB2690AC80E79D930' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Date]' />
+              <expression op='[tweetcreatedts]' />
+            </expression>
+            <first-end-point object-id='Ukraine_Casualties_daily.csv_08C3E8A65DFF4FDCB9BFD7383421C6A6' />
+            <second-end-point object-id='heatmap.csv_6C433F20FC8445FBBE4BBAFF111E235B' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Date]' />
+              <expression op='[date]' />
+            </expression>
+            <first-end-point object-id='Ukraine_Casualties_daily.csv_08C3E8A65DFF4FDCB9BFD7383421C6A6' />
+            <second-end-point object-id='russia_losses_equipment.csv_B33EC15D584345C0A019DBB6E2B4C871' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Date]' />
+              <expression op='[date (russia_losses_equipment_total.csv)]' />
+            </expression>
+            <first-end-point object-id='Ukraine_Casualties_daily.csv_08C3E8A65DFF4FDCB9BFD7383421C6A6' />
+            <second-end-point object-id='russia_losses_equipment_total.csv_EDFD8642E5794D8B9E2C349BF3C0B1F9' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[Date]' />
+              <expression op='[date (russia_losses_personnel.csv)]' />
+            </expression>
+            <first-end-point object-id='Ukraine_Casualties_daily.csv_08C3E8A65DFF4FDCB9BFD7383421C6A6' />
+            <second-end-point object-id='russia_losses_personnel.csv_F83C06BC9AFB47CB844F1CB0D492BA7E' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Cumulative casualties in Ukraine'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Ukraine_Casualties_daily' name='federated.0hapys50hjvjj813svtjj0rxh3n0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hapys50hjvjj813svtjj0rxh3n0'>
+            <column caption='Date (Ukraine Casualties cumulative.csv)' datatype='date' name='[Date (Ukraine_Casualties_cumulative.csv)]' role='dimension' type='ordinal' />
+            <column-instance column='[Date (Ukraine_Casualties_cumulative.csv)]' derivation='None' name='[none:Date (Ukraine_Casualties_cumulative.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total civilian casualties (Ukraine_Casualties_cumulative.csv)]' derivation='Sum' name='[sum:total civilian casualties (Ukraine_Casualties_cumulative.csv):qk]' pivot='key' type='quantitative' />
+            <column caption='total civilian casualties (Ukraine Casualties cumulative.csv)' datatype='integer' name='[total civilian casualties (Ukraine_Casualties_cumulative.csv)]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:total civilian casualties (Ukraine_Casualties_cumulative.csv):qk]</rows>
+        <cols>[federated.0hapys50hjvjj813svtjj0rxh3n0].[none:Date (Ukraine_Casualties_cumulative.csv):qk]</cols>
+      </table>
+      <simple-id uuid='{89CA6DA8-8CE5-41BE-A31F-1D65CEC2C0CC}' />
+    </worksheet>
+    <worksheet name='Cumulative total losses in Russia'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Ukraine_Casualties_daily' name='federated.0hapys50hjvjj813svtjj0rxh3n0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hapys50hjvjj813svtjj0rxh3n0'>
+            <column datatype='integer' name='[Total]' role='measure' type='quantitative' />
+            <column caption='Date (Russia Losses Equipment Total.Csv)' datatype='date' name='[date (russia_losses_equipment_total.csv)]' role='dimension' type='ordinal' />
+            <column-instance column='[date (russia_losses_equipment_total.csv)]' derivation='Day' name='[dy:date (russia_losses_equipment_total.csv):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[date (russia_losses_equipment_total.csv)]' derivation='Month' name='[mn:date (russia_losses_equipment_total.csv):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[Total]' derivation='Sum' name='[sum:Total:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0hapys50hjvjj813svtjj0rxh3n0].[mn:date (russia_losses_equipment_total.csv):ok] / [federated.0hapys50hjvjj813svtjj0rxh3n0].[dy:date (russia_losses_equipment_total.csv):ok])</rows>
+        <cols>[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:Total:qk]</cols>
+      </table>
+      <simple-id uuid='{40430194-5A7F-4FE8-A20A-780C1AC9742F}' />
+    </worksheet>
+    <worksheet name='Russia equipment loss by day'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Ukraine_Casualties_daily' name='federated.0hapys50hjvjj813svtjj0rxh3n0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hapys50hjvjj813svtjj0rxh3n0'>
+            <column caption='APC (russia losses equipment total.csv)' datatype='integer' name='[APC (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[APC]' role='measure' type='quantitative' />
+            <column caption='BUK (russia losses equipment total.csv)' datatype='integer' name='[BUK (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[BUK]' role='measure' type='quantitative' />
+            <column caption='Aircraft (Russia Losses Equipment Total.Csv)' datatype='integer' name='[aircraft (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+            <column caption='Aircraft' datatype='integer' name='[aircraft]' role='measure' type='quantitative' />
+            <column caption='Anti-Aircraft Warfare (Russia Losses Equipment Total.Csv)' datatype='integer' name='[anti-aircraft warfare (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+            <column caption='Anti-Aircraft Warfare' datatype='integer' name='[anti-aircraft warfare]' role='measure' type='quantitative' />
+            <column caption='Australia' datatype='real' name='[australia]' role='measure' type='quantitative' />
+            <column caption='Canada' datatype='real' name='[canada]' role='measure' type='quantitative' />
+            <column caption='China' datatype='real' name='[china]' role='measure' type='quantitative' />
+            <column caption='Day (Russia Losses Equipment Total.Csv)' datatype='integer' name='[day (russia_losses_equipment_total.csv)]' role='dimension' type='quantitative' />
+            <column caption='Drone (Russia Losses Equipment Total.Csv)' datatype='integer' name='[drone (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+            <column caption='Drone' datatype='integer' name='[drone]' role='measure' type='quantitative' />
+            <column caption='Field Artillery (Russia Losses Equipment Total.Csv)' datatype='integer' name='[field artillery (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+            <column caption='Field Artillery' datatype='integer' name='[field artillery]' role='measure' type='quantitative' />
+            <column caption='Fuel Tank (Russia Losses Equipment Total.Csv)' datatype='integer' name='[fuel tank (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+            <column caption='Fuel Tank' datatype='integer' name='[fuel tank]' role='measure' type='quantitative' />
+            <column caption='Helicopter (Russia Losses Equipment Total.Csv)' datatype='integer' name='[helicopter (russia_losses_equipment_total.csv)]' role='measure' type='quantitative' />
+            <column caption='Helicopter' datatype='integer' name='[helicopter]' role='measure' type='quantitative' />
+            <column caption='India' datatype='real' name='[india]' role='measure' type='quantitative' />
+            <column-instance column='[day (russia_losses_equipment_total.csv)]' derivation='None' name='[none:day (russia_losses_equipment_total.csv):ok]' pivot='key' type='ordinal' />
+            <column-instance column='[APC (russia_losses_equipment_total.csv)]' derivation='Sum' name='[sum:APC (russia_losses_equipment_total.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[APC]' derivation='Sum' name='[sum:APC:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[BUK (russia_losses_equipment_total.csv)]' derivation='Sum' name='[sum:BUK (russia_losses_equipment_total.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[BUK]' derivation='Sum' name='[sum:BUK:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[aircraft (russia_losses_equipment_total.csv)]' derivation='Sum' name='[sum:aircraft (russia_losses_equipment_total.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[aircraft]' derivation='Sum' name='[sum:aircraft:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[anti-aircraft warfare (russia_losses_equipment_total.csv)]' derivation='Sum' name='[sum:anti-aircraft warfare (russia_losses_equipment_total.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[anti-aircraft warfare]' derivation='Sum' name='[sum:anti-aircraft warfare:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[australia]' derivation='Sum' name='[sum:australia:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[canada]' derivation='Sum' name='[sum:canada:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[china]' derivation='Sum' name='[sum:china:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[drone (russia_losses_equipment_total.csv)]' derivation='Sum' name='[sum:drone (russia_losses_equipment_total.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[drone]' derivation='Sum' name='[sum:drone:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[field artillery (russia_losses_equipment_total.csv)]' derivation='Sum' name='[sum:field artillery (russia_losses_equipment_total.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[field artillery]' derivation='Sum' name='[sum:field artillery:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[fuel tank (russia_losses_equipment_total.csv)]' derivation='Sum' name='[sum:fuel tank (russia_losses_equipment_total.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[fuel tank]' derivation='Sum' name='[sum:fuel tank:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[helicopter (russia_losses_equipment_total.csv)]' derivation='Sum' name='[sum:helicopter (russia_losses_equipment_total.csv):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[helicopter]' derivation='Sum' name='[sum:helicopter:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[india]' derivation='Sum' name='[sum:india:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0hapys50hjvjj813svtjj0rxh3n0].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:APC:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:APC (russia_losses_equipment_total.csv):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:aircraft:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:aircraft (russia_losses_equipment_total.csv):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:anti-aircraft warfare:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:anti-aircraft warfare (russia_losses_equipment_total.csv):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:australia:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:BUK:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:BUK (russia_losses_equipment_total.csv):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:canada:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:china:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:drone:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:drone (russia_losses_equipment_total.csv):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:field artillery:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:field artillery (russia_losses_equipment_total.csv):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:fuel tank:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:fuel tank (russia_losses_equipment_total.csv):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:helicopter:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:helicopter (russia_losses_equipment_total.csv):qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:india:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <slices>
+            <column>[federated.0hapys50hjvjj813svtjj0rxh3n0].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0hapys50hjvjj813svtjj0rxh3n0].[Multiple Values]</rows>
+        <cols>([federated.0hapys50hjvjj813svtjj0rxh3n0].[none:day (russia_losses_equipment_total.csv):ok] / [federated.0hapys50hjvjj813svtjj0rxh3n0].[:Measure Names])</cols>
+      </table>
+      <simple-id uuid='{D487012C-6E26-41A6-B092-1B4A8F222A2A}' />
+    </worksheet>
+    <worksheet name='Total Civilian Casualties in Ukraine'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Ukraine_Casualties_daily' name='federated.0hapys50hjvjj813svtjj0rxh3n0' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0hapys50hjvjj813svtjj0rxh3n0'>
+            <column datatype='date' name='[Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total civilian casualties]' derivation='Sum' name='[sum:total civilian casualties:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Civilian Casualties' datatype='integer' name='[total civilian casualties]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0hapys50hjvjj813svtjj0rxh3n0].[sum:total civilian casualties:qk]</rows>
+        <cols>[federated.0hapys50hjvjj813svtjj0rxh3n0].[none:Date:qk]</cols>
+      </table>
+      <simple-id uuid='{5DD6C3D3-3A69-4FD3-ACAD-65AB3B7F0005}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Total Civilian Casualties in Ukraine'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hapys50hjvjj813svtjj0rxh3n0].[:Measure Names]</field>
+            <field>[federated.0hapys50hjvjj813svtjj0rxh3n0].[dy:Date:ok]</field>
+            <field>[federated.0hapys50hjvjj813svtjj0rxh3n0].[none:Date:qk]</field>
+            <field>[federated.0hapys50hjvjj813svtjj0rxh3n0].[yr:Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{B7E6CDE3-715D-4D6C-B85F-73AC442C21C6}' />
+    </window>
+    <window class='worksheet' name='Cumulative casualties in Ukraine'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hapys50hjvjj813svtjj0rxh3n0].[yr:Date (Ukraine_Casualties_cumulative.csv):ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{8375DAB2-AEC5-4667-AA0A-684F788A5010}' />
+    </window>
+    <window class='worksheet' name='Cumulative total losses in Russia'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hapys50hjvjj813svtjj0rxh3n0].[dy:date (russia_losses_equipment_total.csv):ok]</field>
+            <field>[federated.0hapys50hjvjj813svtjj0rxh3n0].[none:day (russia_losses_equipment_total.csv):qk]</field>
+            <field>[federated.0hapys50hjvjj813svtjj0rxh3n0].[yr:date (russia_losses_equipment_total.csv):ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6EEC0E0F-DAC5-4275-B46F-11733495982F}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Russia equipment loss by day'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0hapys50hjvjj813svtjj0rxh3n0].[:Measure Names]</field>
+            <field>[federated.0hapys50hjvjj813svtjj0rxh3n0].[none:day (russia_losses_equipment_total.csv):qk]</field>
+            <field>[federated.0hapys50hjvjj813svtjj0rxh3n0].[yr:date (russia_losses_equipment_total.csv):ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D5144109-89B6-4BD2-9055-B71D5BB3A5A3}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Cumulative casualties in Ukraine' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAAA7DAAAOwwHHb6hk
+      AAAecUlEQVR4nO3deXRb153Y8S8edoALCBIAwX0VKVmiNsu2vMTLyeZJ4iTONGma+DQzmZPM
+      NG3ONNOm7UxPjttmJj1J2+k5yWmbdnJ6phM7M8mJHY89M068W/KijRIp7vsGEDtA7Ot7/UOO
+      4kWARUiCQOJ+/rEFgng/kvf37r3v/d69KkVRFAShRkk3OwBBuJlueAIoioLoZIRqJRJAqGli
+      CCTUNJEAQk0TCSDUNJEAQk0TCSDUNJEAQk0TCSDUNJEAQk0TCSDUNM32v0VhbWGGcEai12ll
+      YXmdrsEhtlxLyKYWHGZY2Aiw75ZbMGhFfgnVTbX9alCFVDKFe2ONlrZuVJkQvkAC2WRBHQuQ
+      UKnotVkIFfR02iyXSyFUKtWN+QkE4RqUdYr2e9y0tHUj5aKEU1q626ygKCiACt6q/RENXqh+
+      ZQyB8kSCIXzRNPZ6Lb5wDI2uH03Sg1Jvo8eksOAKsm9fK5IkIcsyKpUKSRLDIaH6lDEE2h5Z
+      lgFEAghVSbRKoaaJBBBqmkgAoaaJBBBqmkgAoaaJBBBqmkgAoaaJBBBqmkgAoaaVlQCFfJ5c
+      Lo+iyGSzORRFIZ/PkS/IKLJMNpdDLAUk7ARl1ALJLM/P4I8msVvqCUQi2Nq6CLg2UDRGrGYI
+      RpL07RvB3mi6/hELwnVUVi1QPOLHG05DPkP3gJPZs/PU9fSi3vISUiT2tjaxkYAumwVZlkU5
+      tFC1ykiAHC/98gXqHR3Y69SsewK09w3iWVkCXT22OoXNQJyhkcPYGoyiGE6oaqIaVKhpRecA
+      Uf86b5ybQJIkjNZ2jh+5BbUkhjHC7lKkB8hycWyRepNEc0cvcsxHMKenr9227QOIHkCoZiWH
+      QKlogJ8+/v/oPPoQDxwbKOsAIgGEalYyASbPvU5CauDALXsx6tRlHUAkgFDNSrbKyFaa1dkT
+      nHxztlLxCEJFlbwR1tFupcF+D8ZGR6XiEYSKKtkDrG8E2dPfwvqKt1LxCEJFlUyAwYF2nnvh
+      DD0DbZWKRxAq6ipuhGXYdMVxtjeXdQAxCRaqWck5wOiJv2UzasRi7y07AQShmpU8LWsNBlZm
+      Z9DVm9/xumd1DncwTizk4dy5cwSjCRamxplbdrHld3H2/DipXOGGBi4I10PJIdDixCjBvJ6D
+      twyj1/7mPkAm7sEVMaDLeIjn8qhVOjA3Ib21OG6frZFATk+X/TfVoGIIJFSjkkOgxqYmzrzw
+      HKmCgXuP9l9+Xa/TA5AvyJjNRrZCKbSGAigKKqBQkC+XP7/7v4JQTYoXw/l8TM1OU2/vo7fd
+      +ravyMzNLhNMSQz2Olhf99IzOMTW5jJKo41ek8zCRoh9e51icVyh6hUdAuXSaRYX5qmzmEmk
+      DQyVeSlUXAUSqlnRVpmIbPL0U8/w+hunSRbE8EXYnYomgKW1l4c/+UHMhjrMJm0lYxKEiik5
+      LnF7XKSjEdyuUKXiEYSKKj4HyGbYikbxulZp7hym1VpX1gHEHECoZkWvAq3MjDG/EQBA29Rd
+      dgIIQjUreloeHLmN4R4n6kKCwFa6kjEJQsW877hEpdWQSYgEEHankgkQi4TYisvY7fWVikcQ
+      KqpkAiQSSZptNsxGXaXiEYSKKlkLlFfU9PX1Y2145xqfhXwORaVGLUE6lUarNyDnsyBp0EiQ
+      zuYxGgyI8h+h2pVMgM7ONhbnZpCHD9FgNlx+fXNlgoS2myZVEFckS2+Xk/n5JZB0WEywFc/Q
+      ObgPh8Vc4tMF4eYrmQBanQGjlGRxLUTf2x6I6ejqYcmnIhKMkMuB3+PH3jOAOuIjhIqDw+1s
+      JNIUCgaxOK5Q1UomQDadJJ5VYW97+5lcZm56msWAxMigjYgngKzW4l2YRtHXYzcrnBqfZfjA
+      YdRq9eWGL26ECdWo5AMx4+dG2TvSx8RkmMOHess6gLgTLFSzkq1Sr07z98+8iKG5sVLxCEJF
+      lewB3v6lcsfwogcQqlnJOcDU2BjujWkauu7i9pGuSsUkCBVT8rScT4WQzC2oETveCbtTyR4g
+      nQoS3TKh1qUqFY8gVFTJHqDRasezukKTUyyKJexORRMg7HKRzGtp7+vCoBZDIGF3KjoEamxt
+      pTGeYPhDe3G5RDm0sDsV7QGi/jWe/PkTPPPMc+Q04qF4YXcq2gMEAyH2HRpBo9FQ5u5IglD1
+      ivYAHf17OXxgmLo6MzrtOzMgGQsTTWYBiIaDpHMFgl4Xga0EuXSclTUXspg2CDtA0R5AbzQx
+      N3UGj7eArHfS1dp0+WvxLS9RxYFZk2NsbJzBoSF8kRSqbAifVoVZr2MzGKW9paEiP4QglKvk
+      fYChA3eh1oxhs72zIdvtDuI+FfNTk6CWCPrD1DvaUG95iSgSzpYmXMkchUJBlEMLVa1kAiQj
+      fhLJODlflKGulrdelZmbmWM9InF4ZA+mkA9tXTO+tXkUkxWHWeHs9Ar7Rw6Kcmih6pVMAACV
+      1oBOevvZW2LPyO3seetfVosFAKf9NzfLnN3XM0RBuHFKnpYVtQmzTqKu3lipeAShokr2AAHX
+      IuGMDOF4peIRhIoqvUeYtsDG7DqKQSyLIuxOJRNAMjTR0mKkkMpUKh5BqKiiT4R5N900O5zk
+      Yn4ieTPO5vKWOBFPhAnVrGirnL04dmmr03yUyen1SsYkCBVTtAeI+tc4cWocNHruvvc+Go3l
+      FcSJHkCoZiUfis+mE2RyChq9AaPufW8ZXJFIAKEaKQqseSOlL4OePfl3BOJ11Fl7eOAD+yoV
+      myDcUAVZ5pULq/z1CxOlrwK1dfTi97hp7y9vi1RBqDYFWeb/PD3KU6/N8kefO166B/C6/Ti6
+      2lAVcu94fXXuAnJ9L01SlPlVF46ufsKuFRSDhdY6WNoMs//gYRrKnDcIwvWmKAqhaIrHn7+I
+      rCj8p9+9nwazvnQCpJIJ8oqRd08Tunu6WfIpNLa2053Pk0nFaegYQL3lxZeWOLq3F3ckilln
+      EdWgwk0Xiqb41dllXh1bY6TPxu997BA6jUQulyvxRNj6OsZmO0F3gHxBftdXVaglFRG/G5XZ
+      Tntzjjl3AlVeQSsViCbT6LSNohpUuGky2TzheJpfnl7gzSkX+3tsfOtL99Jhq3/HybhoAjR3
+      duLxzhMPRcnk33WhSGehuw3gN2uGDvdZgPbr/GMIwvYk0zleHF3m79+cx2Yx85l79/LIhw8i
+      SVcegZQcAsXTBXSaDEHfFuxx3pCABeFaKQok0lmeO7vIP7y5QJejkX/x8G0Md7e879C75H2A
+      mYmLtPX0YTaZUBfJoPcj7gMIN4qiKMRTWf7h1AK/PL3Ing4rD9+7l4F261XPOUsmwNSbLzCx
+      meDQkTvY020vK0iRAML1JssKnnCc588s8eL5ZQ70OXj4A3vpaW3c9sWWkkMgdYOD260K0Vzh
+      mgIWhGulKArJTI43Jjd4+fwK674t7jrQxbd/7wHaW+rLvspYNAHmxk4xNTPJibPrfOWf/0HZ
+      gQtCuRRFQVYUplYCvDi6zJkZF0OdLTx4+wDHhtvfs1xPOYomQD6XQ9Y0ct99HTjt1ms+kCBc
+      LUVR8IUTvHR+hZfPr6DRSDxwpJdHPjyCteH6Pp5bcg4AkI+v88LZCB+570BZBxBzAOFqpTI5
+      3pzc4IXRZVa9W9y1v5MHjvQy2HH1k9rtKtoDTJ09yfSqF7kgc9v9H70hBxeEaCLDhQUPp6dd
+      XFjwMNjRzEdu6+e2t4Y4N7qCoEgPkOXUidP0HThMc72OuckxNE09DHS2vPet70P0AMLbKYqC
+      yx/j3NwmZ2ZcrHgiDHW2cOtwG8eG22huMFa0bKboECifSXL+7BmC8Qx7bjlMT3sLUhmBiQQQ
+      cvkCs2tBzs66OTvjJpMvMNJn59hwOwf67Zj02ptWK1ZyDhDweQl7NzA4h+hsqbv8+sbSJNR3
+      YdEkmZxfY+iW/XgWZ5BNzbTWwcJGkP0jI5h0apEANSqayDC+6OXMjJvxRS/WBiOHB1s5NtxG
+      b1sTWrVUFQWSJRPgpWeewJOKYbMd5YP37b/8eiEVYDWoQZX04ux2sDC1htHRjhT1EUNi0GHB
+      m9HQabOgKIqoBq0xU6sB/vvPTtHeUsetQ20cHXJis5hQV+FJsOSNsEO3HsEfzWFsan3H62r1
+      peuvKkUmncog6bRkMxnUeRmVpJDKZJEkPZIkXU4A0QPUhrEFDz948gxfeegox4bbyho2V1LJ
+      BJiYOE0sUY+uMUPn5R5AZm5uhUhaYnhPN6urbgaHh/CvLUCLkw6TwuJGkL3DHahUqstnf9ED
+      7H7nZt38r6fO8fufvJWje5w74m9ecgjkWZvmlZMXufujH6fdairrAGIOUBtOTbv4i2dG+dqn
+      jnFwwLEjGj+UWBcouL7OqsuHRq8mEolWMiZhh3l9Yp0fPTPK1x++bUc1fiiRAA02K4lolmPH
+      9hEPJyoZk7BDKAq8OrbKXz57gT/8R3ewv8++oxo/lJgDxMI+VlZWyKrgwNHjlYxJ2AEUReGl
+      8yv89KVJvvHZ4+zpbN5xjR9KJEAkFKazrweAdCoN1BV7q1BjFEXhubNLPPnqDH/0uTsZaG/a
+      kY0fSgyB+m45QrMhzdL0PN5IqpIxCVVMURSePb3AL07M8K8/f+e2nr6qRqUfiDFaaWn2kUuK
+      5dGFS43/mTfmePbUIv/mn9xFd6vlZod0zUomQL3JhLHBirWlvlLxCFVKVhSeOjnLC+eW+Hdf
+      uJsO++7YArdkAljtbQxLOVY8W9DnqFRMQpWRZYUnXp3m1bFV/viL99C2i06IJRMgthXB7d6i
+      b//eSsUjVBFFUdjwx3ji1SmW3BH++JF7aLXuroshJRNgaW6Bzaib1KSTHvv+93xdzmcJb8Vp
+      bGoim4iiaIwYNArRRBpLYyM7eG5U0y41/Ci/ODnLxUUv9xzs5p9+9BCWOsPNDu26K1kK4Vuf
+      xx1M0OjoptfZ9J6vr85OkFQUJLWZeDyOSlFhNkI2W6ClawBnU50ohdhBLjf8EzOML/m492A3
+      D94xgLW+sg+pVFLJHmB2apTZhQiDdzRcMQH0Bh1ut58Wq57m9i7UW17CisRwbxOuRIZCwSgW
+      x90hNvxRnnptjsllPx841M2ffvlemt7aHzqfz9/k6G6ckgnQOXCIdHacxiJdXz5fuFQarTMS
+      WJ4BfSP2ugJnJhbYO3JILI5b5X59xn/yxAzji17uP9zLd//g0lCnVk5YJYdAo6dOceDwIBcu
+      hjl2tL+sA4ghUPW53PBfnWF8ycsDR3p58PaBy2f8WlIyAZYmzzAx72Lf7fcz4Gws9raSRAJU
+      l1Qmx4/+7jwXFjw8cKSX37p9EEv97pvcXq2SCfD2xxnL7RJFAlSPfEHm+z8/TTKT42ufPrYr
+      r+psV+lN8l75Jd6EzJ4Dx9jTZatUTMINIMsKP31pEk8ozqO/cy9Gvdi+CkoUwwHEY1vk37qK
+      I+xcl0qXlzkxvsY3P3+naPxvUzIBHG12Yr4Ayey7t0gSdgpFURhf9PL48xN88/N30txY3qOt
+      u1XJBIgmsqhVafyecKXiEa4jRYF1X5Tv//w0/+xTt17xXk6tKzoJTsWiJLIZtsIRrI6Osi+R
+      iUnwzROOpfjWj17mwTsG+K07Bm92OFWp6CQ4Ggwwv7qMPxRlSN1Qk9eId7J0Ns9//Zs3OLKn
+      lQdvH7jZ4VStogmQzadRaQzY7QbqjLpKxiRco0JB5od/e446o45HPnKwZu7qlqPouMSkr0ct
+      5fB4PMTEE2E7hqIo/OzlKTb8Ub7+mdvRqMXQs5SS+wSHQm6CJiM69ZXflooGmJxdpm/4FjxL
+      08jGZpx1ML8R5MDBQ5j1176FjXD1FIVLu6pcWOHbX34Ak0Fc7nw/JW+EyYpCIVdAo7tyQ3at
+      riDpTUjpCHp7L+qoj42YikN7OtkMReiyWy5Xg4pJ8I03ueLnsefG+eY/Po6lTrerqzivl6IJ
+      EHa5iOUKSJKKbDZ3xfdodUY67TZWFtfRW1uRcgXUEiRSGdTqeiRJurw+qEiAG2vDH+UHT57l
+      qw/dKu7ab0PRy6ByoYDXs0mjpY5IHNoc710BoJBNMT2zQPfgEFHPCorZTotRZnEjxNBQPxpJ
+      JS6DVkA4luI//N9X+OCtfXzs+KCY9G5DyWK4E88+jaGpjgSd3FfmpTSRADdWOpvnOz8+SZej
+      kd958BCSJBr/dpRMgHw2hccXptXpRKMW1aDVJpHO8oOfn0YBvvHZ49dl39xaU3QOsDQ1ypI7
+      BEAGHf0d298gT7hxvKE4f/6zN2m11vGVTxwVjb9MRROgrWcIQ52HlQ0PWo345VaT6VU/3//5
+      ae471MPD9+4V1/qvQdEEMJjMzE+fZdOTR9Y76WoVhVQ3m6IovDq2ymPPXeSRD49w10hX1W9B
+      VO1K3gfoGjiMpJ7BLJ4cuunyhQI/e3mak+NrfONzxxnaocuRV5vi+wMEXTz7zK/o39uFspWs
+      ZEzCuyRSWX749DkCW0m+9aUP4GjaXauz3UzFa4EaWrjzjsOo1PUcPNBdyZiEt/GG4nz7r04g
+      qVT8yRfvEY3/OiuaAGqtnnA4wkCXhdPnFioZk/CW6dUA//EvX+XQgIOvffoYZlGVe92VnAN0
+      tNuYmF5j6Mg9lYpH4NeT3TUee26cL3xohHsOisnujVK0B4iHNnn5xCh19Vo8rmAlY6ppubzM
+      37w4yU9fmuRffvY4HxCN/4Yqeic4n00xO7NAi9OJ1WpFe6VrzYrMuTdfo2vvCBvzM8h6C631
+      CiubEW45eBiLWS/uBG9DMpPjh0+dwxdJ8Ie/fTuOXbYUeTUqWQrxfsLedTZ8WzQ31JM1NCJt
+      eYkgMdzahCuhekc5tLhkV1oineP7T5xBp5H46kNHMYta/oooOQd4P6FQCL/HTYFuiKZQFXLo
+      dLDq9mG2dYrFca9SNJnhz392muYGI1996Ch63TX9WYRtuKYeACCXzYCkJRkNgq4Osw784TgO
+      uw1JJYrh3k8knuZ7P3mNDlsDX/74EXSi7KSirjkB3o9IgOJC0RT/+fGT7Olo5ksfPYRGI35H
+      lSb62pvEH0nwncdOcqi/lS986ABqUdB2U4gEuAk8oTjf+fFJ7tjXwWcfuAW1eIjlphEJUGGu
+      QIw/+6sTPHCkh0/fs1c8wXWTiQSooDXvFn/24xN87I5BPn7nHnFpuAqIBKiQJXeY7zx2kt++
+      dy8fPtYvGn+VEAlQAfMbQb7z2Eke+fAI9x3qEY2/iogEuMGmV/189/HX+fLHD3PX/k7R+KuM
+      SICrlM7kGF/yIW/jtkkkluYnL0zwtU8f49hwm2j8VUjcCLsKmVye//LXb+CPJLa1w4qkUvHx
+      44OM9DtE469S19QD5NJxpueW6R/aS9SzgmxqocUEi+sBhob6Ue+CP3ouX+B/PHkWgO/+/ofE
+      8iO7zDX1APGtMJIqx8pGCPR1SMkIebWKVks9KW0DnTbLju4BCrLMXzxznnXfFn/yyD1ic7ld
+      6Jp6AI1Gxfpmkr42K+60FnU+TgSJerORWDJPoVDYseXQiqLw+PMTzG8E+feP3I1GglzuyosE
+      CzvXNSWA371BKJLG1NBLanMR2dxCu1lhdHaNAwcP7thyaEVReOLVGUYXvDz6pfuwiO2hdi0x
+      CX4XRVF49vQCT782x7e+dC+t4qmsXW1ntMoKURR4dWyVX5yY5d9+4W7R+GuASIC3OTPj4sfP
+      XeRffe44XY7Gmx2OUAEiAd4yvujlfz99jq9/5jYGOqw3OxyhQkQCAHPrQb7/xGm+8omj7O+1
+      77grVkL5aj4BVr0R/ttP3+CLHzogyhVqUE0nwGYwxvd+8jqfvHuYDxzsFo2/BtVsAgS3knzv
+      J69z/+FePiLq82vWda8GXV+YYs27xd6Dh7He5H0FFEUhlckTjqcJbiXZDMZxB2NsBmMsbIR4
+      4Egvn7pnSDyWWMOu+42w+YV5uu2XVobrdTZX5EaYLCt4w3GC0RSbwTibwRjuwKWGnsrk0Ws1
+      mI1anM11OJvraWuup72lni5Ho1iNocZd9x5AlUszt+KipbP/en90UTNrAf7nU2cx6jU4rZca
+      +Z37O3E212NtMGDSazHoNGKYI7zHde8BCrkM0UQGS2MDqgqtDCfLCplcXjRyYdtuaC3Qr6tB
+      AdEwhapUlcVwsixv6/2FQgFJkraVZNs9hqIoyLKMWn31D8Rs9xgA+XwejebqR6aVOoZKpdrW
+      73e7x1AUBUVRtvWzbPcY8N7f1w1/JricM/92/6CVOEY5xynnGNv9nt1yjO0mWDnHuNL33PAe
+      QBCqWWWuAeYzjF84x8zSxuWXIpHI5f/PJKOMnR/FF46zMj/J1MLqlT8nHeHN02dZ84Su+DnR
+      oIfR8xeIZ/KkogFWNvxlxTp2/hyzxWJNbDF2fhR/JIFvY5mJueXtHwOYn7rA2NQchUsjROKx
+      LXL5S/8o5NJMX7zA6mYQ38YyY5Oz5H79xm2RWZhbQFYUNpamiWXe+45sMsqF0XP4I+VuhZtl
+      fm4ZRVFYnJsmU7jSexTWluZIXPmLV0FhYW6egqLgXp4mkr7COwpZpsYv4A3Ht/XJlUmAQgaV
+      oZE2uxXP2iKzSxtsri8yNj5JOi+DSkN/fw+RcIgWZxdKtsgfIxVC39JDi8XE0swEa54QqwvT
+      jE/NU5AVNIZ6+lobCEXTrLndRMORK39OyVjTSCYLTruVzbdi9bhWGBu7SCpbAElLf38P4YCX
+      NU+QdkdLWb+SvCLR1e4kFnRzcWqecNDD2IUxQvE0iqKiq2+AZDSELxTBKOWJp8p5HLNAPLiJ
+      JxzHvTJPOBbn/OgowWgS18o8nmAMRaVhcM8A4WAZJwsAsng2NolGQ6ysudgKBxk9P040FmN5
+      aZ5wIkMqGsTj9RHPlJPEAArpyCbuYBLPygzheJLzo5f2TXavzuP2b7G5sojWYqfBpN/WJ1fs
+      LlA6lSSV2OLizCJBjxdMjfS0N+D1xaCQZjOYpK+7nYDXS2d3b9HPSSZiZLZcXFz04/N6MVls
+      WNUFovk82eQWURpoyHtZ94RYd7nJl/E7T6cSpBIRJmYWCXq9oK+jv9OOxxeCfBpPMElPZxty
+      Icfy1CSxMk5s2WyaRDLF5OQEW8EAyYLE0FA/no1NJAq4N/309vWgVqnIZvPISnmNp77ZSWh1
+      CnOTg3Q0QjKdYmFxmWAsg8NaD/k0bn+U/r7y94J22JqYnV/D7mghHgmTjHhYXnWTxIDFpGdm
+      coJoNIwvWMYJ6S2m5nbirosYGlrJRCOkcnnmFhbxRxK0tjRQkBXymQTTc9vb0lf96KOPPlp2
+      VFdNwVDXiM3ahCqfQqU3U69XcPkS9PZ0EAtssukPkFNUBD0uwrEM9lbbFbJTxtzkxGppIBcP
+      Y26yoclGCee1dDlseDdW8QeDNLT2cWC4l8a6Bhrqr34dn18zmC3YrE2QTyHp67AYVaxthunp
+      7SYe8LAZCKBoTTTqIC2Z6GhtZrvTcK3eQKvdhk6SSRfUOJrrWVpao6O3FzIxVjfcpHJQp1OI
+      ZRTanK1X3qjwfShoQAZnux21RkcylcFut2FrbsJkNBLyufH6A+RVOixl/K5AAY0ZiRx2mxWN
+      Wk06J2Ozt9LcbMGo0+Ls7MHRYqWxyYq+rE1AFGRFhVxQ0dbpQK01kEwkcdhbsDVbMZtM1NWb
+      2HS5sbV20lB39c9wi0mwUNNEIYxQ00QCCDVNJIBQ00QCCGXJxgI8/9yvmF/zcnkWqcjk8u+8
+      JKYoeS6cH2d5bQ05m2R9Y4NVl/eKn1ls5T1FUVhfmOCN0amris21vko2l0dWFHK5HKVmuWJ5
+      dKEsyeAqutY9zJx5CYN0J/MLaww4tPz4V9P87uc/ytzMIodvu42Cf4Gkuo7V8TE6LLcyPjVF
+      Dj1KLoOST1FAR8S/RkPbMGHvMm22ZtZdHvYeOsrC+Bmcg4dxmJK8cdHLQw/ehWtxkkV/jluH
+      W3ljdJ59ewaxtDUS8STYXJnA1DbE+vQFks//EqX/CO06mb5eJ1NLXg4OdzF6YY7jd91B0LWA
+      KyqLBBCugUqi3mxgdWUJz+JFdIbj7Dt4kPlTL+BKaWnYCGBJRWls2oN/VaFQkFEBc+dewdHW
+      zerom3zkEw8yOebh3EyANpuG8KaH/fva+dWzz+CPwWBhDvtIM3pjI3qdjpXlVcZOzaE33E54
+      K8jCWIFBx15mzs8STIbwzbzMgNNEW3sftsO3MPPiCyzOXkDSWZBI4w8EKeQTnDm/wIOfuF8k
+      gFAendmK7/x57M5eWusyxFq7sTnbiF8cx9a/j60VLy2NddQbm9jwBRjpa+e51y5w8PAR7I42
+      5HSQPQdGMOs16PR1DPTZsTZIqJGot1gY3m/BODtNe6sDbUM7raZFXjk1hlGjoXtokGZrM4FV
+      L9YuKxdeu0hrq4OYK86gvY1WixZHYx3jF2dwtLfT1d3Mmi+No6WFSCAMipbOVhNnLy6J+wDC
+      DaYUmJqYZWj/PtRV+EiISAChpv1/hm13cCX/WmEAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Cumulative total losses in Russia' width='192'>
+      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
+      nwnn339MAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Russia equipment loss by day' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Total Civilian Casualties in Ukraine' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
