@@ -1,6 +1,6 @@
 
 # Analyzing the Sentiment Distribution of Tweets about the War in Ukraine
-Using Natural Language Processing and Sentiment Analysis, tweet data on the War in Ukraine was analyzed.
+The main focus of this project is Sentiment Analysis of twitter data related to the war in Ukraine and then analyzing the sentiments along with Ukraine Casualties data set and Ukraine Migration data set to derive conclusions.
 
 ## Project Structure
 
@@ -76,18 +76,19 @@ The group has created a GitHub repository with 4 different branches for each mem
 
 Each group member has worked in a specific project task and the whole group has been communicating through slack and meeting every two days via zoom.
 
+## Sentiment Analysis
+
+### About Sentiment Analysis:
+Sentiment Analysis, also known as Opinion Mining, is a popular data mining approach used to study the inclination of people's sentiments, opinions and emotions towards any product, global issue, event, service and organization. The sentiments are typically extracted from the text reviews, comments and surveys using tools in Natural Language Processing(NLP), Machine learning and other computational linguistics.
+
+### Sentiment Analysis Using VADER:
+For the purpose of this analysis we are using VADER (Valence Aware Dictionary sEntiment Reasoner) sentiment analysis relies on a dictionary that maps words and other lexical features common to microblogs. F1 scores have been calculated to approach 
 
 ## Data Preprocessing
 
-### Subsection 1
+### 
 
-### Subsection 2
-
-## Sentiment Analysis
-
-### Subsection 1
-
-### Subsection 2
+### Cleaning Tweets:
 
 ## Database Storage
 The data (tweets data, casualty data, and migration data) has been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in [Google Drive](https://drive.google.com/file/d/152mxp0DtOWYw0seek4LncegdKDTBk65C/view?usp=sharing). It uses the following [schema](resources/schema.sql), as laid out below:
