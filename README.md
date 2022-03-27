@@ -107,7 +107,7 @@ Pipeline steps to follow (could use separate notebooks for each step):
 We have used Tableau for all our data visualizations and analysis. Tableau will also be used to create a secure connection as an ODBC with Sqlite. Successful connection will help us access all our tables and databases and perform our analysis and visualizations effectively. Our final dashboard will be published on Tableau Public. 
 
 #### Interactive elements - 
-Our Dashboard in Tableau Public will have a number of interactive elements. Drop down boxes will be used to give the user flexibility to choose a country of choice and perfrm visualizations. Another drop down box for data can be used to select date of choice and see the visualizations accordingly. 
+Our Dashboard in Tableau Public will have a number of interactive elements. Check boxes will be used to give the user flexibility to choose a country of choice and perfrm visualizations. Other checkboxes for date can be used to select date of choice and see the visualizations accordingly. 
 
 ## Model Deployment 
 Finally the data visualizations will be deployed on Tableau Public and shared publicly.  
