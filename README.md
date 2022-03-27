@@ -102,7 +102,7 @@ Pipeline steps to follow (could use separate notebooks for each step):
  7. Data Visualizations
  8.  Deploying the model and visualizations at the web app. 
 
-## Data Visualizatons
+## Data Visualizatons/Dashboard
 #### Tools used -
 We have used Tableau for all our data visualizations and analysis. Tableau will also be used to create a secure connection as an ODBC with Sqlite. Successful connection will help us access all our tables and databases and perform our analysis and visualizations effectively. Our final dashboard will be published on Tableau Public. 
 
