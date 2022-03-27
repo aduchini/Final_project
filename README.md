@@ -11,13 +11,13 @@ Social Media Analytics is used to collect data from various social media website
 Sentiment Analysis, also known as Opinion Mining, is a popular data mining approach used to study the inclination of people's views, sentiments, evaluations, opinions and emotions towards any products, global issues, events, services and organizations to name a few. These opinions are measured through Natural Language Processing(NLP), text analysis, Machine learning and other computational linguistics. Sentiment distribution is widely used to analyze the reaction of people and reveal the contextual polarity of the information used.
 
 ### Why Sentiment Analysis?
-Sentiment Analysis is an important way to understand the audience and hence make business or corporate decisions based on the analysis performed on people's opinions. Understanding the people's thought process nad needs can help companies and organizations understand what to expect in terms of business and upcoming trends. Based on the results, one can get a direction on how to understand their potential market. Sentiment Analysis provides real time analysis to keep organizations updated all the time. Identifying positive, neutral and negative comments help in audience engagement and better understanding of emotional as well as business aspects of audience in general. 
+Sentiment Analysis is an important way to understand the audience and hence make business or corporate decisions based on the analysis performed on people's opinions. Understanding the people's thought process and needs can help companies and organizations understand what to expect in terms of business and upcoming trends. Based on the results, one can get a direction on how to understand their potential market. Sentiment Analysis provides real time analysis to keep organizations updated all the time. Identifying positive, neutral and negative comments help in audience engagement and better understanding of emotional as well as business aspects of audience in general. 
 
 ![twitter sentiment analysis dia1](https://user-images.githubusercontent.com/23488019/158078675-df77b237-3077-451d-888d-acaf958fda8a.png)
 
 ### Setbacks of Sentiment Analysis
-Sentiment Analysis is a popular way, companies can get information regarding public opinion and their inclination towards or against issues. However, it is not perfect, since there can be discrepancies in the data accumulated and this can lead to minor to major changes in the final result analysis. Few of the major hurdles in performing sentiment anlaysis are discusse below:
-1. Tone of people's voice - The tone of people's voice can sadly not be identified 100% of the times. Sarcasm and irony can b emisinterpreted and misevaluated an dend up getting categorized incorrectly. This problem can be difficult for humans to decipher in day-to-day lives, let alone any algorithm. 
+Sentiment Analysis is a popular way, companies can get information regarding public opinion and their inclination towards or against issues. However, it is not perfect, since there can be discrepancies in the data accumulated and this can lead to minor to major changes in the final result analysis. Few of the major hurdles in performing sentiment analysis are discussed below:
+1. Tone of people's voice - The tone of people's voice can sadly not be identified 100% of the times. Sarcasm and irony can be misinterpreted and misevaluated and end up getting categorized incorrectly. This problem can be difficult for humans to decipher in day-to-day lives, let alone any algorithm. 
 2. Emojis - Wrong use of emojis for sentiment expression can end up in getting skewed results. Sometimes, people can get confused with what emotion an emoji actually represents and hence alter the sentiment altogether. 
 
 
@@ -39,34 +39,28 @@ Given the direct or indirect impact of the war in Ukraine to people’s lives, i
 Through the examination of tweet data, the following questions will be answered:
 
 1. **What are the most common words mentioned on twitter about the Ukrainian war**?
-(in results, show ordered list or tag clouds with most frequent words for the whole dataset and/or can split by sentiment polarity)
 2. **What is the sentiment breakdown for Ukraine war tweets**?
-(in results, show pie chart with negative, positive and neutral percentages)
 3. **How sentiment polarity changes over time**?
-(in results, show line graph with sentiments change over time)
-
-Further questions can be answered if time allows:
-
-4. Do sentiment distributions change according to country (i.e., location of the twitter account)?
-5. How accurate is the model created in predicting polarity (new sentiment output) based on tweet text?
+4. **Do sentiment distributions change according to country**?
+5. **Is polarity related to the number of casualties in the war**?
+6. **How accurate are Machine Learning models in predicting polarity based on tweet text**?
 
 ### Description of the communication protocols
 The group has created a GitHub repository with 4 different branches for each member to work on their own branch. The 4 branches that have been created are as follows:
 
-1. AD_segment-1 : Branch for Ana Duchini
-2. AS_segment-1 : Branch for Aakriti Sharma
-3. FM_segment-1 : Branch for Flora Matos
-4. RK_segment-1 : Branch for Ruchika Kulkarni
+1. week_2_deliverables_AD : Branch for Ana Duchini
+2. week_2_deliverables_AS : Branch for Aakriti Sharma
+3. week_2_deliverables_FM : Branch for Flora Matos
+4. week_2_deliverables_rk : Branch for Ruchika Kulkarni
 
-Specific roles have not yet been assigned to members as the group is deciding together the main project components. To do this, group members have been communicating through slack and meeting daily via zoom.
-
+Each group member has worked in a specific project task and the whole group has been communicating through slack and meeting every two days via zoom.
 
 ## Technologies Used
 ### A.  Data Cleaning and Analysis
 Pandas in Python will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using Python. A number of different libraries that were used for our project are described below:
 
 #### 1. Sentiment Analysis using Vader
-The VADER (Valence Aware Dictionary for sEntiment Reasoning) sentiment analysis model, relies on a dictionary that maps words and other lexical features common to microblogs. F1 scores have been calculated to approach 0.95 ([see research paper](https://www.researchgate.net/publication/275828927_VADER_A_Parsimonious_Rule-based_Model_for_Sentiment_Analysis_of_Social_Media_Text)). It provides pos, neu, and neg scores, which are ratios for proportions of text that fall in each category (so they add up to 1), as well as a compound score normalized between -1 and 1. 
+The VADER (Valence Aware Dictionary for sEntiment Reasoning) sentiment analysis model, relies on a dictionary that maps words and other lexical features common to microblogs. F1 scores have been calculated to approach 0.95 ([see research paper](https://www.researchgate.net/publication/275828927_VADER_A_Parsimonious_Rule-based_Model_for_Sentiment_Analysis_of_Social_Media_Text)). It provides positive, neutral, and negative scores, which are ratios for proportions of text that fall in each category (so they add up to 1), as well as a compound score normalized between -1 and 1. 
 The Heuristics of VADER are:
 1. Punctuation
 2. Capitalization
@@ -128,7 +122,7 @@ Pipeline steps to follow (could use separate notebooks for each step):
  2. **Preprocessing Data**: (data cleaning, filter by English language, and selected countries) [Twitter_Vader_Sentiment_Analysis_Data_Cleaning.ipynb](Twitter_Vader_Sentiment_Analysis_Data_Cleaning.ipynb). Due to the size of each dataset collected by ranges of dates, each file was processes separately, and later consolidated for analysis.
  3. **Sentiment Analysis**: Using [VADER](Twitter_Vader_Sentiment_Analysis_Data_Cleaning.ipynb). A compound score is calculated. This is converted into overall 'positive','negative' or 'neutral' values, and aggregated to each tweet data.
  4. **Machine Learning Model**:
-  Evaluated various models in [Machine_Learning](Machine_Learning.ipynb), where a function was created to compare the accuracy of 3 models: Naive Bayes, Logistic Regression, and Linear SVC.
+  Evaluated various models in [Machine_Learning](Machine_Learning.ipynb), where a function was created to compare the accuracy of 4 models: Random Forest, Naive Bayes, Logistic Regression, and Linear SVC.
  7. **Data Visualizations**: A working presentation has been added to [Google docs](https://docs.google.com/presentation/d/1uzYRtAgBxeyVoteSkImERVQHtRtEBiBFCAVat05HdC0/edit?usp=sharing)
  8. **Database**: A copy of the datasets can be found in [the resources data sets folder](resources/data%20set/tweets_data.sqlite.zip) using the following [schema](resources/schema.sql), as laid out below:
  ![screenshot of schema](resources/images/schema.png)
