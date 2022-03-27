@@ -10,34 +10,33 @@ Using Natural Language Processing and Sentiment Analysis, tweet data on the War 
 - Research questions
 - Communication Protocol
 
-2. Data Preprocessing
-- 
+2. [Data Preprocessing](#Data_Preprocessing)
+- Ruchita add subsections here
+- Ruchita add subsections here
 
-3. Sentiment Analysis
-- 
+3. [Sentiment Analysis](#Sentiment_Analysis)
+- Ruchita add subsections here
+- Ruchita add subsections here
 
-4. Database Storage
+4. [Database Storage](#Database_Storage)
 - Flowchart of Data Processes and Inputs/Outputs
 
-5. Machine Learning
+5. [Machine Learning](#Machine_Learning)
 - Data Preprocessing for Machine Learning
 - Comparison of Classification Models
 - Implementation of Linear SVC
 
-6. Dashboard
+6. [Dashboard](#Dashboad)
 - Tools Used
 - Interactive elements
 - Model Deployment
 
-7. Summary
+7. [Summary](#Summary)
 - Project Limitations
 - Recommendation for Future Analysis
 
 ### Presentation
 A working presentation has been added to [Google docs](https://docs.google.com/presentation/d/1uzYRtAgBxeyVoteSkImERVQHtRtEBiBFCAVat05HdC0/edit?usp=sharing)
-
-### Project Pipeline
-![project pipeline](https://user-images.githubusercontent.com/23488019/158079683-59057a33-11ee-42c4-bcac-af917b35b83d.PNG)
  
 
 ## Overview
@@ -80,9 +79,15 @@ Each group member has worked in a specific project task and the whole group has 
 
 ## Data Preprocessing
 
+### Subsection 1
+
+### Subsection 2
 
 ## Sentiment Analysis
 
+### Subsection 1
+
+### Subsection 2
 
 ## Database Storage
 The data (tweets data, casualty data, and migration data) has been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in [Google Drive](https://drive.google.com/file/d/152mxp0DtOWYw0seek4LncegdKDTBk65C/view?usp=sharing). It uses the following [schema](resources/schema.sql), as laid out below:
@@ -117,19 +122,17 @@ As the dependent variable is categorical and binary, classification algorithms w
 
 The models performances were compared using boxplots of the model accuracy score:
 
-![Machine Learning Models Boxplots](resources/images/ADD.png)
+![Machine Learning Models Boxplots](resources/images/ML_boxplots.png)
 
 As seen in the image above, Linear SVC and Logistic Regression were the most accurate in predicting positive and negative outcomes from tweet text with 84% accuracy. Linear SVC was then chosen for implementation.
 
 ### Implementation of Linear SVC 
 Our data was best classified using Linear SVC, algorithm that finds the maximal margin that separates the data into the two categories (positive or negative sentiments).
 
-![Linear SVC](resources/images/ADD.png)
-
 The performance of the model was satisfactory, with 84% accuracy, 84% of average precision and 83% of average recall.
 
-![Table Accuracy](resources/images/ADD.png)
-![Confusion Matrix](resources/images/ADD.png)
+![Table Accuracy](resources/images/SVC_confusion_matrix_classification_report.png)
+![Confusion Matrix](resources/images/SVC_confusion_matrix.png)
 
 
 ## Dashboard
