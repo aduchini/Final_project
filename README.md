@@ -10,18 +10,18 @@ Using Natural Language Processing and Sentiment Analysis, tweet data on the War 
 - Research questions
 - Communication Protocol
 
-2. [Data Preprocessing](#Data_Preprocessing)
+2. [Data Preprocessing](#Data-Preprocessing)
 - Ruchita add subsections here
 - Ruchita add subsections here
 
-3. [Sentiment Analysis](#Sentiment_Analysis)
+3. [Sentiment Analysis](#Sentiment-Analysis)
 - Ruchita add subsections here
 - Ruchita add subsections here
 
-4. [Database Storage](#Database_Storage)
+4. [Database Storage](#Database-Storage)
 - Flowchart of Data Processes and Inputs/Outputs
 
-5. [Machine Learning](#Machine_Learning)
+5. [Machine Learning](#Machine-Learning)
 - Data Preprocessing for Machine Learning
 - Comparison of Classification Models
 - Implementation of Linear SVC
