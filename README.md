@@ -11,7 +11,7 @@ The main focus of this project is Sentiment Analysis of twitter data related to 
 - Communication Protocol
 
 2. [Data Preprocessing](#Data-Preprocessing)
-- Text Pre-processing
+- Pre-processing Pipeline
 - Data Cleaning
 
 3. [Sentiment Analysis](#Sentiment-Analysis)
@@ -78,6 +78,7 @@ Each group member has worked in a specific project task and the whole group has 
 
 ## Data Preprocessing
 
+### Pre-processing Pipeline:
 Typically data pre-processing for sentiment analysis requires removal of everything other than pure text data. After this initial cleaning process, pure text, goes through a NLP pipeline consisting of tokenization, stemming, lemmatization, POS tagging and stop words removal etc.
 
 However, due to VADER's capability of analyzing data as complete sentence the need for pre-processing the tweets is considerably minimized. The process followed for cleaning the tweets is described below.
