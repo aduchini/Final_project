@@ -1,0 +1,1102 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20214.22.0213.1102                               -->
+<workbook original-version='18.1' source-build='2021.4.4 (20214.22.0213.1102)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <MapboxVectorStylesAndLayers />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='tweets+ (C:\Users\anadu\repos\test\resources\Ukraine_Analysis.sqlite)' inline='true' name='federated.0mu63c307rkucc18rza9u1tbuzp7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Devart ODBC Driver for SQLite (ODBC)' name='genericodbc.18c6zel182jfwn1burnlz0lgqoaa'>
+            <connection class='genericodbc' dbname='C:\Users\14197\OneDrive\Desktop\New folder\Final_project\Datasets\ukraine_analysis.sqlite\ukraine_analysis.sqlite' odbc-connect-string-extras='StepAPI=0;SyncPragma=;NoTXN=0;Timeout=;ShortNames=0;LongNames=0;NoCreat=0;NoWCHAR=0;FKSupport=0;JournalMode=;OEMCP=0;LoadExt=;BigInt=0;JDConv=0' odbc-dbms-name='SQLite' odbc-driver='SQLite3 ODBC Driver' odbc-dsn='' odbc-suppress-connection-pooling='' odbc-use-connection-pooling='' port='' server='' username=''>
+              <connection-customization class='genericodbc' enabled='false' version='18.1'>
+                <vendor name='SQLite' />
+                <driver name='SQLite3 ODBC Driver' />
+                <customizations>
+                  <customization name='CAP_CREATE_TEMP_TABLES' value='yes' />
+                  <customization name='CAP_ISOLATION_LEVEL_READ_COMMITTED' value='no' />
+                  <customization name='CAP_ISOLATION_LEVEL_READ_UNCOMMITTED' value='no' />
+                  <customization name='CAP_ISOLATION_LEVEL_REPEATABLE_READS' value='no' />
+                  <customization name='CAP_ISOLATION_LEVEL_SERIALIZABLE' value='no' />
+                  <customization name='CAP_ODBC_BIND_DETECT_ALIAS_CASE_FOLDING' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_DATETIME_AS_CHAR' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_DATE_AS_CHAR' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_MAX_STRING_BUFFERS' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_MEDIUM_STRING_BUFFERS' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_SIGNED' value='no' />
+                  <customization name='CAP_ODBC_BIND_FORCE_SMALL_STRING_BUFFERS' value='no' />
+                  <customization name='CAP_ODBC_BIND_SUPPRESS_INT64' value='no' />
+                  <customization name='CAP_ODBC_BIND_SUPPRESS_PREFERRED_TYPES' value='no' />
+                  <customization name='CAP_ODBC_BIND_SUPPRESS_WIDE_CHAR' value='no' />
+                  <customization name='CAP_ODBC_CURSOR_DYNAMIC' value='no' />
+                  <customization name='CAP_ODBC_CURSOR_FORWARD_ONLY' value='no' />
+                  <customization name='CAP_ODBC_CURSOR_KEYSET_DRIVEN' value='no' />
+                  <customization name='CAP_ODBC_CURSOR_STATIC' value='no' />
+                  <customization name='CAP_ODBC_ERROR_IGNORE_FALSE_ALARM' value='no' />
+                  <customization name='CAP_ODBC_FETCH_BUFFERS_RESIZABLE' value='no' />
+                  <customization name='CAP_ODBC_FETCH_BUFFERS_SIZE_MASSIVE' value='no' />
+                  <customization name='CAP_ODBC_FETCH_CONTINUE_ON_ERROR' value='no' />
+                  <customization name='CAP_ODBC_METADATA_STRING_LENGTH_UNKNOWN' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_EXECUTED_QUERY' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_PREPARED_QUERY' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SELECT_STAR' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SQLCOLUMNS_API' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SQLFOREIGNKEYS_API' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SQLPRIMARYKEYS_API' value='no' />
+                  <customization name='CAP_ODBC_METADATA_SUPPRESS_SQLSTATISTICS_API' value='no' />
+                  <customization name='CAP_ODBC_REBIND_SKIP_UNBIND' value='no' />
+                  <customization name='CAP_ODBC_TRIM_VARCHAR_PADDING' value='no' />
+                  <customization name='CAP_ODBC_UNBIND_AUTO' value='no' />
+                  <customization name='CAP_ODBC_UNBIND_BATCH' value='no' />
+                  <customization name='CAP_ODBC_UNBIND_EACH' value='no' />
+                  <customization name='CAP_QUERY_BOOLEXPR_TO_INTEXPR' value='yes' />
+                  <customization name='CAP_QUERY_FROM_REQUIRES_ALIAS' value='no' />
+                  <customization name='CAP_QUERY_GROUP_ALLOW_DUPLICATES' value='yes' />
+                  <customization name='CAP_QUERY_GROUP_BY_ALIAS' value='no' />
+                  <customization name='CAP_QUERY_GROUP_BY_DEGREE' value='yes' />
+                  <customization name='CAP_QUERY_HAVING_REQUIRES_GROUP_BY' value='yes' />
+                  <customization name='CAP_QUERY_HAVING_UNSUPPORTED' value='no' />
+                  <customization name='CAP_QUERY_JOIN_ACROSS_SCHEMAS' value='no' />
+                  <customization name='CAP_QUERY_JOIN_REQUIRES_SCOPE' value='no' />
+                  <customization name='CAP_QUERY_NULL_REQUIRES_CAST' value='no' />
+                  <customization name='CAP_QUERY_SELECT_ALIASES_SORTED' value='yes' />
+                  <customization name='CAP_QUERY_SORT_BY_DEGREE' value='yes' />
+                  <customization name='CAP_QUERY_SUBQUERIES' value='yes' />
+                  <customization name='CAP_QUERY_SUBQUERIES_WITH_TOP' value='yes' />
+                  <customization name='CAP_QUERY_SUBQUERY_QUERY_CONTEXT' value='yes' />
+                  <customization name='CAP_QUERY_TOPSTYLE_LIMIT' value='yes' />
+                  <customization name='CAP_QUERY_TOPSTYLE_ROWNUM' value='no' />
+                  <customization name='CAP_QUERY_TOPSTYLE_TOP' value='no' />
+                  <customization name='CAP_QUERY_TOP_0_METADATA' value='no' />
+                  <customization name='CAP_QUERY_TOP_N' value='yes' />
+                  <customization name='CAP_QUERY_WHERE_FALSE_METADATA' value='no' />
+                  <customization name='CAP_SELECT_INTO' value='no' />
+                  <customization name='CAP_SELECT_TOP_INTO' value='yes' />
+                  <customization name='CAP_SET_ISOLATION_LEVEL_VIA_ODBC_API' value='no' />
+                  <customization name='CAP_SET_ISOLATION_LEVEL_VIA_SQL' value='no' />
+                  <customization name='CAP_SUPPRESS_CONNECTION_POOLING' value='no' />
+                  <customization name='CAP_SUPPRESS_DISCOVERY_QUERIES' value='no' />
+                  <customization name='SQL_CATALOG_NAME_SEPARATOR' value='.' />
+                  <customization name='SQL_CATALOG_USAGE' value='0' />
+                  <customization name='SQL_COLUMN_ALIAS' value='Y' />
+                  <customization name='SQL_CONVERT_FUNCTIONS' value='0' />
+                  <customization name='SQL_CURSOR_COMMIT_BEHAVIOR' value='2' />
+                  <customization name='SQL_DBMS_NAME' value='SQLite' />
+                  <customization name='SQL_DBMS_VER' value='3.32.3' />
+                  <customization name='SQL_DRIVER_ODBC_VER' value='03.00' />
+                  <customization name='SQL_DRIVER_VER' value='0.9998' />
+                  <customization name='SQL_IDENTIFIER_QUOTE_CHAR' value='&quot;' />
+                  <customization name='SQL_MAX_IDENTIFIER_LEN' value='255' />
+                  <customization name='SQL_NUMERIC_FUNCTIONS' value='0' />
+                  <customization name='SQL_ODBC_INTERFACE_CONFORMANCE' value='1' />
+                  <customization name='SQL_ODBC_VER' value='03.80.0000' />
+                  <customization name='SQL_OJ_CAPABILITIES' value='1' />
+                  <customization name='SQL_QUOTED_IDENTIFIER_CASE' value='3' />
+                  <customization name='SQL_SCHEMA_USAGE' value='0' />
+                  <customization name='SQL_SPECIAL_CHARACTERS' value='' />
+                  <customization name='SQL_SQL_CONFORMANCE' value='1' />
+                  <customization name='SQL_STRING_FUNCTIONS' value='0' />
+                  <customization name='SQL_SYSTEM_FUNCTIONS' value='0' />
+                  <customization name='SQL_TIMEDATE_ADD_INTERVALS' value='0' />
+                  <customization name='SQL_TIMEDATE_DIFF_INTERVALS' value='0' />
+                  <customization name='SQL_TIMEDATE_FUNCTIONS' value='0' />
+                  <customization name='SQL_TXN_CAPABLE' value='2' />
+                </customizations>
+              </connection-customization>
+            </connection>
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='genericodbc.18c6zel182jfwn1burnlz0lgqoaa' name='casualties' table='[casualties]' type='table' />
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='genericodbc.18c6zel182jfwn1burnlz0lgqoaa' name='tweets' table='[tweets]' type='table' />
+          <relation connection='genericodbc.18c6zel182jfwn1burnlz0lgqoaa' name='casualties' table='[casualties]' type='table' />
+          <relation connection='genericodbc.18c6zel182jfwn1burnlz0lgqoaa' name='migration' table='[migration]' type='table' />
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>location</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[location]</local-name>
+            <parent-name>[tweets]</parent-name>
+            <remote-alias>location</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65536</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tweets_73EF6302D1E440ABAE224E10EAA1C07E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tweetcreatedts</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[tweetcreatedts]</local-name>
+            <parent-name>[tweets]</parent-name>
+            <remote-alias>tweetcreatedts</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65536</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tweets_73EF6302D1E440ABAE224E10EAA1C07E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>text</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[text]</local-name>
+            <parent-name>[tweets]</parent-name>
+            <remote-alias>text</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65536</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tweets_73EF6302D1E440ABAE224E10EAA1C07E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[tweets]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65536</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tweets_73EF6302D1E440ABAE224E10EAA1C07E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[neg]</local-name>
+            <parent-name>[tweets]</parent-name>
+            <remote-alias>neg</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>4</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tweets_73EF6302D1E440ABAE224E10EAA1C07E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>neu</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[neu]</local-name>
+            <parent-name>[tweets]</parent-name>
+            <remote-alias>neu</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>4</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tweets_73EF6302D1E440ABAE224E10EAA1C07E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pos</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[pos]</local-name>
+            <parent-name>[tweets]</parent-name>
+            <remote-alias>pos</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>4</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tweets_73EF6302D1E440ABAE224E10EAA1C07E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>compound</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[compound]</local-name>
+            <parent-name>[tweets]</parent-name>
+            <remote-alias>compound</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>4</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tweets_73EF6302D1E440ABAE224E10EAA1C07E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sentiment</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[sentiment]</local-name>
+            <parent-name>[tweets]</parent-name>
+            <remote-alias>sentiment</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65536</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[tweets_73EF6302D1E440ABAE224E10EAA1C07E]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Date</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Date]</local-name>
+            <parent-name>[casualties]</parent-name>
+            <remote-alias>Date</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65536</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[casualties_01B8B4351242404B86C3151D6B0FF9F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>casualties</remote-name>
+            <remote-type>3</remote-type>
+            <local-name>[casualties]</local-name>
+            <parent-name>[casualties]</parent-name>
+            <remote-alias>casualties</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>2</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_INTEGER&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_SLONG&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[casualties_01B8B4351242404B86C3151D6B0FF9F6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>data_date</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[data_date]</local-name>
+            <parent-name>[migration]</parent-name>
+            <remote-alias>data_date</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <width>65536</width>
+            <contains-null>true</contains-null>
+            <padded-semantics>true</padded-semantics>
+            <collation flag='0' name='binary' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_WCHAR&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_WCHAR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[migration_18969B3BA019425F99657CF0494E18E3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>people</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[people]</local-name>
+            <parent-name>[migration]</parent-name>
+            <remote-alias>people</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>4</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;SQL_DOUBLE&quot;</attribute>
+              <attribute datatype='string' name='DebugWireType'>&quot;SQL_C_DOUBLE&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[migration_18969B3BA019425F99657CF0494E18E3]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='casualties' datatype='table' name='[__tableau_internal_object_id__].[casualties_01B8B4351242404B86C3151D6B0FF9F6]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='migration' datatype='table' name='[__tableau_internal_object_id__].[migration_18969B3BA019425F99657CF0494E18E3]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='tweets' datatype='table' name='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' role='measure' type='quantitative' />
+      <column caption='Casualties' datatype='integer' name='[casualties]' role='measure' type='quantitative' />
+      <column caption='Compound' datatype='real' name='[compound]' role='measure' type='quantitative' />
+      <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column caption='Data Date' datatype='string' name='[data_date]' role='dimension' type='nominal' />
+      <column caption='Location' datatype='string' name='[location]' role='dimension' type='nominal' />
+      <column caption='Neg' datatype='real' name='[neg]' role='measure' type='quantitative' />
+      <column caption='Neu' datatype='real' name='[neu]' role='measure' type='quantitative' />
+      <column caption='People' datatype='real' name='[people]' role='measure' type='quantitative' />
+      <column caption='Pos' datatype='real' name='[pos]' role='measure' type='quantitative' />
+      <column caption='Sentiment' datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+      <column caption='Text' datatype='string' name='[text]' role='dimension' type='nominal' />
+      <column caption='Tweetcreatedts' datatype='string' name='[tweetcreatedts]' role='dimension' type='nominal' />
+      <column-instance column='[sentiment]' derivation='None' name='[none:sentiment:nk]' pivot='key' type='nominal' />
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:sentiment:nk]' palette='traffic_light_10_0' type='palette'>
+            <map to='#309143'>
+              <bucket>&quot;positive&quot;</bucket>
+            </map>
+            <map to='#b60a1c'>
+              <bucket>&quot;negative&quot;</bucket>
+            </map>
+            <map to='#e39802'>
+              <bucket>&quot;neutral&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='casualties' id='casualties_01B8B4351242404B86C3151D6B0FF9F6'>
+            <properties context=''>
+              <relation connection='genericodbc.18c6zel182jfwn1burnlz0lgqoaa' name='casualties' table='[casualties]' type='table' />
+            </properties>
+          </object>
+          <object caption='migration' id='migration_18969B3BA019425F99657CF0494E18E3'>
+            <properties context=''>
+              <relation connection='genericodbc.18c6zel182jfwn1burnlz0lgqoaa' name='migration' table='[migration]' type='table' />
+            </properties>
+          </object>
+          <object caption='tweets' id='tweets_73EF6302D1E440ABAE224E10EAA1C07E'>
+            <properties context=''>
+              <relation connection='genericodbc.18c6zel182jfwn1burnlz0lgqoaa' name='tweets' table='[tweets]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[tweetcreatedts]' />
+              <expression op='[Date]' />
+            </expression>
+            <first-end-point object-id='tweets_73EF6302D1E440ABAE224E10EAA1C07E' />
+            <second-end-point object-id='casualties_01B8B4351242404B86C3151D6B0FF9F6' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[tweetcreatedts]' />
+              <expression op='[data_date]' />
+            </expression>
+            <first-end-point object-id='tweets_73EF6302D1E440ABAE224E10EAA1C07E' />
+            <second-end-point object-id='migration_18969B3BA019425F99657CF0494E18E3' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Casualties'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tweets+ (C:\Users\anadu\repos\test\resources\Ukraine_Analysis.sqlite)' name='federated.0mu63c307rkucc18rza9u1tbuzp7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mu63c307rkucc18rza9u1tbuzp7'>
+            <column datatype='string' name='[Date]' role='dimension' type='nominal' />
+            <column caption='Casualties' datatype='integer' name='[casualties]' role='measure' type='quantitative' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:nk]' pivot='key' type='nominal' />
+            <column-instance column='[casualties]' derivation='None' name='[none:casualties:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:casualties:qk]' scope='rows' value='Russian Casualties' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:Date:nk]' value='110' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:casualties:qk]</rows>
+        <cols>[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:Date:nk]</cols>
+      </table>
+      <simple-id uuid='{8779578B-D022-4F64-864C-E4B32890D240}' />
+    </worksheet>
+    <worksheet name='Compound per sentiment'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Compound Value per Sentiment by Location</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tweets+ (C:\Users\anadu\repos\test\resources\Ukraine_Analysis.sqlite)' name='federated.0mu63c307rkucc18rza9u1tbuzp7' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.0mu63c307rkucc18rza9u1tbuzp7'>
+            <column-instance column='[compound]' derivation='Avg' name='[avg:compound:qk]' pivot='key' type='quantitative' />
+            <column caption='Compound' datatype='real' name='[compound]' role='measure' type='quantitative' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[sentiment]' derivation='None' name='[none:sentiment:nk]' pivot='key' type='nominal' />
+            <column caption='Sentiment' datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk]'>
+            <groupfilter function='member' level='[none:sentiment:nk]' member='&quot;negative&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='map'>
+            <format attr='washout' value='0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0mu63c307rkucc18rza9u1tbuzp7].[avg:compound:qk]' />
+              <lod column='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:country:nk]' />
+              <geometry column='[federated.0mu63c307rkucc18rza9u1tbuzp7].[Geometry (generated)]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mu63c307rkucc18rza9u1tbuzp7].[Latitude (generated)]</rows>
+        <cols>[federated.0mu63c307rkucc18rza9u1tbuzp7].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{3FB79D0F-66A6-42F7-8EBE-D5033D366BE6}' />
+    </worksheet>
+    <worksheet name='Migration'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tweets+ (C:\Users\anadu\repos\test\resources\Ukraine_Analysis.sqlite)' name='federated.0mu63c307rkucc18rza9u1tbuzp7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mu63c307rkucc18rza9u1tbuzp7'>
+            <column datatype='string' name='[Date]' role='dimension' type='nominal' />
+            <column-instance column='[Date]' derivation='None' name='[none:Date:nk]' pivot='key' type='nominal' />
+            <column-instance column='[people]' derivation='None' name='[none:people:qk]' pivot='key' type='quantitative' />
+            <column caption='People' datatype='real' name='[people]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:people:qk]' scope='rows' value='Ukranian Diaspora' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:Date:nk]' value='109' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:people:qk]</rows>
+        <cols>[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:Date:nk]</cols>
+      </table>
+      <simple-id uuid='{35C0FBD9-505F-4CEE-943D-015797E8D741}' />
+    </worksheet>
+    <worksheet name='Negative sentiments by Country (2)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Tweets by Country</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tweets+ (C:\Users\anadu\repos\test\resources\Ukraine_Analysis.sqlite)' name='federated.0mu63c307rkucc18rza9u1tbuzp7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mu63c307rkucc18rza9u1tbuzp7'>
+            <_.fcp.ObjectModelTableType.false...column caption='tweets' datatype='integer' name='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='tweets' datatype='table' name='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' role='measure' type='quantitative' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[sentiment]' derivation='None' name='[none:sentiment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tweetcreatedts]' derivation='None' name='[none:tweetcreatedts:nk]' pivot='key' type='nominal' />
+            <column caption='Sentiment' datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+            <column caption='Tweetcreatedts' datatype='string' name='[tweetcreatedts]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk]'>
+            <groupfilter function='member' level='[none:sentiment:nk]' member='&quot;negative&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]' value='122' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:tweetcreatedts:nk]' value='102' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='total-label' data-class='total' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:tweetcreatedts:nk]' value='Date' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-size' value='14' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='font-size' value='18' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:country:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mu63c307rkucc18rza9u1tbuzp7].[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]</rows>
+        <cols>[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:tweetcreatedts:nk]</cols>
+      </table>
+      <simple-id uuid='{FC29E38F-DF3A-4DA3-9D10-8EFC5F5A4025}' />
+    </worksheet>
+    <worksheet name='Positive sentiments by Country'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Tweets by Country</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tweets+ (C:\Users\anadu\repos\test\resources\Ukraine_Analysis.sqlite)' name='federated.0mu63c307rkucc18rza9u1tbuzp7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mu63c307rkucc18rza9u1tbuzp7'>
+            <_.fcp.ObjectModelTableType.false...column caption='tweets' datatype='integer' name='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='tweets' datatype='table' name='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' role='measure' type='quantitative' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[sentiment]' derivation='None' name='[none:sentiment:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tweetcreatedts]' derivation='None' name='[none:tweetcreatedts:nk]' pivot='key' type='nominal' />
+            <column caption='Sentiment' datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+            <column caption='Tweetcreatedts' datatype='string' name='[tweetcreatedts]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk]'>
+            <groupfilter function='member' level='[none:sentiment:nk]' member='&quot;positive&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]' value='122' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:tweetcreatedts:nk]' value='102' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='total-label' data-class='total' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:tweetcreatedts:nk]' value='Date' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-size' value='14' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='font-size' value='18' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:country:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mu63c307rkucc18rza9u1tbuzp7].[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]</rows>
+        <cols>[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:tweetcreatedts:nk]</cols>
+      </table>
+      <simple-id uuid='{DFB3F628-E930-4D30-B2A1-14AE9D5E77B6}' />
+    </worksheet>
+    <worksheet name='Sentiment Distribution per Compound measure'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tweets+ (C:\Users\anadu\repos\test\resources\Ukraine_Analysis.sqlite)' name='federated.0mu63c307rkucc18rza9u1tbuzp7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mu63c307rkucc18rza9u1tbuzp7'>
+            <_.fcp.ObjectModelTableType.false...column caption='tweets' datatype='integer' name='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='tweets' datatype='table' name='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' role='measure' type='quantitative' />
+            <column caption='Compound' datatype='real' name='[compound]' role='measure' type='quantitative' />
+            <column-instance column='[compound]' derivation='None' name='[none:compound:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sentiment]' derivation='None' name='[none:sentiment:nk]' pivot='key' type='nominal' />
+            <column caption='Sentiment' datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk]'>
+            <groupfilter function='member' level='[none:sentiment:nk]' member='&quot;positive&quot;' user:ui-domain='relevant' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+        </panes>
+        <rows>[federated.0mu63c307rkucc18rza9u1tbuzp7].[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]</rows>
+        <cols>[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:compound:qk]</cols>
+      </table>
+      <simple-id uuid='{0B97FCAD-04BA-4DE3-A439-95D16CDAE9AE}' />
+    </worksheet>
+    <worksheet name='Sentiment by Country'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tweets+ (C:\Users\anadu\repos\test\resources\Ukraine_Analysis.sqlite)' name='federated.0mu63c307rkucc18rza9u1tbuzp7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mu63c307rkucc18rza9u1tbuzp7'>
+            <_.fcp.ObjectModelTableType.false...column caption='tweets' datatype='integer' name='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='tweets' datatype='table' name='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' role='measure' type='quantitative' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[sentiment]' derivation='None' name='[none:sentiment:nk]' pivot='key' type='nominal' />
+            <column caption='Sentiment' datatype='string' name='[sentiment]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='font-size' data-class='subtotal' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:country:nk]' value='16' />
+            <format attr='height' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:country:nk]' value='44' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='font-size' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:country:nk]' value='16' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0mu63c307rkucc18rza9u1tbuzp7].[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]</rows>
+        <cols>([federated.0mu63c307rkucc18rza9u1tbuzp7].[none:country:nk] / [federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk])</cols>
+      </table>
+      <simple-id uuid='{DFBA65EE-C54C-4EC2-B177-FF699B73BB32}' />
+    </worksheet>
+    <worksheet name='Tweets by Country'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run>Number of Tweets by Country</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='tweets+ (C:\Users\anadu\repos\test\resources\Ukraine_Analysis.sqlite)' name='federated.0mu63c307rkucc18rza9u1tbuzp7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0mu63c307rkucc18rza9u1tbuzp7'>
+            <_.fcp.ObjectModelTableType.false...column caption='tweets' datatype='integer' name='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]' pivot='key' type='quantitative' />
+            <_.fcp.ObjectModelTableType.true...column caption='tweets' datatype='table' name='[__tableau_internal_object_id__].[tweets_73EF6302D1E440ABAE224E10EAA1C07E]' role='measure' type='quantitative' />
+            <column caption='Country' datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tweetcreatedts]' derivation='None' name='[none:tweetcreatedts:nk]' pivot='key' type='nominal' />
+            <column caption='Tweetcreatedts' datatype='string' name='[tweetcreatedts]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='width' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]' value='122' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:tweetcreatedts:nk]' value='102' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='total-label' data-class='total' field='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:tweetcreatedts:nk]' value='Date' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='font-size' value='14' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-family' value='Tableau Bold' />
+            <format attr='font-size' value='18' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:country:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0mu63c307rkucc18rza9u1tbuzp7].[__tableau_internal_object_id__].[cnt:tweets_73EF6302D1E440ABAE224E10EAA1C07E:qk]</rows>
+        <cols>[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:tweetcreatedts:nk]</cols>
+      </table>
+      <simple-id uuid='{A1E4AAF9-6C03-43AB-B6A6-656AFAD18CD2}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Tweets by Country'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:country:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AAE368C7-DEFA-42DC-AD37-72F68F825EFC}' />
+    </window>
+    <window class='worksheet' name='Sentiment by Country'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{6B663986-712E-4634-9897-6DD05C153F7F}' />
+    </window>
+    <window class='worksheet' name='Positive sentiments by Country'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:country:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4A31E926-522D-405C-ACCA-2990C98E6B7A}' />
+    </window>
+    <window class='worksheet' name='Negative sentiments by Country (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:country:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{B5ADD5B3-A834-4EC6-87F4-D81CAD95CD1A}' />
+    </window>
+    <window class='worksheet' name='Compound per sentiment'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.0mu63c307rkucc18rza9u1tbuzp7].[avg:compound:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3A2E5E04-D75B-4C8B-A72C-B500CFD4A686}' />
+    </window>
+    <window class='worksheet' name='Sentiment Distribution per Compound measure'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.0mu63c307rkucc18rza9u1tbuzp7].[none:sentiment:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8CA44CB0-26F9-4B05-8A60-9E9D2BEEF5D3}' />
+    </window>
+    <window class='worksheet' name='Migration'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{62A18B9A-9710-42EA-BE20-E2D28A0D51B3}' />
+    </window>
+    <window class='worksheet' name='Casualties'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C14E4954-9ABD-4DA5-ACFC-FAC4CB1BF573}' />
+    </window>
+  </windows>
+</workbook>
