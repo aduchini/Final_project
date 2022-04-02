@@ -1,0 +1,3 @@
+1. https://deeplearninganalytics.org/ai-and-machine-learning/
+2. https://towardsdatascience.com/naive-bayes-intuition-and-implementation-ac328f9c9718
+3. https://forkas.stis.ac.id/2019/04/metode-random-forest.html
