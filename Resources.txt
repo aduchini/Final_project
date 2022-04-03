@@ -1,3 +1,6 @@
+CSS and HTMl Template:
+https://www.free-css.com/free-css-templates/page272/infinite-loop
+
 For Images in WebPage:
 1. https://deeplearninganalytics.org/ai-and-machine-learning/
 2. https://towardsdatascience.com/naive-bayes-intuition-and-implementation-ac328f9c9718
@@ -12,4 +15,8 @@ https://www.kaggle.com/datasets/piterfm/2022-ukraine-russian-war
 
 2. For Ukraine 
 
+- From 24th Feb
+https://data2.unhcr.org/en/situations/ukraine
+
+- From 3rd March
 https://data.humdata.org/m/dataset/ukraine-key-figures-2022?
