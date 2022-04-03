@@ -147,13 +147,13 @@ The performance of the model was satisfactory, with 84% accuracy, 84% of average
 ## Dashboard
 
 ### Tools Used
-We have used Tableau for all our data visualizations and analysis. Tableau will also be used to create a secure connection as an ODBC with Sqlite. Successful connection will help us access all our tables and databases and perform our analysis and visualizations effectively. Our final dashboard will be published on Tableau Public.
+We have used Tableau for all our data visualizations and analysis. Tableau is also used to create a secure connection as an ODBC with Sqlite. Successful connection helps us access all our tables and databases and perform our analysis and visualizations effectively. Our final dashboard is published on Tableau Public.
 
 ### Interactive elements
-Our Dashboard in Tableau Public will have a number of interactive elements. Check boxes will be used to give the user flexibility to choose a country of choice and perform visualizations. Other checkboxes for date can be used to select date of choice and see the visualizations accordingly.
+Our Dashboard in Tableau Public has interactive elements, such as check boxes that provide the user flexibility to choose a country, select dates, or sentiments to update visualizations.
 
 ### Model Deployment
-Finally the data visualizations will be deployed on Tableau Public and shared publicly.
+Finally the data visualizations has been deployed on Tableau Public and shared publicly, to [this Tableau viz](https://public.tableau.com/app/profile/ana.duchini/viz/Ukraine_analysis/Story1).
 
 
 ## Summary
