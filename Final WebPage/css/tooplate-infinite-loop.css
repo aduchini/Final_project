@@ -145,11 +145,18 @@ blockquote {
 /* Hero */
 
 #infinite {
-	background-color: #222;
-  background-image: url(../img/infinite-loop-01.jpg);
-  background-repeat: no-repeat;
-  height: 100vh;
-  min-height: 375px;
+	background-color: rgb(250, 245, 245);
+  background-image: url(../img/covers.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-blend-mode: normal;
+  background-position: center;
+  
+  
+
+  
+  height: 120vh;
+  min-height: 178px;
   position: relative;
 }
 
