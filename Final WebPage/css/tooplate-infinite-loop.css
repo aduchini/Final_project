@@ -249,9 +249,9 @@ blockquote {
   padding: 20px 50px;
 }
 
-/* Introduction */
+/* about */
 
-#introduction {
+#about {
   padding-bottom: 100px;
 }
 
@@ -286,12 +286,12 @@ blockquote {
 }
 
 @media (max-width: 991px) {
-  #testimonials {
+  #models {
     background-image: url(../img/th.jpg);
   }
 }
 
-.tm-testimonials-content {
+.tm-models-content {
   position: relative;
   z-index: 100;
 }
@@ -308,23 +308,23 @@ blockquote {
   z-index: 0;
 }
 
-.tm-testimonials-carousel {
+.tm-models-carousel {
   max-width: 1050px;
   margin: 0 auto;
 }
 
-.tm-testimonial-item {
+.tm-models-item {
   max-width: 290px;
   margin-left: 35px;
   margin-right: 35px;
 }
 
-.tm-testimonial-item img {
+.tm-models-item img {
   border-radius: 50%;
   margin-bottom: 35px;
 }
 
-.tm-testimonial-item figcaption {
+.tm-models-item figcaption {
   text-align: right;
   font-style: italic;
   font-size: 1.1rem;
@@ -338,12 +338,12 @@ blockquote {
   font-size: 0.9rem;
 }
 
-.tm-gallery-container {
+.tm-results-container {
   padding-top: 70px;
   padding-bottom: 120px;
 }
 
-.tm-gallery-item {
+.tm-results-item {
   margin: 0 15px;
 }
 
@@ -362,14 +362,14 @@ blockquote {
   color: #3ba0dd;
 }
 
-.tm-testimonials-carousel .slick-dots li button:before {
+.tm-models-carousel .slick-dots li button:before {
   color: white;
   opacity: 0.5;
 }
 
-.tm-testimonials-carousel .slick-dots li button:hover:before,
-.tm-testimonials-carousel .slick-dots li button:focus:before,
-.tm-testimonials-carousel .slick-dots li.slick-active button:before {
+.tm-models-carousel .slick-dots li button:hover:before,
+.tm-models-carousel .slick-dots li button:focus:before,
+.tm-models-carousel .slick-dots li.slick-active button:before {
   color: white;
   opacity: 1;
 }
