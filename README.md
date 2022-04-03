@@ -107,12 +107,14 @@ Notebook: [Statistical_Analysis](Statistical_Analysis.ipynb)
 A hypothesis of whether tweets sentiment polarity was related to other variables was tested. Specifically, Pearson correlation was used to test if the number of war casualties in Ukraine, the number of refugees and the day of the week was related to the compound polarity score.
 
 H0: There is no linear relationship between variables.
-H1: There is a significant positive or negative linear relationship between variables. 
+
+H1: There is a positive or negative linear relationship between variables. 
 
 ### Correlation Matrix
 As seen in the correlation matrix below, Pearson correlation values were close to zero and p-values were greater than 0.05. The null hypothesis was then accepted and it was assumed that variables are not linearly related.
 
 ![Correlation Matrix](resources/images/correlation_matrix.png)
+*p < .05
 
 ### Scatter Matrix
 Scatter plots were also generated to check if there was a clear non-linear relationship between variables. From visual inspection of the scatter matrix below, points look spread out for all scatter plots and there is no clear distribution pattern.
