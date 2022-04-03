@@ -1,6 +1,6 @@
 
 # Analyzing the Sentiment Distribution of Tweets about the War in Ukraine
-The main focus of this project is Sentiment Analysis of twitter data related to the war in Ukraine and then analyzing the sentiments along with Ukraine Casualties data set and Ukraine Migration data set to derive conclusions.
+The main focus of this project is the analysis of twitter users’ sentiments about the war in Ukraine. Secondary analysis of how these sentiments are related to data on war casualties and migrations from Ukraine were are also performed.
 
 ## Project Structure
 
@@ -8,7 +8,6 @@ The main focus of this project is Sentiment Analysis of twitter data related to 
 - Topic rationale
 - Data source
 - Research questions
-- Communication Protocol
 
 2. [Data Preprocessing](#Data-Preprocessing)
 - Pre-processing Pipeline
@@ -26,14 +25,14 @@ The main focus of this project is Sentiment Analysis of twitter data related to 
 - Comparison of Classification Models
 - Implementation of Linear SVC
 
-6. [Dashboard](#Dashboad)
+6. [Dashboard](#Dashboard)
 - Tools Used
 - Interactive elements
 - Model Deployment
 
 7. [Summary](#Summary)
-- Project Limitations
-- Recommendation for Future Analysis
+- Limitations
+- Future Analysis
 
 ### Presentation
 A working presentation has been added to [Google docs](https://docs.google.com/presentation/d/1uzYRtAgBxeyVoteSkImERVQHtRtEBiBFCAVat05HdC0/edit?usp=sharing)
@@ -50,11 +49,13 @@ Since then, there have been tensions between countries, in particular with the U
 Besides the threat of worldwide conflict, other impacts of the Russian invasion on Ukraine has already been observed. The most prominent impact is Ukrainians’ migration to neighboring countries, such as Poland, Hungary and Slovakia. Specialists have been calling it a major refugee crisis, as of March 11 over two and a half million Ukrainians have fled their homes (Source: [The UN Refugee Agency](https://data2.unhcr.org/en/situations/ukraine#_ga=2.200929772.353981607.1646674903-2007428328.1646674903)).
 
 ### Data Source
-Given the direct or indirect impact of the war in Ukraine to people’s lives, it is worthwhile to assess the sentiments people have about this event. Sentiments were identified through text data, consisting of over one million tweets downloaded from February 26 to March 10, 2022. Data was sourced from [Kaggle](https://www.kaggle.com/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows/discussion/310030). The dataset administrator used three processes to collect data:
+Given the direct or indirect impact of the war in Ukraine to people’s lives, it is worthwhile to assess the sentiments people have about this event. Sentiments were identified through text data, consisting of over 11 million tweets downloaded from February 26 to March 19, 2022. Data was sourced from [Kaggle](https://www.kaggle.com/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows/discussion/310030). The dataset administrator used three processes to collect data:
 
 - Process 1 hashtags: "#SlavaUkraini OR #Russia OR #RussiaUkraineWar OR #Putin OR #RussiaUkraine OR #RussianWar OR #ww3 OR #moscow OR #RussianConflict"
 - Process 2 hashtags: "#ukraineunderattack OR #Ukriane OR #Ukraine OR #RussianUkrainianWar OR #UkraineRussia OR #UkraineConflict OR #UkraineWar OR #Kharkiv OR #StopPutinNow"
 - Process 3: Geolocation UKRAINE country.
+
+[The UN Refugee Agency](https://data2.unhcr.org/en/situations/ukraine#_ga=2.176425381.1265551284.1648919578-2007428328.1646674903) served as a secondary data source. From this agency, we gathered the number of refugees fleeing Ukraine from February 24 to March 19, 2022, as well as the number of war casualties for the same period.
 
 ### Research Questions
 Through the examination of tweet data, the following questions will be answered:
@@ -64,17 +65,9 @@ Through the examination of tweet data, the following questions will be answered:
 3. **How sentiment polarity changes over time**?
 4. **Do sentiment distributions change according to country**?
 5. **Is polarity related to the number of casualties in the war**?
-6. **How accurate are Machine Learning models in predicting polarity based on tweet text**?
+6.  **Is polarity related to the number of refugees fleeing Ukraine**?
+7. **How accurate are Machine Learning models in predicting polarity based on tweet text**?
 
-### Communication Protocol
-The group has created a GitHub repository with 4 different branches for each member to work on their own branch. The 4 branches that have been created are as follows:
-
-1. week_2_deliverables_AD : Branch for Ana Duchini
-2. week_2_deliverables_AS : Branch for Aakriti Sharma
-3. week_2_deliverables_FM : Branch for Flora Matos
-4. week_2_deliverables_rk : Branch for Ruchika Kulkarni
-
-Each group member has worked in a specific project task and the whole group has been communicating through slack and meeting every two days via zoom.
 
 ## Data Preprocessing
 
@@ -96,7 +89,7 @@ For the purpose of this analysis we are using VADER (Valence Aware Dictionary sE
 
  > Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text. Eighth International Conference   on Weblogs and Social Media (ICWSM-14). Ann Arbor, MI, June 2014.
  
-Once the data is cleaned and ready for VADER, the data is analyzed by importing and using SentimentIntensityAnalyzer module from vaderSentiment package. The tweets are then passes throught the analyzer and assigned polarity scores, using which we can further divide the tweets as positive, neutral and negative. Detailed demo of cleaning process and VADER sentiment analysis can be found [here](https://github.com/aduchini/Final_project/blob/main/Twitter_Vader_Sentiment_Analysis.ipynb).
+Once the data is cleaned and ready for VADER, the data is analyzed by importing and using SentimentIntensityAnalyzer module from vaderSentiment package. The tweets are then passes through the analyzer and assigned polarity scores, using which we can further divide the tweets as positive, neutral and negative. Detailed demo of cleaning process and VADER sentiment analysis can be found [here](https://github.com/aduchini/Final_project/blob/main/Twitter_Vader_Sentiment_Analysis.ipynb).
 
 ## Database Storage
 The data (tweets data, casualty data, and migration data) has been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in [Google Drive](https://drive.google.com/file/d/152mxp0DtOWYw0seek4LncegdKDTBk65C/view?usp=sharing). It uses the following [schema](resources/schema.sql), as laid out below:
@@ -107,8 +100,31 @@ The data (tweets data, casualty data, and migration data) has been loaded to an 
 *Diagram of the steps followed and the files involved*
 
 
+## Statistical Analysis
+Notebook: [Statistical_Analysis](Statistical_Analysis.ipynb)
+
+### Hypothesis
+A hypothesis of whether tweets sentiment polarity was related to other variables was tested. Specifically, Pearson correlation was used to test if the number of war casualties in Ukraine, the number of refugees and the day of the week was related to the compound polarity score.
+
+H0: There is no linear relationship between variables.
+
+H1: There is a positive or negative linear relationship between variables. 
+
+### Correlation Matrix
+As seen in the correlation matrix below, Pearson correlation values were close to zero and p-values were greater than 0.05. The null hypothesis was then accepted and it was assumed that variables are not linearly related.
+
+![Correlation Matrix](resources/images/correlation_matrix.png)
+*p < .05
+
+### Scatter Matrix
+Scatter plots were also generated to check if there was a clear non-linear relationship between variables. From visual inspection of the scatter matrix below, points look spread out for all scatter plots and there is no clear distribution pattern.
+
+![Scatter Matrix](resources/images/scatter_matrix.png)
+
+
 ## Machine Learning
 Notebook: [Machine_Learning](Machine_Learning.ipynb)
+
 Library: SciKitLearn
 
 ### Data Preprocessing for Machine Learning
@@ -157,5 +173,15 @@ Finally the data visualizations will be deployed on Tableau Public and shared pu
 
 
 ## Summary
+In sum, …
 
+### Limitations
+Ideas:
+- Russians do not have access to twitter, data is biased towards supporters of Ukraine
+- Using only english tweets also makes our sample biased
+
+### Future Analysis
+Ideas:
+- analyze tweets in other languages spoken by the group members (i.e., Spanish, Portuguese, Hindi) to explore other NLP libraries, check if the sentiment distribution is equivalent and compare ML algorithm accuracy.
+- use Spacy (NLP library) to identify entities mentioned in Ukraine war tweets. Conduct case study of an entity image in relation to the war in Ukraine.
 
