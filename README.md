@@ -62,6 +62,15 @@ Given the direct or indirect impact of the war in Ukraine to people’s lives, i
 
 [The UN Refugee Agency](https://data2.unhcr.org/en/situations/ukraine#_ga=2.176425381.1265551284.1648919578-2007428328.1646674903) served as a secondary data source. From this agency, we gathered the number of refugees fleeing Ukraine from February 24 to March 19, 2022, as well as the number of war casualties for the same period.
 
+Other Data for Russia equipment and personnel losses as well as Ukraine Casualties have been sourced from the following:
+ - 1. For Russia Losses-
+https://www.kaggle.com/datasets/piterfm/2022-ukraine-russian-war
+
+- 2. For Ukraine Losses - 
+
+From 24th Feb - 
+https://data2.unhcr.org/en/situations/ukraine
+
 ### Research Questions
 Through the examination of tweet data, the following questions will be answered:
 
@@ -185,6 +194,7 @@ Our Dashboard in Tableau Public has interactive elements, such as check boxes th
 ### Model Deployment
 Finally the data visualizations has been deployed on Tableau Public and shared publicly, to [this Tableau viz](https://public.tableau.com/app/profile/ana.duchini/viz/Ukraine_analysis/Story1).
 
+A website has been created with multiple interactive elements and all our project related details including visualizations and the machine models used. Various Tableau stories published in Tableau Public have been embedded in their respective webpages. The website  
 
 ## Summary
 In sum, …
