@@ -97,7 +97,9 @@ For the purpose of this analysis we are using VADER (Valence Aware Dictionary sE
 Once the data is cleaned and ready for VADER, the data is analyzed by importing and using SentimentIntensityAnalyzer module from vaderSentiment package. The tweets are then passes through the analyzer and assigned polarity scores, using which we can further divide the tweets as positive, neutral and negative. Detailed demo of cleaning process and VADER sentiment analysis can be found [here](https://github.com/aduchini/Final_project/blob/main/Twitter_Vader_Sentiment_Analysis.ipynb).
 
 ## Database Storage
-The data (tweets data, casualty data, and migration data) has been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in [Google Drive](https://drive.google.com/file/d/152mxp0DtOWYw0seek4LncegdKDTBk65C/view?usp=sharing). It uses the following [schema](resources/schema.sql), as laid out below:
+The data (tweets data, casualty data, and migration data) has been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in:
+> [SQLite in Google Drive](https://drive.google.com/file/d/19K75J2ouPGdZb6Kk2lWZiYaIquHsYsT4/view?usp=sharing)
+ It uses the following:[schema](resources/schema.sql), as laid out below:
  ![screenshot of schema](resources/images/schema.png)
 
 ### Flowchart of Data Processes and Inputs/Outputs
@@ -175,13 +177,13 @@ The performance of the model was satisfactory, with 92% accuracy, 92% of average
 ## Dashboard
 
 ### Tools Used
-We have used Tableau for all our data visualizations and analysis. Tableau will also be used to create a secure connection as an ODBC with Sqlite. Successful connection will help us access all our tables and databases and perform our analysis and visualizations effectively. Our final dashboard will be published on Tableau Public.
+We have used Tableau for all our data visualizations and analysis. Tableau is also used to create a secure connection as an ODBC with Sqlite. Successful connection helps us access all our tables and databases and perform our analysis and visualizations effectively. Our final dashboard is published on Tableau Public.
 
 ### Interactive elements
-Our Dashboard in Tableau Public will have a number of interactive elements. Check boxes will be used to give the user flexibility to choose a country of choice and perform visualizations. Other checkboxes for date can be used to select date of choice and see the visualizations accordingly.
+Our Dashboard in Tableau Public has interactive elements, such as check boxes that provide the user flexibility to choose a country, select dates, or sentiments to update visualizations.
 
 ### Model Deployment
-Finally the data visualizations will be deployed on Tableau Public and shared publicly.
+Finally the data visualizations has been deployed on Tableau Public and shared publicly, to [this Tableau viz](https://public.tableau.com/app/profile/ana.duchini/viz/Ukraine_analysis/Story1).
 
 
 ## Summary

@@ -1,0 +1,23 @@
+CSS and HTMl Template:
+https://www.free-css.com/free-css-templates/page272/infinite-loop
+
+For Images in WebPage:
+1. https://deeplearninganalytics.org/ai-and-machine-learning/
+2. https://towardsdatascience.com/naive-bayes-intuition-and-implementation-ac328f9c9718
+3. https://forkas.stis.ac.id/2019/04/metode-random-forest.html
+4. https://explore.mathworks.com/common-machine-learning-challenges
+5. https://autome.me/an-introduction-to-major-types-of-machine-learning-models/
+
+
+
+Data sources:
+1. For Russia Losses-
+https://www.kaggle.com/datasets/piterfm/2022-ukraine-russian-war
+
+2. For Ukraine 
+
+- From 24th Feb
+https://data2.unhcr.org/en/situations/ukraine
+
+- From 3rd March
+https://data.humdata.org/m/dataset/ukraine-key-figures-2022?
