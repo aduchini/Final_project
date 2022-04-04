@@ -1,8 +1,10 @@
 tweets
 -
 tweetcreatedts datetime PK
-location nvarchar
 text nvarchar
+hashtags nvarchar
+retweetcount int
+favorite_count int
 country nvarchar
 neg float
 neu float
@@ -13,16 +15,23 @@ sentiment nvarchar
 migration
 -
 data_date datetime FK
-people int
+ukraine_migration int
 
-casualties
+russia_casualties
 -
 Date datetime FK
-casualties int
+russia_prisoners int
+russia_casualties int
+
+ukraine_casualties
+-
+date datetime FK
+ukraine_casualties int
 
 migration_sentiments
 -
 data_date datetime FK
-people int
-casualties int
+ukraine_migration int
+russia_casualties int
+ukraine_casualties int
 compound_sentiment float
