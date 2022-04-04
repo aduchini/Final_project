@@ -20,17 +20,22 @@ The main focus of this project is the analysis of twitter users’ sentiments ab
 4. [Database Storage](#Database-Storage)
 - Flowchart of Data Processes and Inputs/Outputs
 
-5. [Machine Learning](#Machine-Learning)
+5. [Statistical Analysis](#Statistical-Analysis)
+- Hypothesis
+- Correlation Matrix
+- Scatter Matrix
+
+6. [Machine Learning](#Machine-Learning)
 - Data Preprocessing for Machine Learning
 - Comparison of Classification Models
 - Implementation of Linear SVC
 
-6. [Dashboard](#Dashboard)
+7. [Dashboard](#Dashboard)
 - Tools Used
 - Interactive elements
 - Model Deployment
 
-7. [Summary](#Summary)
+8. [Summary](#Summary)
 - Limitations
 - Future Analysis
 
@@ -65,7 +70,7 @@ Through the examination of tweet data, the following questions will be answered:
 3. **How sentiment polarity changes over time**?
 4. **Do sentiment distributions change according to country**?
 5. **Is polarity related to the number of casualties in the war**?
-6.  **Is polarity related to the number of refugees fleeing Ukraine**?
+6. **Is polarity related to the number of refugees fleeing Ukraine**?
 7. **How accurate are Machine Learning models in predicting polarity based on tweet text**?
 
 
@@ -104,20 +109,22 @@ The data (tweets data, casualty data, and migration data) has been loaded to an 
 Notebook: [Statistical_Analysis](Statistical_Analysis.ipynb)
 
 ### Hypothesis
-A hypothesis of whether tweets sentiment polarity was related to other variables was tested. Specifically, Pearson correlation was used to test if the number of war casualties in Ukraine, the number of refugees and the day of the week was related to the compound polarity score.
+A hypothesis of whether tweets sentiment polarity was related to other variables was tested. Specifically, Pearson correlation was used to test if the number of war casualties in Russia and Ukraine, the number of refugees fleeing Ukraine, the number of Russian prisoners and the day of the week was related to the compound polarity score.
 
 H0: There is no linear relationship between variables.
 
 H1: There is a positive or negative linear relationship between variables. 
 
 ### Correlation Matrix
-As seen in the correlation matrix below, Pearson correlation values were close to zero and p-values were greater than 0.05. The null hypothesis was then accepted and it was assumed that variables are not linearly related.
+As seen in the correlation matrix below, Pearson correlation values for the relationship between compound polarity and other variables were close to zero and p-values were greater than 0.05. The null hypothesis was then accepted and it was assumed that these variables are not linearly related.
 
 ![Correlation Matrix](resources/images/correlation_matrix.png)
-*p < .05
+
+
+There were significant negative relationships between date and number of migrants as well as number of casualties in Russia. These relationships might warrant more attention later in the analysis of how migration and casualties change across time.
 
 ### Scatter Matrix
-Scatter plots were also generated to check if there was a clear non-linear relationship between variables. From visual inspection of the scatter matrix below, points look spread out for all scatter plots and there is no clear distribution pattern.
+Scatter plots were also generated to check if there was a clear non-linear relationship between compound polarity and other variables. From visual inspection of the scatter matrix below, points look spread out and there is no clear distribution pattern.
 
 ![Scatter Matrix](resources/images/scatter_matrix.png)
 
@@ -131,8 +138,12 @@ Library: SciKitLearn
 After data was cleaned and sentiment scores was computed,
 data preprocessing for Machine Learning included:
  - Dropping rows with neutral sentiment scores in order to get only a binary outcome: positive or negative.
- - Getting 1% of the dataset (n = 8,083) as sample to fit our computing resources.
+ - Getting 1% of the dataset (n = 10,855) as sample to fit our computing resources.
  - Vectorizing the text data using Term Frequency-Inverse Document Frequency (TF-IDF). The TF-IDF method consists in converting the text into numerical vectors by calculating the frequency of each text unit and assigning less weight to most frequent units. The logic is that most frequent terms are less helpful in categorizing the dataset as they appear in most cases.
+
+Most important features from TF-IDF
+![Feature Importance](resources/images/feature_importance.png)
+
  - Defining the numeric vectors as X, independent variables or features.
  - Factorizing the variable sentiment score (from positive/negative to 0/1) and defining it as y, dependent variable.
  - Setting 80% of the sample data as training set and 20% as testing set. 
@@ -149,15 +160,16 @@ The models performances were compared using boxplots of the model accuracy score
 
 ![Machine Learning Models Boxplots](resources/images/ML_boxplots.png)
 
-As seen in the image above, Linear SVC and Logistic Regression were the most accurate in predicting positive and negative outcomes from tweet text with 84% accuracy. Linear SVC was then chosen for implementation.
+As seen in the image above, Linear SVC and Logistic Regression were the most accurate in predicting positive and negative outcomes from tweet text with 92% and 91% accuracy respectively. Linear SVC was then chosen for implementation.
 
 ### Implementation of Linear SVC 
 Our data was best classified using Linear SVC, algorithm that finds the maximal margin that separates the data into the two categories (positive or negative sentiments).
 
-The performance of the model was satisfactory, with 84% accuracy, 84% of average precision and 83% of average recall.
+The performance of the model was satisfactory, with 92% accuracy, 92% of average precision and 92% of average recall.
 
-![Table Accuracy](resources/images/SVC_confusion_matrix_classification_report.png)
-![Confusion Matrix](resources/images/SVC_confusion_matrix.png)
+![Table Accuracy](resources/images/classification_report.png)
+
+![Confusion Matrix](resources/images/confusion_matrix.png)
 
 
 ## Dashboard
