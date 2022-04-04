@@ -120,6 +120,7 @@ As seen in the correlation matrix below, Pearson correlation values for the rela
 
 ![Correlation Matrix](resources/images/correlation_matrix.png)
 
+
 There were significant negative relationships between date and number of migrants as well as number of casualties in Russia. These relationships might warrant more attention later in the analysis of how migration and casualties change across time.
 
 ### Scatter Matrix
@@ -137,7 +138,7 @@ Library: SciKitLearn
 After data was cleaned and sentiment scores was computed,
 data preprocessing for Machine Learning included:
  - Dropping rows with neutral sentiment scores in order to get only a binary outcome: positive or negative.
- - Getting 1% of the dataset (n = 8,083) as sample to fit our computing resources.
+ - Getting 1% of the dataset (n = 10,855) as sample to fit our computing resources.
  - Vectorizing the text data using Term Frequency-Inverse Document Frequency (TF-IDF). The TF-IDF method consists in converting the text into numerical vectors by calculating the frequency of each text unit and assigning less weight to most frequent units. The logic is that most frequent terms are less helpful in categorizing the dataset as they appear in most cases.
 
 Most important features from TF-IDF
@@ -159,14 +160,15 @@ The models performances were compared using boxplots of the model accuracy score
 
 ![Machine Learning Models Boxplots](resources/images/ML_boxplots.png)
 
-As seen in the image above, Linear SVC and Logistic Regression were the most accurate in predicting positive and negative outcomes from tweet text with 84% accuracy. Linear SVC was then chosen for implementation.
+As seen in the image above, Linear SVC and Logistic Regression were the most accurate in predicting positive and negative outcomes from tweet text with 92% and 91% accuracy respectively. Linear SVC was then chosen for implementation.
 
 ### Implementation of Linear SVC 
 Our data was best classified using Linear SVC, algorithm that finds the maximal margin that separates the data into the two categories (positive or negative sentiments).
 
-The performance of the model was satisfactory, with 84% accuracy, 84% of average precision and 83% of average recall.
+The performance of the model was satisfactory, with 92% accuracy, 92% of average precision and 92% of average recall.
 
 ![Table Accuracy](resources/images/classification_report.png)
+
 ![Confusion Matrix](resources/images/confusion_matrix.png)
 
 
