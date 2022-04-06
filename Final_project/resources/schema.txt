@@ -1,0 +1,37 @@
+tweets
+-
+tweetcreatedts datetime PK
+text nvarchar
+hashtags nvarchar
+retweetcount int
+favorite_count int
+country nvarchar
+neg float
+neu float
+pos float
+compound float
+sentiment nvarchar
+
+migration
+-
+data_date datetime FK
+ukraine_migration int
+
+russia_casualties
+-
+Date datetime FK
+russia_prisoners int
+russia_casualties int
+
+ukraine_casualties
+-
+date datetime FK
+ukraine_casualties int
+
+migration_sentiments
+-
+data_date datetime FK
+ukraine_migration int
+russia_casualties int
+ukraine_casualties int
+compound_sentiment float
