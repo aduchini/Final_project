@@ -52,6 +52,9 @@ On February 24, 2022, Russia invaded Ukraine demanding an assurance that Ukraine
 Since then, there have been tensions between countries, in particular with the United States and European Union supporting Ukraine, and Russia counting with Venezuela and Syria as allies (Source: [NYTimes](https://www.nytimes.com/2022/03/05/world/americas/venezuela-russia-usa.html?searchResultPosition=1)). These tensions, according to media channels and specialists, can potentially escalate the Ukrainian war to a third world war.
 
 Besides the threat of worldwide conflict, other impacts of the Russian invasion on Ukraine has already been observed. The most prominent impact is Ukrainians’ migration to neighboring countries, such as Poland, Hungary and Slovakia. Specialists have been calling it a major refugee crisis, as of March 11 over two and a half million Ukrainians have fled their homes (Source: [The UN Refugee Agency](https://data2.unhcr.org/en/situations/ukraine#_ga=2.200929772.353981607.1646674903-2007428328.1646674903)).
+Social media data can be used as a tool for evaluating sentiment for a standing government. Accurate sentiment analysis is a useful tool to predict outcome of events such as election results.
+Many products, services and companies are openly discussed on social media. Detailed analysis of which could lead to feedback on public sentiment for these products or companies. It can also support the decision making process in businesses.
+The public sentiment analysis about companies, products, and services can also aid stock market predictions, marketing, business & sales related forecasts.
 
 ### Data Source
 Given the direct or indirect impact of the war in Ukraine to people’s lives, it is worthwhile to assess the sentiments people have about this event. Sentiments were identified through text data, consisting of over 11 million tweets downloaded from February 26 to March 19, 2022. Data was sourced from [Kaggle](https://www.kaggle.com/bwandowando/ukraine-russian-crisis-twitter-dataset-1-2-m-rows/discussion/310030). The dataset administrator used three processes to collect data:
@@ -63,13 +66,10 @@ Given the direct or indirect impact of the war in Ukraine to people’s lives, i
 [The UN Refugee Agency](https://data2.unhcr.org/en/situations/ukraine#_ga=2.176425381.1265551284.1648919578-2007428328.1646674903) served as a secondary data source. From this agency, we gathered the number of refugees fleeing Ukraine from February 24 to March 19, 2022, as well as the number of war casualties for the same period.
 
 Other Data for Russia equipment and personnel losses as well as Ukraine Casualties have been sourced from the following:
- - 1. For Russia Losses-
+- For Russia Losses:
 https://www.kaggle.com/datasets/piterfm/2022-ukraine-russian-war
 
-- 2. For Ukraine Losses - 
-
-From 24th Feb - 
-https://data2.unhcr.org/en/situations/ukraine
+- For Ukraine Losses: From 24th Feb, https://data2.unhcr.org/en/situations/ukraine
 
 ### Research Questions
 Through the examination of tweet data, the following questions will be answered:
@@ -108,6 +108,7 @@ Once the data is cleaned and ready for VADER, the data is analyzed by importing 
 ## Database Storage
 The data (tweets data, casualty data, and migration data) has been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in:
 > [SQLite in Google Drive](https://drive.google.com/file/d/19K75J2ouPGdZb6Kk2lWZiYaIquHsYsT4/view?usp=sharing)
+
  It uses the following:[schema](resources/schema.sql), as laid out below:
  ![screenshot of schema](resources/images/schema.png)
 
@@ -194,18 +195,23 @@ Our Dashboard in Tableau Public has interactive elements, such as check boxes th
 ### Model Deployment
 Finally the data visualizations has been deployed on Tableau Public and shared publicly, to [this Tableau viz](https://public.tableau.com/app/profile/ana.duchini/viz/Ukraine_analysis/Story1).
 
-A website has been created with multiple interactive elements and all our project related details including visualizations and the machine models used. Various Tableau stories published in Tableau Public have been embedded in their respective webpages. The website  
+A website has been created with multiple interactive elements and all our project related details including visualizations and the machine models used. Various Tableau stories published in Tableau Public have been embedded in their respective webpages. 
 
-## Summary
-In sum, …
+## Conclusion
+- Per the analysis, the most common words mention on Twitter about the conflict are associated with the hastags that were used to scrape the data. Some insight is provided by WordCloud images depicted in our visualizations.
+- The sentiment breakdown follows a normal distribution, with a slight skew towards the negative, but a large portion of the tweets sit in the neutral column.
+- Geographic patterns of sentiment polarities on the topic were identified, and found to vary according to country; more noticeably, the following countries, some of which have recently experienced conflict, indicated more sentiment polarities towards the negative: Siria, Yemen, Ethiopia, Iran, and Ukraine; while other countries, show a tendency towards the positive, such as: Indonesia, Nigeria, Turkey, Belgium, and the U.K. A visual of this can be seen in the heatmap.
+- The analysis shows that polarity is not related to number of refugees fleeing Ukraine, nor is it related to number of casualties. But it was found that number of refugees and casualties showed significant negative correlation with time.
+- Finally, a Linear SVC classification algorithm was found to be the best predictor of VADER compound sentiments with a 92% precision and accuracy.
 
 ### Limitations
-Ideas:
-- Russians do not have access to twitter, data is biased towards supporters of Ukraine
-- Using only english tweets also makes our sample biased
+- Basing the analysis only on English language tweets contributes to bias on these results
+- Restrictions to the use of Twitter in Russia, as well as China, also contributes bias to the sample used
 
 ### Future Analysis
-Ideas:
-- analyze tweets in other languages spoken by the group members (i.e., Spanish, Portuguese, Hindi) to explore other NLP libraries, check if the sentiment distribution is equivalent and compare ML algorithm accuracy.
-- use Spacy (NLP library) to identify entities mentioned in Ukraine war tweets. Conduct case study of an entity image in relation to the war in Ukraine.
+- To reduce bias, including an analysis that includes tweets in other languages, for example, such as the ones spoken by the group members (i.e., Spanish, Portuguese, Hindi), would result helpful.
+- Acquiring similar sample data from other social media sources, more readily available in countries with lower Twitter usage, such as Vkontakt and Sina Weibo.
+- Exploring other NLP libraries,  to check if the sentiment distribution is equivalent and compare ML algorithm accuracy.
+- Using Spacy (NLP library) to identify entities mentioned in Ukraine war tweets. 
+- Conduct case studies of an entity image in relation to the war in Ukraine.
 
