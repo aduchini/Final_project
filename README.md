@@ -66,13 +66,10 @@ Given the direct or indirect impact of the war in Ukraine to people’s lives, i
 [The UN Refugee Agency](https://data2.unhcr.org/en/situations/ukraine#_ga=2.176425381.1265551284.1648919578-2007428328.1646674903) served as a secondary data source. From this agency, we gathered the number of refugees fleeing Ukraine from February 24 to March 19, 2022, as well as the number of war casualties for the same period.
 
 Other Data for Russia equipment and personnel losses as well as Ukraine Casualties have been sourced from the following:
- - 1. For Russia Losses-
+- For Russia Losses:
 https://www.kaggle.com/datasets/piterfm/2022-ukraine-russian-war
 
-- 2. For Ukraine Losses - 
-
-From 24th Feb - 
-https://data2.unhcr.org/en/situations/ukraine
+- For Ukraine Losses: From 24th Feb, https://data2.unhcr.org/en/situations/ukraine
 
 ### Research Questions
 Through the examination of tweet data, the following questions will be answered:
@@ -111,6 +108,7 @@ Once the data is cleaned and ready for VADER, the data is analyzed by importing 
 ## Database Storage
 The data (tweets data, casualty data, and migration data) has been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in:
 > [SQLite in Google Drive](https://drive.google.com/file/d/19K75J2ouPGdZb6Kk2lWZiYaIquHsYsT4/view?usp=sharing)
+
  It uses the following:[schema](resources/schema.sql), as laid out below:
  ![screenshot of schema](resources/images/schema.png)
 
@@ -202,9 +200,9 @@ A website has been created with multiple interactive elements and all our projec
 ## Conclusion
 - Per the analysis, the most common words mention on Twitter about the conflict are associated with the hastags that were used to scrape the data. Some insight is provided by WordCloud images depicted in our visualizations.
 - The sentiment breakdown follows a normal distribution, with a slight skew towards the negative, but a large portion of the tweets sit in the neutral column.
-- Geographic patters of sentiment polarities on the topic were identified, and found to vary according to country; more noticeably, the following countries, some of which have recently experienced conflict, indicated more sentiment polarities towards the negative: Siria, Yemen, Ethiopia, Iran, and Ukraine; while other countries, show a tendency towards the positive, such as: Indonesia, Nigeria, Turkey, Belgium, and the U.K. A visual of this can be seen in the heatmap.
+- Geographic patterns of sentiment polarities on the topic were identified, and found to vary according to country; more noticeably, the following countries, some of which have recently experienced conflict, indicated more sentiment polarities towards the negative: Siria, Yemen, Ethiopia, Iran, and Ukraine; while other countries, show a tendency towards the positive, such as: Indonesia, Nigeria, Turkey, Belgium, and the U.K. A visual of this can be seen in the heatmap.
 - The analysis shows that polarity is not related to number of refugees fleeing Ukraine, nor is it related to number of casualties. But it was found that number of refugees and casualties showed significant negative correlation with time.
-- Finally, it was found that a Linear SVC classification algorithm predicts VADER compound sentiments with a 92% precision as well as accuracy.
+- Finally, a Linear SVC classification algorithm was found to be the best predictor of VADER compound sentiments with a 92% precision and accuracy.
 
 ### Limitations
 - Basing the analysis only on English language tweets contributes to bias on these results
