@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Analyzing the Sentiment Distribution of Tweets about the war in Ukraine</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tooplate-infinite-loop.css') }}">
+     <!- Bootstrap CSS -->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="slick/slick.css" >
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+<!--
+Tooplate 2117 Infinite Loop
+https://www.tooplate.com/view/2117-infinite-loop
+-->
+
+  </head>
+  <body>    
+    <!-- Hero section -->
+    <section id="infinite-ml" class="text-white tm-font-big tm-parallax">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
+        <div class="container">   
+          <div class="tm-next">
+            <a href="tableau.html" class="navbar-brand">Twitter Sentiment Analysis</a>
+            <div class="tm-continue">
+              
+            </div>
+          </div>
+                             
+            
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="index.html#about">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="index.html#visualizations">Visualizations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="index.html#models">Machine Learning Models</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="index.html#results">Results</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="index.html#conclusion">Conclusion</a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="index.html#team">Our Team</a>
+              </li>                    
+            </ul>
+          </div>        
+        </div>
+      </nav>
+      <img class="img-responsive" src="img/twitter.jpg" alt="Chania" width="50" height="50">
+
+
+      <section id = "about" class ="tm-section-pad-top">
+        <div class="container">
+      
+          <div class="row tm-content-box"><!-- first row -->
+              <div class="col-lg-12 col-xl-12">
+                  <div class="tm-intro-text-container">
+                      <h2 class="tm-text-primary mb-4 tm-section-title">Statistical Analysis</h2>
+                      Statistical approach and analysis is required so that the extraction of relevant data showing the sentiments, their intensity and polarity can be predicted. 
+                      <p class="mb-4 tm-intro-text">
+                        <br><br>
+                        <h2 class="tm-text-primary mb-4 tm-section-title">Hypothesis</h2>
+      
+                   A hypothesis of whether tweets sentiment polarity was related to other variables was tested. Specifically, <a href="https://www.sciencedirect.com/topics/computer-science/pearson-correlation">Pearson correlation </a>was used to test if the number of war casualties in Russia and Ukraine, the number of refugees fleeing Ukraine, the number of Russian prisoners and the day of the week was related to the compound polarity score. 
+                    <br>
+                   <ul type="square">
+                     <li>H0: There is no linear relationship between variables.</li>
+                     <li>H1: There is a positive or negative linear relationship between variables.</li>
+                   </ul>
+             </div>
+            </div>      
+      
+           <div id="cmatrix">
+           <br><br>
+           <h2 class="tm-text-primary mb-4 tm-section-title">Correlation Matrix</h2>
+         As seen in the correlation matrix below, Pearson correlation values for the relationship between compound polarity and other variables were close to zero and p-values were greater than 0.05. The null hypothesis was then accepted and it was assumed that these variables are not linearly related.
+        <br>
+        <br>
+        <br>
+         <img class="img-responsive" src="img/gallery/cmatrix.png" alt="Chania">
+         <br>
+         <br>
+         <br>
+         There were significant negative relationships between date and number of migrants as well as number of casualties in Russia. These relationships might warrant more attention later in the analysis of how migration and casualties change across time.
+        </div>
+  
+        <div id="smatrix">
+          <br>
+          <br>
+          <h2 class="tm-text-primary mb-4 tm-section-title">Scatter Matrix</h2>
+          Scatter plots were also generated to check if there was a clear non-linear relationship between compound polarity and other variables. From visual inspection of the scatter matrix below, points look spread out and there is no clear distribution pattern.
+         <br>
+         <br>
+         <br>
+          <img class="img-responsive" src="img/gallery/smatrix.png" alt="Chania">
+          <br>
+          <br>
+          <br>
+          
+         </div>

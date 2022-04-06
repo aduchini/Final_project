@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Analyzing the Sentiment Distribution of Tweets about the war in Ukraine</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tooplate-infinite-loop.css') }}">
+     <!- Bootstrap CSS -->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="slick/slick.css" >
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+<!--
+Tooplate 2117 Infinite Loop
+https://www.tooplate.com/view/2117-infinite-loop
+-->
+
+  </head>
+  <body>    
+    <!-- Hero section -->
+    <section id="infinite-ml" class="text-white tm-font-big tm-parallax">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
+        <div class="container">   
+          <div class="tm-next">
+            <a href="tableau.html" class="navbar-brand">Twitter Sentiment Analysis</a>
+            <div class="tm-continue">
+              
+            </div>
+          </div>
+                             
+            
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="index.html#about">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="index.html#visualizations">Visualizations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="index.html#models">Machine Learning Models</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="index.html#results">Results</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="index.html#conclusion">Conclusion</a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="index.html#team">Our Team</a>
+              </li>                    
+            </ul>
+          </div>        
+        </div>
+      </nav>
+      <img class="img-responsive" src="img/twitter.jpg" alt="Chania" width="50" height="50">
+
+
+      <section id = "about" class ="tm-section-pad-top">
+        <div class="container">
+      
+          <div class="row tm-content-box"><!-- first row -->
+              <div class="col-lg-12 col-xl-12">
+                  <div class="tm-intro-text-container">
+                      <h2 class="tm-text-primary mb-4 tm-section-title">Data Preprocessing for Machine Learning</h2>
+                      <p class="mb-4 tm-intro-text">
+                        <br><br>
+                        <h6 class="tm-text-primary mb-4 tm-section-title">Data Cleaning</h6>
+      
+                   (info here)</p>
+             </div>
+            </div>      
+            <br>
+          
+            After data was cleaned and sentiment scores was computed, data preprocessing for Machine Learning included:
+            <br>
+              <br>
+                <ul>- Dropping rows with neutral sentiment scores in order to get only a binary outcome: positive or negative.</ul>
+                <ul>- Getting 1% of the dataset (n = 10,855) as sample to fit our computing resources.</ul>
+                <ul>- Vectorizing the text data using Term Frequency-Inverse Document Frequency (TF-IDF). The TF-IDF method consists in converting the text into numerical vectors by calculating the frequency of each text unit and assigning less weight to most frequent units. The logic is that most frequent terms are less helpful in categorizing the dataset as they appear in most cases. </ul>
+                
+                   <br>
+                   <br>
+                   Most important features from TF-IDF:
+                   <br>
+                   <br>
+                   <br>
+                   <img class="img-responsive" src="img/gallery/feature_importance.png" alt="Chania" center="auto">
+                   <br>
+                   <br>
+                   <br>
+                   <br>                      
+           </div></div>
+        </section>
+       </body>
+       </html>    
+           
+           
+              
