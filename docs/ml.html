@@ -71,34 +71,52 @@ https://www.tooplate.com/view/2117-infinite-loop
 
       <section id = "about" class ="tm-section-pad-top">
         <div class="container">
-      
-          
+          <h2 class="tm-text-primary mb-4 tm-section-title">Data processing for Machine Learning</h2>
+          After data was cleaned and sentiment scores was computed, data preprocessing for Machine Learning included:
+          <br>
+            <br>
+              <ul>- Dropping rows with neutral sentiment scores in order to get only a binary outcome: positive or negative.</ul>
+              <ul>- Getting 1% of the dataset (n = 10,855) as sample to fit our computing resources.</ul>
+              <ul>- Vectorizing the text data using Term Frequency-Inverse Document Frequency (TF-IDF). The TF-IDF method consists in converting the text into numerical vectors by calculating the frequency of each text unit and assigning less weight to most frequent units. The logic is that most frequent terms are less helpful in categorizing the dataset as they appear in most cases. </ul>
+              
+                 <br>
+                 <br>
+                 Most important features from TF-IDF:
+                 <br>
+                 <br>
+                 <br>
+                 <img class="img-responsive" src="img/gallery/feature_importance.png" alt="Chania" center="auto">
+                 <br>
+                 <br>
+                 <br>
+                 <br>                      
+                  
                      
-<h2 class="tm-text-primary mb-4 tm-section-title">Comparison of Classification Models</h2>
-   <br> 
-    As the dependent variable is categorical and binary, classification algorithms were chosen. Because they are suited to text classification tasks and easy to interpret, the following algorithms were chosen:
-   <br>
-   <br>
-<ul>1. Random Forest</ul>
-<ul>2. Multinomial Naive Bayes</ul>
-<ul>3. Logistic Regression </ul>
-<ul>4. Linear Support Vector Classification (SVC) </ul>
-<br>
-<br>
-The models performances were compared using boxplots of the model accuracy score:
-<br>
-<br>
-<br>
-<img class="img-responsive" src="img/gallery/boxplot_update.png" alt="Chania" center="auto">
-<br>
-<br>
-<br>  
-As seen in the image above, Linear SVC and Logistic Regression were the most accurate in predicting positive and negative outcomes from tweet text with 92% and 91% accuracy respectively. Linear SVC was then chosen for implementation.
-<br>
-<br>
-<br>         
-<h2 class="tm-text-primary mb-4 tm-section-title">Implementation of Linear SVC</h2>
-<br>
+            <h2 class="tm-text-primary mb-4 tm-section-title">Comparison of Classification Models</h2>
+               
+            As the dependent variable is categorical and binary, classification algorithms were chosen. Because they are suited to text classification tasks and easy to interpret, the following algorithms were chosen:
+           <br>
+           <br>
+            <ul>1. Random Forest</ul>
+            <ul>2. Multinomial Naive Bayes</ul>
+            <ul>3. Logistic Regression </ul>
+            <ul>4. Linear Support Vector Classification (SVC) </ul>
+            <br>
+            <br>
+            The models performances were compared using boxplots of the model accuracy score:
+            <br>
+            <br>
+            <br>
+              <img class="img-responsive" src="img/gallery/boxplot_update.png" alt="Chania" center="auto">
+            <br>
+            <br>
+            <br>  
+            As seen in the image above, Linear SVC and Logistic Regression were the most accurate in predicting positive and negative outcomes from tweet text with 92% and 91% accuracy respectively. Linear SVC was then chosen for implementation.
+            <br>
+            <br>
+            <br>         
+            <h2 class="tm-text-primary mb-4 tm-section-title">Implementation of Linear SVC</h2>
+            <br>
  
 Our data was best classified using Linear SVC, algorithm that finds the maximal margin that separates the data into the two categories (positive or negative sentiments).
 
@@ -110,7 +128,8 @@ The performance of the model was satisfactory, with 92% accuracy, 92% of average
 
 <img class="img-responsive" src="img/gallery/confusion_matrix.png" alt="Chania" center="auto">
 </div>
-
+</div>
+</div>
 </section>
   
 </div>
