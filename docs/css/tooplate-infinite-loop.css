@@ -161,6 +161,26 @@ blockquote {
   position: relative;
 }
 
+
+#infinite-ml {
+	background-color: rgb(250, 245, 245);
+  background-image: url(../img/th.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+  background-blend-mode: normal;
+  background-position: center;
+  height: 100%;
+  min-height: 178px;
+  position: relative;
+  background: url('../img/th.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  
+}
+
+
 @media (min-height: 600px) and (min-width: 1920px) {
   #infinite {
     background-size: cover;
@@ -210,6 +230,11 @@ blockquote {
 
 .tm-hero-subtitle {
   text-shadow: 2px 2px 2px #333;
+}
+
+.tm-hero-general{
+  font-size: medium;
+  font-weight: bold;
 }
 
 .tm-intro-next {
@@ -271,6 +296,11 @@ blockquote {
 
 .tm-continue {
 	padding: 20px 0 30px 0;
+}
+
+.tm-continue-center {
+	padding: 20px 0 30px 0;
+  text-align: center;
 }
 
 /* MAchine Models*/
