@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Analyzing the Sentiment Distribution of Tweets about the war in Ukraine</title>
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/tooplate-infinite-loop.css') }}">
+     <!- Bootstrap CSS -->
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    -->
+    <link rel="stylesheet" href="fontawesome-5.5/css/all.min.css" />
+    <link rel="stylesheet" href="slick/slick.css" >
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/tooplate-infinite-loop.css" />
+<!--
+Tooplate 2117 Infinite Loop
+https://www.tooplate.com/view/2117-infinite-loop
+-->
+
+  </head>
+  <body>    
+    <!-- Hero section -->
+    <section id="infinite" class="text-white tm-font-big tm-parallax">
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-md tm-navbar" id="tmNav">              
+        <div class="container">   
+          <div class="tm-next">
+            <a  href="tableau.html" class="navbar-brand">Twitter Sentiment Analysis</a>
+            <div class="tm-continue">
+              
+            </div>
+          </div>
+                             
+            
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars navbar-toggler-icon"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#visualizations">Visualizations</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="#models">Machine Learning Models</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#results">Results</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link tm-nav-link" href="#conclusion">Conclusion</a>
+            </li>
+              <li class="nav-item">
+                  <a class="nav-link tm-nav-link" href="#team">Our Team</a>
+              </li>                    
+            </ul>
+          </div>        
+        </div>
+      </nav>
+
+      <img class="img-responsive" src="img/twitter.jpg" alt="Chania" width="50" height="50">
+      <div class="text-center tm-hero-text-container">
+        <div class="tm-hero-text-container-inner">
+            <h2 class="tm-hero-title">Analyzing the Sentiment Distribution of <br>Tweets about the war in Ukraine</h2>
+            <p class="tm-hero-subtitle">
+              
+              <br>
+            </p>
+        </div>        
+      </div>
+
+      <div class="tm-next tm-intro-next">
+        <a href="#about" class="text-center tm-down-arrow-link">
+          <i class="fas fa-2x fa-arrow-down tm-down-arrow"></i>
+        </a>
+      </div>      
+    </section>
+<section id = "about" class ="tm-section-pad-top">
+  <div class="container">
+
+    <div class="row tm-content-box"><!-- first row -->
+        <div class="col-lg-12 col-xl-12">
+            <div class="tm-intro-text-container">
+                <h2 class="tm-text-primary mb-4 tm-section-title">About</h2>
+                <p class="mb-4 tm-intro-text">
+                
+                  On the 24th of February, 2022, on the instructions of Russian President Putin, Russian troops began a full-scale invasion of Ukraine. Russian forces have been shelling and bombing key infrastructure and residential areas of Ukrainian cities and villages, using artillery, rockets, and missiles.
+                  Inspite of a lot of speculations about the possible invasion, it has been surprising to see a full scale invasion in the 21st century. Russia invaded Ukraine demanding an assurance that Ukraine will never join NATO. Over a dozen cities and towns were attacked, including the capital city, Kyiv <a href="https://www.nytimes.com/interactive/2022/world/europe/ukraine-maps.html?searchResultPosition=3">(Source: NYTimes)</a><br><br>
+                  
+                  Since then, there have been tensions between countries, in particular with the United States and European Union supporting Ukraine, and Russia counting with Venezuela and Syria as allies <a href="https://www.nytimes.com/2022/03/05/world/americas/venezuela-russia-usa.html?searchResultPosition=1">(Source: NYTimes). </a>
+                  These tensions, according to media channels and specialists, can potentially escalate the Ukrainian war to a third world war. <br><br>
+
+                  Besides the threat of worldwide conflict, other impacts of the Russian invasion on Ukraine has already been observed. The most prominent impact is Ukrainians’ migration to neighboring countries, such as Poland, Hungary and Slovakia. Specialists have been calling it a major refugee crisis, 
+                  as of March 11 over two and a half million Ukrainians have fled their homes <a href="https://data2.unhcr.org/en/situations/ukraine#_ga=2.200929772.353981607.1646674903-2007428328.1646674903">(Source: The UN Refugee Agency).</a> <br><br>
+                  
+                  This analysis reads thousands of tweets by people all over the world and analyzes their sentiments related to the war.
+                  The main focus of this project is Sentiment Analysis of twitter data related to the war in Ukraine and then analyzing the sentiments along with Ukraine Casualties data set and Ukraine Migration data set to derive conclusions.</p> 
+                  
+                </p>
+                  
+
+                  
+                </div>
+        </div>
+
+</section>
+    <section id="visualizations" class="tm-section-pad-top">
+      
+      <div class="container">
+
+            <div class="row tm-content-box"><!-- first row -->
+                <div class="col-lg-12 col-xl-12">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4 tm-section-title">Data Visualizations</h2>
+                        <p class="mb-4 tm-intro-text">
+                          Data from tweets were collecetd and analysed using Python and other libraries.</p>
+                    </div>
+                </div>
+
+            </div><!-- first row -->
+            
+            <div class="row tm-content-box"><!-- second row -->
+        		<div class="col-lg-1">
+                    <i class="far fa-3x fa-chart-bar text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Twitter Sentiment Analysis</h2>
+                        <p class="mb-4 tm-intro-text">
+                          A detailed analysis of sentiments of tweets by people all over the world. The tweets in English have been analyzed here.</p>
+                          <div class="tm-continue">
+                            <a href="tableau.html" class="tm-intro-text tm-btn-primary">Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-1">
+                    <i class="fas fa-3x fa-users text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Losses in Ukraine</h2>
+                        <p class="mb-4 tm-intro-text">
+                        The war in Ukraine has resulted in a number of casualties in Ukraine as well as personnel and equipent losses of the military. This section shows the detailed visualizations of losses in Ukraine.</p>
+                        <div class="tm-continue">
+                          <a href="#models" class="tm-intro-text tm-btn-primary">Learn More</a>
+                      </div>
+</div></div>
+            </div><!-- second row -->
+            
+            <div class="row tm-content-box"><!-- third row -->
+        		<div class="col-lg-1">
+                    <i class="fas fa-3x fa-users text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Losses in Russia</h2>
+                        <p class="mb-4 tm-intro-text">
+                      The war has resulted in a number of personnel as well as equipment losses in Russia. The details can be seen here.</p>
+                          
+                          <div class="tm-continue">
+                            <a href="Tableau_Russia_Losses.html" class="tm-intro-text tm-btn-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-1">
+                  <i class="fas fa-3x fa-users text-center tm-icon"></i>
+              </div>
+              <div class="col-lg-5">
+                  <div class="tm-intro-text-container">
+                    <h2 class="tm-text-primary mb-4">Migration</h2>
+                      <p class="mb-4 tm-intro-text">
+                     Migration of people mainly from Ukraine to various neighboring countries and beyond. </p>
+                        
+                        <div class="tm-continue">
+                          <a href="#models" class="tm-intro-text tm-btn-primary">Details</a>
+                      </div>
+                  </div>
+              </div>
+
+
+              </div><!-- first row -->
+            
+              <div class="row tm-content-box"><!-- second row -->
+              <div class="col-lg-1">
+                      <i class="far fa-3x fa-comment-alt text-center tm-icon"></i>
+                  </div>
+                  <div class="col-lg-5">
+                      <div class="tm-intro-text-container">
+                          <h2 class="tm-text-primary mb-4">Word Clouds</h2>
+                          <p class="mb-4 tm-intro-text">
+                            Hashtags most commonly used are shown here.</p>
+                            <div class="tm-continue">
+                              <a href="wordcloud.html" class="tm-intro-text tm-btn-primary">Details</a>
+                          </div>
+                      </div>
+                  </div>
+              
+                  
+      
+    </section>
+    
+    <section id="models" class="tm-section-pad-top tm-parallax-2">      
+      <div class="container tm-models-content">
+        <div class="row">
+          <div class="col-lg-12 tm-content-box">
+            <h2 class="tm-text-primary mb-4 tm-section-title">Machine Learning Models</h2>
+            <p class="mb-4 tm-intro-text">
+                For our analysis we have used four machine learning models, namely, Random forest classifier, Naive Bayes Algorithm, Logistic Regression and SVC.
+              </p>
+            <div class="mx-auto tm-results-container tm-results-container-2">
+              <div class="tm-models-carousel">
+                <figure class="tm-models-item">
+                  <img src="img/ml.jpg" alt="Image" class="img-fluid mx-auto">
+                  <h4 class="tm-text-primary mb-4">Logistic Regression</h4>
+                  <blockquote>Logistic regression model predicts binary outcomes, analyze the available data, and when presented with a new sample, mathematically determines its probability of belonging to a class. If the probability is above a certain cutoff point, the sample is assigned to that class. If the probability is less than the cutoff point, the sample is assigned to the other class.</blockquote>
+                  <div class="tm-continue">
+                    <a href="#models" class="tm-intro-text tm-btn-primary">Details</a>
+                </div>
+                </figure>
+
+                <figure class="tm-models-item">
+                  <img src="img/naive-bayes.jpg" alt="Image" class="img-fluid mx-auto">
+                  <h4 class="tm-text-primary mb-4">Naive Bayes Algorithm</h4>
+                  <blockquote>Naive Bayes is a probabilistic algorithm that’s typically used for classification problems. Naive Bayes is simple, intuitive, and yet performs surprisingly well in many cases. Naive Bayes utilizes the most fundamental probability knowledge and makes a naive assumption that all features are independent. Despite the simplicity, Naive Bayes gives a decent performance in many applications.</blockquote>
+                  <div class="tm-continue">
+                    <a href="#models" class="tm-intro-text tm-btn-primary">Details</a>
+                </div>
+                </figure>
+
+                <figure class="tm-models-item">
+                  <img src="img/random-forest.png" alt="Image" class="img-fluid mx-auto">
+                  <h4 class="tm-text-primary mb-4">Random Forest Classifier</h4>
+                  <blockquote>Random forest classifiers are a type of ensemble learning model that combines multiple smaller models into a more robust and accurate model. Random forest models use a number of weak learner algorithms (decision trees) and combine their output to make a final classification (or regression) decision. </blockquote>
+                  <div class="tm-continue">
+                    <a href="#models" class="tm-intro-text tm-btn-primary">Details</a>
+                </div>
+                </figure>
+
+                <figure class="tm-models-item">
+                  <img src="img/svc.jpg" alt="Image" class="img-fluid mx-auto">
+                  <h4 class="tm-text-primary mb-4">Linear Support Vector Classification(SVC)</h4>
+                  <blockquote>(SVM), like logistic regression, is a binary classifier. It can categorize samples into one of two categories (for example, yes or no). As a linear classifier, the goal of SVM is to find a line that separates the data into two classes.SVM draws a line at the edge of each class, and attempts to maximize the distance between them. It does so by separating the data points with the largest possible margins.</blockquote>
+                  <div class="tm-continue">
+                    <a href="#models" class="tm-intro-text tm-btn-primary">Details</a>
+                </div>
+                </figure>
+
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tm-bg-overlay"></div>
+    </section>
+    
+    <section id="results" class="tm-section-pad-top">
+      <div class="container tm-container-results">
+        <div class="row">
+          <div class="text-center col-12">
+              <h2 class="tm-text-primary tm-section-title mb-4">Results</h2>
+              <p class="mx-auto tm-section-desc">
+                Images of all the charts and visualizations for this project.
+              </p>
+          </div>            
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="mx-auto tm-results-container">
+                    <div class="grid tm-results">
+                      <a href="img/gallery/flowchart.png">
+                        <figure class="effect-honey tm-results-item">
+                          <img src="img/gallery/flowchart.png" alt="Image 1" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Flowchart of<span>Sentiment Analysis</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery/input_output_tables.png">
+                        <figure class="effect-honey tm-results-item">
+                          <img src="img/gallery/input_output_tables.png" alt="Image 2" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Input Output Tables <span>in PostGres</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery/project pipeline.png">
+                        <figure class="effect-honey tm-results-item">
+                          <img src="img/gallery/project pipeline.png" alt="Image 3" class="img-fluid">
+                          <figcaption>
+                            <h2><i><span>Project</span> Pipeline</i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery/twitter sentiment analysis dia1.png">
+                        <figure class="effect-honey tm-results-item">
+                          <img src="img/gallery/twitter sentiment analysis dia1.png" alt="Image 4" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Twitter <span>Sentiment Analysis</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery/schema.png">
+                        <figure class="effect-honey tm-results-item">
+                          <img src="img/gallery/schema.png" alt="Image 5" class="img-fluid">
+                          <figcaption>
+                            <h2><i><span>Schema</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery/ML_boxplots.png">
+                        <figure class="effect-honey tm-results-item">
+                          <img src="img/gallery/ML_boxplots.png" alt="Image 6" class="img-fluid">
+                          <figcaption>
+                            <h2><i>Machine Learning <span>Boxplots</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery/SVC_confusion_matrix.png">
+                        <figure class="effect-honey tm-results-item">
+                          <img src="img/gallery/SVC_confusion_matrix.png" alt="Image 7" class="img-fluid">
+                          <figcaption>
+                            <h2><i>SVC <span>Confusion Matrix</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                      <a href="img/gallery/SVC_confusion_matrix_classification_report.png">
+                        <figure class="effect-honey tm-results-item">
+                          <img src="img/gallery/SVC_confusion_matrix_classification_report.png" alt="Image 8" class="img-fluid">
+                          <figcaption>
+                            <h2><i>SVC Confusion Matrix <span>Classification Report</span></i></h2>
+                          </figcaption>
+                        </figure>
+                      </a>
+                    </div>
+                </div>                
+            </div>        
+          </div>
+      </div>
+    </section>
+    <section id = "conclusion" class ="tm-section-pad-top">
+      <div class="container">
+    
+        <div class="row tm-content-box"><!-- first row -->
+            <div class="col-lg-12 col-xl-12">
+                <div class="tm-intro-text-container">
+                    <h2 class="tm-text-primary mb-4 tm-section-title">Conclusion</h2>
+                    <p class="mb-4 tm-intro-text">
+                      Our conclusion of the project here.<br><br>
+                      
+                      
+                      
+    
+                      
+                    </div>
+            </div>
+    
+    </section>
+    <!-- Team -->
+    <section id="team" class="tm-section-pad-top tm-parallax-2">
+    
+      <div class="container tm-container-contact">
+        
+        <div class="row">
+            
+            <div class="text-center col-12">
+                <h2 class="tm-section-title mb-4">Our Team</h2>
+                <p class="mb-5">
+                  Our team consists of the following hard working professionals.
+                </p><br>
+            </div>
+            <br><br>
+            <div class="row tm-content-box"><!-- second row -->
+              <div class="col-lg-1">
+                      <i class="fas fa-3x fa-users text-center tm-icon"></i>
+                  </div>
+                  <div class="col-lg-5">
+                      <div class="tm-intro-text-container">
+                          <h2 class="tm-text-primary mb-4">Aakriti A Sharma</h2>
+                          <p class="mb-4 tm-intro-text">
+                            She is currently pursuing Bootcamp in Data Analytics from University of California Berkeley.</p>
+                            <div class="tm-continue">
+                              <a href="https://www.linkedin.com/in/aakriti-sharma-86b851b/" class="tm-intro-text tm-btn-primary">LinkedIn Profile</a>
+                          </div>
+                          <div class="tm-continue">
+                            <a href="https://github.com/aakriiti2504" class="tm-intro-text tm-btn-primary">Github</a>
+                        </div>
+                      </div>
+                  </div>
+                  
+                  <div class="col-lg-1">
+                      <i class="fas fa-3x fa-users text-center tm-icon"></i>
+                  </div>
+                  <div class="col-lg-5">
+                      <div class="tm-intro-text-container">
+                          <h2 class="tm-text-primary mb-4">Ana Duchini</h2>
+                          <p class="mb-4 tm-intro-text">
+                            She is currently pursuing Bootcamp in Data Analytics from University of California Berkeley.</p>
+                            <div class="tm-continue">
+                              <a href="https://www.linkedin.com/in/ana-duchini-30aa164/" class="tm-intro-text tm-btn-primary">LinkedIn Profile</a>
+                          </div>
+                          <div class="tm-continue">
+                            <a href="https://github.com/aduchini" class="tm-intro-text tm-btn-primary">Github</a>
+                        </div>
+                      </div><br><br><br><br>
+              </div><!-- second row -->
+              
+              <div class="row tm-content-box"><!-- third row -->
+              <div class="col-lg-1">
+                      <i class="fas fa-3x fa-users text-center tm-icon"></i>
+                  </div>
+                  <div class="col-lg-5">
+                      <div class="tm-intro-text-container">
+                          <h2 class="tm-text-primary mb-4">Flora Matos</h2>
+                          <p class="mb-4 tm-intro-text">
+                            She is currently pursuing Bootcamp in Data Analytics from University of California Berkeley.</p>
+                            <div class="tm-continue">
+                              <a href="https://www.linkedin.com/in/floramatos/" class="tm-intro-text tm-btn-primary">LinkedIn Profile</a>
+                          </div>
+                          <div class="tm-continue">
+                            <a href="https://github.com/floramatos" class="tm-intro-text tm-btn-primary">Github</a>
+                        </div>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-1">
+                    <i class="fas fa-3x fa-users text-center tm-icon"></i>
+                </div>
+                <div class="col-lg-5">
+                    <div class="tm-intro-text-container">
+                        <h2 class="tm-text-primary mb-4">Ruchita Kulkarni</h2>
+                        <p class="mb-4 tm-intro-text">
+                          She is currently pursuing Bootcamp in Data Analytics from University of California Berkeley.</p>
+                          <div class="tm-continue">
+                            <a href="https://www.linkedin.com/in/ruchitakulkarni/" class="tm-intro-text tm-btn-primary">LinkedIn Profile</a>
+                        </div>
+                        <div class="tm-continue">
+                          <a href="https://github.com/SpottedOwlet" class="tm-intro-text tm-btn-primary">Github</a>
+                      </div>
+                    </div>
+            </div><!-- second row -->
+
+                
+  
+  
+                </div><!-- first row -->
+            
+           
+                
+              
+            
+            
+        </div><!-- row ending -->
+        
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <footer class="text-center small tm-footer">
+          <p class="mb-0">
+          Copyright &copy; 2020 Company Name 
+        
+           <a rel="nofollow" href="https://www.tooplate.com" title="HTML templates">Designed by TOOPLATE</a></p>
+        </footer></div>
+  </section>
+  
+    
+    <script src="js/jquery-1.9.1.min.js"></script>     
+    <script src="slick/slick.min.js"></script>
+    <script src="magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="js/easing.min.js"></script>
+    <script src="js/jquery.singlePageNav.min.js"></script>     
+    <script src="js/bootstrap.min.js"></script> 
+    <script>
+
+      function getOffSet(){
+        var _offset = 450;
+        var windowHeight = window.innerHeight;
+
+        if(windowHeight > 500) {
+          _offset = 400;
+        } 
+        if(windowHeight > 680) {
+          _offset = 300
+        }
+        if(windowHeight > 830) {
+          _offset = 210;
+        }
+
+        return _offset;
+      }
+
+      function setParallaxPosition($doc, multiplier, $object){
+        var offset = getOffSet();
+        var from_top = $doc.scrollTop(),
+          bg_css = 'center ' +(multiplier * from_top - offset) + 'px';
+        $object.css({"background-position" : bg_css });
+      }
+
+      // Parallax function
+      // Adapted based on https://codepen.io/roborich/pen/wpAsm        
+      var background_image_parallax = function($object, multiplier, forceSet){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        // $object.css({"background-attatchment" : "fixed"});
+
+        if(forceSet) {
+          setParallaxPosition($doc, multiplier, $object);
+        } else {
+          $(window).scroll(function(){          
+            setParallaxPosition($doc, multiplier, $object);
+          });
+        }
+      };
+
+      var background_image_parallax_2 = function($object, multiplier){
+        multiplier = typeof multiplier !== 'undefined' ? multiplier : 0.5;
+        multiplier = 1 - multiplier;
+        var $doc = $(document);
+        $object.css({"background-attachment" : "fixed"});
+        
+        $(window).scroll(function(){
+          if($(window).width() > 768) {
+            var firstTop = $object.offset().top,
+                pos = $(window).scrollTop(),
+                yPos = Math.round((multiplier * (firstTop - pos)) - 186);              
+
+            var bg_css = 'center ' + yPos + 'px';
+
+            $object.css({"background-position" : bg_css });
+          } else {
+            $object.css({"background-position" : "center" });
+          }
+        });
+      };
+      
+      $(function(){
+        // Hero Section - Background Parallax
+        background_image_parallax($(".tm-parallax"), 0.30, false);
+        background_image_parallax_2($("#team"), 0.80);   
+        background_image_parallax_2($("#models"), 0.80);   
+        
+        // Handle window resize
+        window.addEventListener('resize', function(){
+          background_image_parallax($(".tm-parallax"), 0.30, true);
+        }, true);
+
+        // Detect window scroll and update navbar
+        $(window).scroll(function(e){          
+          if($(document).scrollTop() > 120) {
+            $('.tm-navbar').addClass("scroll");
+          } else {
+            $('.tm-navbar').removeClass("scroll");
+          }
+        });
+        
+        // Close mobile menu after click 
+        $('#tmNav a').on('click', function(){
+          $('.navbar-collapse').removeClass('show'); 
+        })
+
+        // Scroll to corresponding section with animation
+        $('#tmNav').singlePageNav({
+          'easing': 'easeInOutExpo',
+          'speed': 600
+        });        
+        
+        // Add smooth scrolling to all links
+        // https://www.w3schools.com/howto/howto_css_smooth_scroll.asp
+        $("a").on('click', function(event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 600, 'easeInOutExpo', function(){
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+
+        // Pop up
+        $('.tm-results').magnificPopup({
+          delegate: 'a',
+          type: 'image',
+          gallery: { enabled: true }
+        });
+
+        $('.tm-models-carousel').slick({
+          dots: true,
+          prevArrow: false,
+          nextArrow: false,
+          infinite: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 2
+              }
+            }, 
+            {
+              breakpoint: 480,
+              settings: {
+                  slidesToShow: 1
+              }                 
+            }
+          ]
+        });
+
+        // Gallery
+        $('.tm-results').slick({
+          dots: true,
+          infinite: false,
+          slidesToShow: 5,
+          slidesToScroll: 2,
+          responsive: [
+          {
+            breakpoint: 1199,
+            settings: {
+              slidesToShow: 4,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 991,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 2
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+        });
+      });
+    </script>
+  </body>
+</html>
