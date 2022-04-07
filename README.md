@@ -99,17 +99,20 @@ The tweets contain a wide variety of emoticons, hashtags, mentions, special char
 Sentiment Analysis, also known as Opinion Mining, is a popular data mining approach used to study the inclination of people's sentiments, opinions and emotions towards any product, global issue, event, service and organization. The sentiments are typically extracted from the text reviews, comments and surveys using tools in Natural Language Processing(NLP), Machine learning and other computational linguistics.
 
 ### Sentiment Analysis Using VADER:
+Notebook: [Data_Consolidation_Cleaning_And_Sentiment_Analysis](Data_Consolidation_Cleaning_And_Sentiment_Analysis.ipynb)
+
 For the purpose of this analysis we are using VADER (Valence Aware Dictionary sEntiment Reasoner) sentiment analysis. It is a trained NLTK lexicon that relies on a dictionary that maps words and other lexical features common to microblogs. It is a powerful tool specifically attuned to sentiments expressed in social media.
 
  > Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text. Eighth International Conference   on Weblogs and Social Media (ICWSM-14). Ann Arbor, MI, June 2014.
  
-Once the data is cleaned and ready for VADER, the data is analyzed by importing and using SentimentIntensityAnalyzer module from vaderSentiment package. The tweets are then passes through the analyzer and assigned polarity scores, using which we can further divide the tweets as positive, neutral and negative. Detailed demo of cleaning process and VADER sentiment analysis can be found [here](https://github.com/aduchini/Final_project/blob/main/Twitter_Vader_Sentiment_Analysis.ipynb).
+Once the data is cleaned and ready for VADER, the data is analyzed by importing and using SentimentIntensityAnalyzer module from vaderSentiment package. The tweets are then passes through the analyzer and assigned polarity scores, using which we can further divide the tweets as positive, neutral and negative. Detailed demo of cleaning process and VADER sentiment analysis can be found in:
+> 
 
 ## Database Storage
 The data (tweets data, casualty data, and migration data) has been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in:
 > [SQLite in Google Drive](https://drive.google.com/file/d/19K75J2ouPGdZb6Kk2lWZiYaIquHsYsT4/view?usp=sharing)
 
- It uses the following:[schema](resources/schema.sql), as laid out below:
+ It uses the following: [schema](resources/schema.sql), as laid out below:
  ![screenshot of schema](resources/images/schema.png)
 
 ### Flowchart of Data Processes and Inputs/Outputs
