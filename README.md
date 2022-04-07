@@ -105,11 +105,10 @@ For the purpose of this analysis we are using VADER (Valence Aware Dictionary sE
 
  > Hutto, C.J. & Gilbert, E.E. (2014). VADER: A Parsimonious Rule-based Model for Sentiment Analysis of Social Media Text. Eighth International Conference   on Weblogs and Social Media (ICWSM-14). Ann Arbor, MI, June 2014.
  
-Once the data is cleaned and ready for VADER, the data is analyzed by importing and using SentimentIntensityAnalyzer module from vaderSentiment package. The tweets are then passes through the analyzer and assigned polarity scores, using which we can further divide the tweets as positive, neutral and negative. Detailed demo of cleaning process and VADER sentiment analysis can be found in:
-> 
+Once the data is cleaned and ready for VADER, the data is analyzed by importing and using SentimentIntensityAnalyzer module from vaderSentiment package. The tweets are then passes through the analyzer and assigned polarity scores, using which we can further divide the tweets as positive, neutral and negative. Detailed demo of cleaning process and VADER sentiment analysis can be found in the notebook at the top of this section.
 
 ## Database Storage
-The data (tweets data, casualty data, and migration data) has been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in:
+The data (tweets data, casualty data, and migration data) have been loaded to an SQLite database using the Python sqlite3 library on [this notebook](SQL_database.ipynb). A left join for the 3 tables is performed on the date column (incorporating mean compound scores for tweets' sentiments). A copy of the output can be found in:
 > [SQLite in Google Drive](https://drive.google.com/file/d/19K75J2ouPGdZb6Kk2lWZiYaIquHsYsT4/view?usp=sharing)
 
  It uses the following: [schema](resources/schema.sql), as laid out below:
@@ -198,7 +197,9 @@ Our Dashboard in Tableau Public has interactive elements, such as check boxes th
 ### Model Deployment
 Finally the data visualizations has been deployed on Tableau Public and shared publicly, to [this Tableau viz](https://public.tableau.com/app/profile/ana.duchini/viz/Ukraine_analysis/Story1).
 
-A website has been created with multiple interactive elements and all our project related details including visualizations and the machine models used. Various Tableau stories published in Tableau Public have been embedded in their respective webpages. 
+A website has been created with multiple interactive elements and all our project related details including visualizations and the machine models used. Various Tableau stories published in Tableau Public have been embedded in their respective webpages.
+
+> [View web pages](https://aduchini.github.io/Final_project/)
 
 ## Conclusion
 - Per the analysis, the most common words mention on Twitter about the conflict are associated with the hastags that were used to scrape the data. Some insight is provided by WordCloud images depicted in our visualizations.
